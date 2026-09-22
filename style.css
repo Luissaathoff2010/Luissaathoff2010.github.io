@@ -1,0 +1,1110 @@
+/* ==========================================================================
+   Norderney Guide — Design System
+   Sand/Beige, Weiß, dunkles Marineblau, maritime Akzente (Petrol & Rost)
+   ========================================================================== */
+
+/* Schriften werden lokal aus assets/fonts/ geladen statt von Google-Servern nachgeladen —
+   sonst würde bei jedem Seitenaufruf die Besucher-IP an Google übertragen (DSGVO-Problem). */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/worksans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/worksans-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/worksans-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/worksans-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Farben */
+  --sand-50:  #FBF8F2;
+  --sand-100: #F5EFE2;
+  --sand-200: #ECE1CB;
+  --sand-300: #DFCDA8;
+  --white:    #FFFFFF;
+  --navy-900: #0A1E30;
+  --navy-800: #0F2A43;
+  --navy-700: #17395A;
+  --navy-600: #22496E;
+  --teal-600: #2F6F76;
+  --teal-500: #3D8A8F;
+  --rust-500: #C1622D;
+  --rust-600: #A84F22;
+  --ink:        #1C2B33;
+  --ink-muted:  #5B6B74;
+  --line:       #E3D9C4;
+  --line-strong:#CBBB94;
+
+  /* Typografie */
+  --font-head: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Sonstiges */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgba(15, 42, 67, 0.06), 0 1px 1px rgba(15, 42, 67, 0.04);
+  --shadow-md: 0 8px 24px rgba(15, 42, 67, 0.10);
+  --shadow-lg: 0 20px 48px rgba(10, 30, 48, 0.16);
+  --container: 1320px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--sand-50);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 600; line-height: 1.15; margin: 0 0 0.5em; color: var(--navy-900); }
+p { margin: 0 0 1em; color: var(--ink); }
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--teal-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+button { font-family: inherit; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+  .container { padding: 0 32px; }
+}
+
+/* ---------- Utility ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+  margin-bottom: 12px;
+}
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--rust-500);
+  display: inline-block;
+  border-radius: 2px;
+}
+.lede { font-size: 1.08rem; color: var(--ink-muted); max-width: 62ch; }
+.section { padding: 64px 0; }
+.section--tight { padding: 40px 0; }
+.section--sand { background: var(--sand-100); }
+.section--navy { background: var(--navy-900); color: var(--sand-100); }
+.section--navy h2, .section--navy h3 { color: var(--white); }
+.section--navy p { color: #C7D3DD; }
+.section-head { max-width: 720px; margin-bottom: 36px; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: var(--navy-800); color: var(--white); }
+.btn-primary:hover { background: var(--navy-700); }
+.btn-accent { background: var(--rust-500); color: var(--white); }
+.btn-accent:hover { background: var(--rust-600); }
+.btn-outline { background: transparent; border-color: var(--navy-800); color: var(--navy-800); }
+.btn-outline:hover { background: var(--navy-800); color: var(--white); }
+.btn-outline-light { background: transparent; border-color: rgba(255,255,255,0.55); color: var(--white); }
+.btn-outline-light:hover { background: rgba(255,255,255,0.14); border-color: var(--white); }
+/* Heller Button für dunkle Bildhintergründe */
+.btn-light { background: var(--sand-50); color: var(--navy-900); }
+.btn-light:hover { background: var(--white); }
+.btn-sm { padding: 9px 16px; font-size: 0.85rem; }
+.btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ---------- Header / Navigation ---------- */
+.site-header-group {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header {
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+/* Blur läuft über ein Pseudo-Element statt direkt auf .site-header: backdrop-filter auf dem
+   Header selbst würde einen neuen containing block erzeugen und das fixed-positionierte
+   Mobile-Menü (.site-nav) auf die Header-Box einklemmen statt auf den vollen Viewport. */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(251, 248, 242, 0.92);
+  backdrop-filter: saturate(180%) blur(14px);
+  z-index: -1;
+}
+/* min-height statt height: bei fester Höhe lief der Navigationsinhalt aus dem
+   Header heraus und überlappte den Bereich darunter. */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+  min-height: 76px;
+}
+/* flex-shrink: 0 ist wichtig: sonst wird die Logo-Box schmaler gerechnet als der
+   Schriftzug breit ist, und der Text läuft sichtbar über die Menüpunkte. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.brand-mark {
+  width: 40px; height: 40px;
+  border-radius: 11px;
+  background: var(--navy-800);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.brand-mark svg { width: 21px; height: 21px; }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  min-width: 0;
+}
+.brand-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.16rem;
+  color: var(--navy-900);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.brand-sub {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  flex-shrink: 0;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.nav-toggle:hover { border-color: var(--line-strong); background: var(--sand-100); }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+  content: "";
+  display: block;
+  width: 18px; height: 2px;
+  background: var(--navy-900);
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+.nav-toggle span::before { position: absolute; top: -6px; }
+.nav-toggle span::after { position: absolute; top: 6px; }
+.nav-toggle[aria-expanded="true"] span { background: transparent; }
+.nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+.site-nav {
+  position: fixed;
+  top: var(--header-bottom, 108px); left: 0; right: 0; bottom: 0;
+  background: var(--sand-50);
+  padding: 20px 20px 40px;
+  overflow-y: auto;
+  transform: translateY(-8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.site-nav.is-open { opacity: 1; transform: translateY(0); visibility: visible; }
+.nav-list { display: flex; flex-direction: column; gap: 2px; }
+.nav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 4px;
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  border-bottom: 1px solid var(--line);
+}
+.nav-list a.is-active { color: var(--rust-600); }
+.nav-cta { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
+.nav-cta .btn { justify-content: center; width: 100%; }
+
+/* ---------- Nav-Gruppen (Dropdown / Mega-Menü) ---------- */
+.nav-group { display: flex; flex-direction: column; }
+.nav-group-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 4px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  cursor: pointer;
+  text-align: left;
+}
+.nav-group-trigger.is-active { color: var(--rust-600); }
+.nav-chev { width: 18px; height: 18px; flex-shrink: 0; transition: transform 0.2s ease; }
+.nav-group.is-open .nav-chev { transform: rotate(180deg); }
+
+.nav-dropdown {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+.nav-dropdown-inner { overflow: hidden; min-height: 0; }
+.nav-group.is-open .nav-dropdown { grid-template-rows: 1fr; }
+.nav-dropdown-list { display: flex; flex-direction: column; padding-left: 14px; }
+.nav-dropdown-list a {
+  display: block;
+  padding: 13px 4px;
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--line);
+}
+.nav-dropdown-list a.is-active { color: var(--rust-600); font-weight: 600; }
+
+/* Waagerechte Navigation erst ab 1280px: darunter passen Logo, Menüpunkte und
+   Button nicht mehr nebeneinander, dort greift das Hamburger-Menü. */
+@media (min-width: 1280px) {
+  .nav-toggle { display: none; }
+  .site-nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    background: transparent;
+    padding: 0;
+    opacity: 1; visibility: visible; transform: none;
+    overflow: visible;
+  }
+  .nav-list { flex-direction: row; align-items: center; flex-wrap: nowrap; gap: 2px; }
+  .nav-list > li { flex-shrink: 0; }
+  .nav-list a {
+    border-bottom: none;
+    padding: 9px 13px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-list a:hover { background: var(--sand-200); }
+  .nav-list a.is-active { background: var(--navy-900); color: var(--white); }
+  .nav-cta { margin-top: 0; margin-left: 0; flex-direction: row; flex-shrink: 0; }
+  .nav-cta .btn { width: auto; }
+
+  .nav-group { position: relative; flex-direction: row; }
+  .nav-group-trigger {
+    border-bottom: none;
+    padding: 9px 10px 9px 13px;
+    font-size: 0.88rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    width: auto;
+  }
+  .nav-group-trigger:hover { background: var(--sand-200); }
+  .nav-group-trigger.is-active,
+  .nav-group.is-open .nav-group-trigger { background: var(--sand-200); }
+  .nav-chev { width: 15px; height: 15px; }
+
+  .nav-dropdown {
+    display: block;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 250px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+  }
+  .nav-dropdown-inner { overflow: visible; }
+  .nav-group:hover .nav-dropdown,
+  .nav-group.is-open .nav-dropdown,
+  .nav-group-trigger:focus-visible + .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .nav-dropdown-list { padding-left: 0; gap: 2px; }
+  .nav-dropdown-list a {
+    border-bottom: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    color: var(--navy-900);
+    font-weight: 500;
+  }
+  .nav-dropdown-list a:hover { background: var(--sand-100); }
+  .nav-dropdown-list a.is-active { background: var(--navy-900); color: var(--white); }
+}
+
+/* Enger Desktop-Bereich: Menüpunkte etwas kompakter, damit alles einzeilig bleibt. */
+@media (min-width: 1280px) and (max-width: 1420px) {
+  .nav-list a, .nav-group-trigger { padding: 9px 10px; font-size: 0.84rem; }
+  .site-nav { gap: 10px; }
+}
+
+/* ---------- Emergency strip ---------- */
+.emergency-strip {
+  background: var(--navy-900);
+  color: #C7D3DD;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.emergency-strip .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.emergency-strip svg { width: 15px; height: 15px; flex-shrink: 0; color: #8FD2D6; }
+.emergency-item { display: inline-flex; align-items: center; gap: 6px; }
+.emergency-sep { color: rgba(255,255,255,0.25); }
+.emergency-strip a { color: var(--white); font-weight: 600; }
+.emergency-strip a:hover { color: #8FD2D6; }
+.emergency-strip strong { color: #FFD6BE; font-weight: 700; }
+
+/* ---------- Hero mit Vollbild-Foto ----------
+   Die Section geht über die gesamte Fensterbreite; nur der Textinhalt liegt im
+   .container und bleibt dadurch mittig lesbar. Das Foto liegt als eigenes
+   Element darunter, damit object-fit: cover greift (füllt die Fläche ohne
+   Verzerrung) und der Bildausschnitt per object-position steuerbar bleibt. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 80vh, 800px);
+  padding: 96px 0 104px;
+  overflow: hidden;
+  background: var(--navy-900);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(180deg, #24405C 0%, #7A5B4A 55%, #2B2620 100%);
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 33% holt Himmel und Sonne ins Bild; weiter unten läge nur dunkles Wasser im
+     sichtbaren Streifen und der Sonnenuntergang ginge verloren. */
+  object-position: center 33%;
+  display: block;
+}
+/* Abdunklung nur dort, wo sie gebraucht wird: links hinter dem Text kräftig,
+   nach rechts hin klar, damit der Sonnenuntergang sichtbar bleibt. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 24, 40, 0.90) 0%, rgba(8, 24, 40, 0.82) 24%, rgba(8, 24, 40, 0.64) 42%, rgba(8, 24, 40, 0.40) 58%, rgba(8, 24, 40, 0.16) 72%, rgba(8, 24, 40, 0) 86%),
+    linear-gradient(180deg, rgba(8, 24, 40, 0.34) 0%, rgba(8, 24, 40, 0) 26%, rgba(8, 24, 40, 0) 74%, rgba(8, 24, 40, 0.30) 100%);
+}
+.hero-inner { position: relative; flex: 1 1 auto; }
+.hero-content { max-width: 52rem; }
+/* Die Wellenlinie sitzt am unteren Rand des Heros, nicht im Textfluss daneben. */
+.hero .wave-divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 1;
+  margin-top: 0;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6.2vw, 4.7rem);
+  line-height: 1.06;
+  margin-bottom: 0.3em;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(6, 20, 34, 0.6), 0 1px 38px rgba(6, 20, 34, 0.5);
+}
+.hero .eyebrow { color: #A5DCE0; }
+.hero .eyebrow::before { background: #F0A87A; }
+.hero .lede {
+  font-size: clamp(1.08rem, 1.55vw, 1.42rem);
+  line-height: 1.5;
+  max-width: 40rem;
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 10px rgba(6, 20, 34, 0.65), 0 1px 28px rgba(6, 20, 34, 0.45);
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Einstiegs-Animation: Foto blendet ein und fährt langsam aus einem leichten
+   Zoom heraus, Text folgt zeitversetzt. */
+@keyframes heroImageIn {
+  from { opacity: 0; transform: scale(1.07); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes heroTextIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+/* "backwards" statt "both": nach Ablauf gilt wieder der normale Zustand. Sollte eine
+   Animation einmal nicht durchlaufen, bleibt der Inhalt sichtbar statt unsichtbar. */
+.hero-bg img {
+  animation: heroImageIn 2s cubic-bezier(0.16, 0.7, 0.3, 1) backwards;
+  will-change: transform, opacity;
+}
+.hero-content > * { animation: heroTextIn 0.85s cubic-bezier(0.16, 0.7, 0.3, 1) backwards; }
+.hero-content > .eyebrow    { animation-delay: 0.35s; }
+.hero-content > h1          { animation-delay: 0.5s; }
+.hero-content > .lede       { animation-delay: 0.68s; }
+.hero-content > .hero-actions { animation-delay: 0.84s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg img,
+  .hero-content > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Auf dem Handy steht der Text über der vollen Bildbreite, nicht nur links.
+   Deshalb dunkelt hier ein gleichmäßiger Verlauf von oben ab statt von der Seite. */
+@media (max-width: 860px) {
+  .hero::after {
+    background: linear-gradient(180deg,
+      rgba(8, 24, 40, 0.66) 0%,
+      rgba(8, 24, 40, 0.54) 44%,
+      rgba(8, 24, 40, 0.18) 66%,
+      rgba(8, 24, 40, 0.10) 84%,
+      rgba(8, 24, 40, 0.34) 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: clamp(480px, 76vh, 640px);
+    padding: 64px 0 80px;
+  }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.5rem); }
+  .hero .lede { font-size: 1.02rem; }
+  .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+  /* Ohne Zoom: spart Rechenleistung auf schwächeren Geräten, das Einblenden bleibt. */
+  .hero-bg img { animation: heroImageFade 1.2s ease-out backwards; }
+}
+@keyframes heroImageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -2px;
+}
+
+/* ---------- Quick nav tiles (home) ---------- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+/* Bei neun Bereichen ergeben drei Spalten drei volle Reihen; bei vier Spalten
+   stünde die letzte Kachel allein. */
+@media (min-width: 700px) { .tile-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } }
+
+.tile {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.tile-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--sand-200);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy-800);
+}
+.tile-icon svg { width: 22px; height: 22px; }
+.tile h3 { font-size: 1.02rem; margin-bottom: 2px; }
+.tile p { font-size: 0.86rem; color: var(--ink-muted); margin: 0; }
+
+/* ---------- Cards (Unterkünfte, Essen, etc.) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+@media (min-width: 640px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); } }
+/* Ab dieser Breite nutzen drei Spalten den Platz besser als zwei sehr breite Karten. */
+@media (min-width: 1120px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.card-media {
+  height: 168px;
+  background: var(--sand-200);
+  position: relative;
+  overflow: hidden;
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.card:hover .card-media img { transform: scale(1.045); }
+.card-body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+  background: rgba(61, 138, 143, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.card-tags-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.price-badge {
+  flex-shrink: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--rust-600);
+  background: rgba(193, 98, 45, 0.1);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.card h3 { font-size: 1.14rem; margin-bottom: 0; }
+.card-meta { font-size: 0.82rem; color: var(--ink-muted); display: flex; align-items: center; gap: 6px; }
+.card p.desc { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 4px; }
+.card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.card-foot .btn { flex: 1; justify-content: center; }
+
+.badge-real {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--navy-700);
+}
+
+/* ---------- Info notice / disclaimer boxes ---------- */
+.notice {
+  border: 1px solid var(--line-strong);
+  background: var(--sand-100);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.notice svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--teal-600); margin-top: 2px; }
+.notice strong { color: var(--ink); }
+.notice.notice-accent { border-color: rgba(193, 98, 45, 0.35); background: #FBF1E8; }
+.notice.notice-accent svg { color: var(--rust-500); }
+
+/* ---------- Info list (Fähre / Notfall page) ---------- */
+.info-block {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+}
+.info-block + .info-block { margin-top: 22px; }
+.info-block h3 { display: flex; align-items: center; gap: 12px; font-size: 1.2rem; }
+.info-block h3 svg { width: 26px; height: 26px; color: var(--teal-600); flex-shrink: 0; }
+.kv-list { display: flex; flex-direction: column; gap: 0; margin-top: 14px; }
+.kv-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+}
+.kv-row:last-child { border-bottom: none; }
+.kv-row dt { color: var(--ink-muted); font-weight: 500; }
+.kv-row dd { margin: 0; font-weight: 600; text-align: right; color: var(--navy-900); }
+.kv-row a.btn { margin-top: 0; }
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 700px) { .emergency-grid { grid-template-columns: repeat(2, 1fr); } }
+.emergency-card {
+  border-radius: var(--radius-md);
+  padding: 22px;
+  background: var(--navy-900);
+  color: var(--white);
+}
+.emergency-card .num { font-family: var(--font-head); font-size: 2.1rem; font-weight: 700; color: #FFD6BE; line-height: 1; margin-bottom: 8px; display: block; }
+.emergency-card p { color: #C7D3DD; font-size: 0.88rem; margin: 0; }
+.emergency-card.alt { background: var(--white); border: 1px solid var(--line); color: var(--ink); }
+.emergency-card.alt .num { color: var(--rust-500); }
+.emergency-card.alt p { color: var(--ink-muted); }
+
+/* ---------- Steps (Fähre / Anreise) ---------- */
+.step-list { display: flex; flex-direction: column; gap: 0; counter-reset: step; }
+.step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--sand-200);
+  color: var(--navy-900);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-head);
+}
+.step h4 { font-size: 1rem; margin-bottom: 4px; }
+.step p { font-size: 0.9rem; color: var(--ink-muted); margin: 0; }
+
+/* ---------- Accordion (Schlechtwetter / FAQ) ---------- */
+.accordion-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  overflow: hidden;
+}
+.accordion-item + .accordion-item { margin-top: 12px; }
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  padding: 18px 20px;
+  text-align: left;
+  font-family: var(--font-head);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  cursor: pointer;
+}
+.accordion-trigger .plus { width: 22px; height: 22px; flex-shrink: 0; position: relative; }
+.accordion-trigger .plus::before, .accordion-trigger .plus::after {
+  content: ""; position: absolute; background: var(--navy-800); border-radius: 2px;
+}
+.accordion-trigger .plus::before { width: 14px; height: 2px; top: 10px; left: 4px; }
+.accordion-trigger .plus::after { width: 2px; height: 14px; top: 4px; left: 10px; transition: transform 0.2s ease; }
+.accordion-item.is-open .accordion-trigger .plus::after { transform: rotate(90deg); }
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+.accordion-panel-inner { padding: 0 20px 20px; color: var(--ink-muted); font-size: 0.92rem; }
+
+/* ---------- Timeline (Veranstaltungen) ---------- */
+.event-row {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.event-row:last-child { border-bottom: none; }
+.event-date {
+  background: var(--sand-200);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: 10px 4px;
+  height: fit-content;
+}
+.event-date .month { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-600); }
+.event-date .day { display: block; font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; color: var(--navy-900); }
+.event-row h4 { font-size: 1.02rem; margin-bottom: 4px; }
+.event-row p { font-size: 0.9rem; color: var(--ink-muted); margin-bottom: 6px; }
+.event-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--rust-600); }
+
+/* ---------- Beach section cards (Strand & Natur) ---------- */
+.pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy-800);
+  background: var(--white);
+}
+
+.filter-bar { margin-bottom: 28px; }
+button.pill { cursor: pointer; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+button.pill:hover { border-color: var(--navy-800); }
+button.pill.is-active { background: var(--navy-900); color: var(--white); border-color: var(--navy-900); }
+
+/* ---------- Split feature ---------- */
+.split {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } }
+.split.reverse .split-media { order: -1; }
+@media (min-width: 900px) { .split.reverse .split-media { order: 2; } }
+.split-media {
+  border-radius: var(--radius-lg);
+  min-height: 260px;
+  background: linear-gradient(135deg, var(--sand-300), var(--sand-100));
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.split-media svg { width: 72px; height: 72px; color: var(--navy-700); opacity: 0.55; }
+.split-media.navy { background: linear-gradient(135deg, var(--navy-900), var(--navy-700)); }
+.split-media.navy svg { color: rgba(255,255,255,0.85); opacity: 1; }
+.split-media img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy-900);
+  color: #B9C6D0;
+  padding: 56px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+@media (min-width: 720px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+.footer-brand .brand { color: var(--white); }
+.footer-brand p { color: #93A4B1; font-size: 0.9rem; margin-top: 14px; max-width: 32ch; }
+.footer-col h4 { color: var(--white); font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: 0.9rem; color: #B9C6D0; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom {
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #7C8D9A;
+}
+
+/* ---------- Page hero (subpages) ---------- */
+.page-hero {
+  padding: 44px 0 40px;
+  background: linear-gradient(180deg, var(--sand-100), var(--sand-50));
+  border-bottom: 1px solid var(--line);
+}
+/* Kompakter Kopf für die Kategorieseiten: kein großes Foto mehr davor, damit die
+   Liste der Einträge direkt sichtbar ist. */
+.page-hero--compact { padding: 26px 0 24px; }
+.page-hero--compact h1 {
+  font-size: clamp(1.55rem, 3.2vw, 2.15rem);
+  margin-bottom: 8px;
+}
+.page-hero--compact .breadcrumb { margin-bottom: 9px; }
+.page-hero--compact .lede {
+  font-size: 0.98rem;
+  max-width: 76ch;
+  margin-bottom: 0;
+}
+/* Auf dem Handy noch knapper, damit Filter und erste Karten früher sichtbar sind. */
+@media (max-width: 640px) {
+  .page-hero--compact { padding: 18px 0 16px; }
+  .page-hero--compact h1 { font-size: 1.5rem; margin-bottom: 6px; }
+  .page-hero--compact .breadcrumb { margin-bottom: 7px; font-size: 0.78rem; }
+  .page-hero--compact .lede { font-size: 0.92rem; line-height: 1.5; }
+  .section--tight { padding: 20px 0; }
+  .notice { padding: 14px 15px; font-size: 0.85rem; gap: 10px; }
+  .filter-bar { margin-bottom: 20px; }
+}
+.breadcrumb { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 14px; }
+.breadcrumb a { color: var(--teal-600); font-weight: 600; }
+.page-hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-bottom: 10px; }
+.page-hero .lede { margin-bottom: 0; }
+
+/* ---------- Misc content helpers ---------- */
+.two-col { display: grid; gap: 32px; }
+@media (min-width: 860px) { .two-col { grid-template-columns: 2fr 1fr; align-items: start; } }
+.sticky-side { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 16px; }
+
+.check-list { display: flex; flex-direction: column; gap: 10px; }
+.check-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.94rem; }
+.check-list svg { width: 18px; height: 18px; color: var(--teal-600); flex-shrink: 0; margin-top: 3px; }
+
+hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+
+/* ---------- Bildergalerie auf der Anbieter-Detailseite ---------- */
+.galerie-haupt {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--sand-200);
+  aspect-ratio: 3 / 2;
+  box-shadow: var(--shadow-md);
+}
+.galerie-haupt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.galerie-zaehler {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(10, 30, 48, 0.72);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+.galerie-pfeil {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.galerie-pfeil:hover { background: var(--white); }
+.galerie-pfeil:active { transform: translateY(-50%) scale(0.94); }
+.galerie-pfeil svg { width: 22px; height: 22px; }
+.galerie-pfeil--zurueck { left: 12px; }
+.galerie-pfeil--vor { right: 12px; }
+
+.galerie-leiste {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.galerie-vorschau {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--sand-200);
+  cursor: pointer;
+  aspect-ratio: 3 / 2;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+  opacity: 0.72;
+}
+.galerie-vorschau img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.galerie-vorschau:hover { opacity: 1; }
+.galerie-vorschau.is-active { border-color: var(--navy-800); opacity: 1; }
+
+@media (max-width: 640px) {
+  .galerie-leiste { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .galerie-pfeil { width: 40px; height: 40px; }
+  .galerie-pfeil--zurueck { left: 8px; }
+  .galerie-pfeil--vor { right: 8px; }
+}
+
+/* Aufbau der Anbieter-Detailseite.
+   Auf dem Handy stehen die Eckdaten mit dem Website-Knopf bewusst direkt unter der
+   Galerie und nicht erst nach dem Beschreibungstext. */
+.anbieter-layout { display: grid; gap: 30px; }
+/* Reihenfolge auf schmalen Bildschirmen: Galerie, dann Eckdaten mit Website-Knopf,
+   erst danach der längere Beschreibungstext. */
+.anbieter-galerie { order: 1; }
+.anbieter-info    { order: 2; }
+.anbieter-text    { order: 3; }
+@media (min-width: 900px) {
+  .anbieter-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    align-items: start;
+    column-gap: 40px;
+  }
+  .anbieter-galerie { grid-column: 1; grid-row: 1; }
+  .anbieter-text    { grid-column: 1; grid-row: 2; }
+  .anbieter-info    { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 96px; }
+}
+.anbieter-info { display: flex; flex-direction: column; gap: 16px; }
+
+/* Öffnungszeiten auf Geschäfts-Karten: bei Läden eine Pflichtangabe, deshalb
+   als eigene Zeile mit Uhr-Symbol statt versteckt im Fließtext. */
+.card-hours {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--teal-600);
+  margin: 0 0 2px;
+  line-height: 1.45;
+}
+.card-hours svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; }
