@@ -690,6 +690,18 @@
     </div>
   </section>
 
+  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
+  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Von Betrieben eingetragen</p>
+        <h2>Neu im Guide</h2>
+      </div>
+      <div class="card-grid cols-3" data-betriebe="restaurants-cafes,bars"></div>
+      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
+    </div>
+  </section>
+
 </main>
 
 <!-- @footer -->
@@ -755,6 +767,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe.js?v=23"></script>
 <script src="js/main.js?v=23"></script>
 </body>
 </html>

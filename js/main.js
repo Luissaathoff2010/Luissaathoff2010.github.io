@@ -155,6 +155,31 @@ document.addEventListener('DOMContentLoaded', function () {
     applyFilters();
   });
 
+  // Externe Inhalte (Tally-Formulare, Karten) erst nach Klick laden.
+  // <div class="klick-einbettung" data-einbettung-src="https://..."> ... <button> ... </div>
+  document.querySelectorAll('.klick-einbettung[data-einbettung-src]').forEach(function (box) {
+    var btn = box.querySelector('button');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var src = box.getAttribute('data-einbettung-src') || '';
+      if (!/^https:\/\//.test(src)) {
+        box.insertAdjacentHTML('beforeend', '<p class="einbettung-fehlt">Das Formular ist noch nicht eingerichtet.</p>');
+        btn.disabled = true;
+        return;
+      }
+      var params = new URLSearchParams(window.location.search);
+      var eintrag = params.get('eintrag');
+      if (eintrag) src += (src.indexOf('?') === -1 ? '?' : '&') + 'eintrag=' + encodeURIComponent(eintrag);
+      var frame = document.createElement('iframe');
+      frame.src = src;
+      frame.title = box.getAttribute('data-einbettung-titel') || 'Formular';
+      frame.loading = 'lazy';
+      frame.style.height = (box.getAttribute('data-einbettung-hoehe') || '900') + 'px';
+      box.replaceWith(frame);
+      frame.classList.add('einbettung-frame');
+    });
+  });
+
   // Jahr im Footer
   var yearEl = document.querySelector('[data-year]');
   if (yearEl) {

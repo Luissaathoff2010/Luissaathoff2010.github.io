@@ -1,0 +1,88 @@
+{
+  "_anleitung": "Neuen Eintrag anlegen: den Block unter _vorlage kopieren, unten in die Liste 'eintraege' einfügen (Komma zwischen den Einträgen nicht vergessen) und ausfüllen. Erlaubte Kategorien: unterkuenfte, restaurants-cafes, bars, geschaefte-mode, freizeit-aktivitaeten, fahrradverleih-service. Details: docs/eintraege.md",
+  "_vorlage": {
+    "id": "name-ohne-leerzeichen",
+    "name": "",
+    "kategorie": "restaurants-cafes",
+    "adresse": { "strasse": "", "plz": "26548", "ort": "Norderney" },
+    "koordinaten": [53.7072, 7.1478],
+    "kurzbeschreibung": "",
+    "oeffnungszeiten": { "sommer": "", "winter": "" },
+    "preisniveau": "€€",
+    "telefon": "",
+    "webseite": "https://",
+    "instagram": "https://www.instagram.com/",
+    "buchungslink": "https://",
+    "fotos": [
+      { "src": "assets/images/betriebe/name-ohne-leerzeichen/1.jpg", "alt": "Kurze Bildbeschreibung" }
+    ],
+    "luis_tipp": "",
+    "beispiel": false,
+    "zuletzt_aktualisiert": "2026-11-15"
+  },
+  "eintraege": [
+    {
+      "id": "beispiel-cafe-strandgut",
+      "name": "Café Strandgut (Beispiel)",
+      "kategorie": "restaurants-cafes",
+      "adresse": { "strasse": "Musterstraße 1", "plz": "26548", "ort": "Norderney" },
+      "koordinaten": [53.7079, 7.1462],
+      "kurzbeschreibung": "So sieht ein Eintrag aus: Kuchen, Kaffee und Blick aufs Meer. Diesen Betrieb gibt es nicht.",
+      "oeffnungszeiten": { "sommer": "täglich 9–18 Uhr", "winter": "Mi–So 10–17 Uhr" },
+      "preisniveau": "€€",
+      "telefon": "04932 000000",
+      "webseite": "https://example.com",
+      "instagram": "https://www.instagram.com/",
+      "buchungslink": "https://example.com/reservieren",
+      "fotos": [
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Café von außen" },
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Kuchentheke" },
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Terrasse" }
+      ],
+      "luis_tipp": "[LUIS-TIPP: kurzer persönlicher Satz]",
+      "beispiel": true,
+      "zuletzt_aktualisiert": "2026-11-15"
+    },
+    {
+      "id": "beispiel-radstation-duene",
+      "name": "Radstation Düne (Beispiel)",
+      "kategorie": "fahrradverleih-service",
+      "adresse": { "strasse": "Musterweg 2", "plz": "26548", "ort": "Norderney" },
+      "koordinaten": [53.7058, 7.1521],
+      "kurzbeschreibung": "So sieht ein Fahrradverleih aus: Räder, E-Bikes und Anhänger. Diesen Betrieb gibt es nicht.",
+      "oeffnungszeiten": { "sommer": "täglich 8–19 Uhr", "winter": "Mo–Sa 9–17 Uhr" },
+      "preisniveau": "€",
+      "telefon": "04932 000001",
+      "webseite": "https://example.com",
+      "instagram": "",
+      "buchungslink": "",
+      "fotos": [
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Fahrräder vor dem Laden" }
+      ],
+      "luis_tipp": "",
+      "beispiel": true,
+      "zuletzt_aktualisiert": "2026-11-15"
+    },
+    {
+      "id": "beispiel-haus-seeblick",
+      "name": "Ferienhaus Seeblick (Beispiel)",
+      "kategorie": "unterkuenfte",
+      "adresse": { "strasse": "Musterallee 3", "plz": "26548", "ort": "Norderney" },
+      "koordinaten": [53.7090, 7.1440],
+      "kurzbeschreibung": "So sieht eine Unterkunft aus: zwei Wohnungen, fünf Minuten zum Strand. Diesen Betrieb gibt es nicht.",
+      "oeffnungszeiten": { "sommer": "Anreise 15–18 Uhr", "winter": "Anreise 15–18 Uhr" },
+      "preisniveau": "€€€",
+      "telefon": "04932 000002",
+      "webseite": "https://example.com",
+      "instagram": "https://www.instagram.com/",
+      "buchungslink": "https://example.com/buchen",
+      "fotos": [
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Haus von außen" },
+        { "src": "assets/images/platzhalter-quer.svg", "alt": "Platzhalter: Wohnzimmer" }
+      ],
+      "luis_tipp": "",
+      "beispiel": true,
+      "zuletzt_aktualisiert": "2026-11-15"
+    }
+  ]
+}
