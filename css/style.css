@@ -1161,3 +1161,10 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 .geheimtipp:first-of-type { padding-top: 0; }
 .geheimtipp:last-of-type { border-bottom: 0; }
 
+
+/* ---------- Karte ---------- */
+.karte { width: 100%; height: 420px; border-radius: var(--radius-md); overflow: hidden; background: var(--sand-100); border: 1px solid var(--line); position: relative; z-index: 0; }
+.karte-start { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; background: var(--sand-100) url('../assets/images/platzhalter-quer.svg') center / cover no-repeat; }
+.karte-start p { max-width: 46ch; margin: 0; font-size: 0.9rem; background: rgba(251, 248, 242, 0.92); padding: 10px 14px; border-radius: 10px; }
+@media (max-width: 640px) { .karte { height: 340px; } }
+.karte--gross { height: 70vh; min-height: 420px; }

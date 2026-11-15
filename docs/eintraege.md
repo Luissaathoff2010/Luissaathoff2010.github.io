@@ -21,7 +21,7 @@ auf der Karte und unter `/eintrag?id=<id>`.
 | `name` | Name des Betriebs |
 | `kategorie` | Eine von: `unterkuenfte`, `restaurants-cafes`, `bars`, `geschaefte-mode`, `freizeit-aktivitaeten`, `fahrradverleih-service` |
 | `adresse` | `strasse`, `plz`, `ort` |
-| `koordinaten` | `[Breitengrad, Längengrad]` für die Karte, z. B. aus openstreetmap.org (Rechtsklick → „Adresse anzeigen“). Leer lassen (`[]`) = kein Marker. |
+| `koordinaten` | `[Breitengrad, Längengrad]` für die Karte. Leer lassen (`[]`) und `python3 tools/koordinaten.py` ausführen, dann wird sie aus der Adresse ermittelt. Ohne Koordinaten kein Marker. |
 | `kurzbeschreibung` | 1–2 Sätze |
 | `oeffnungszeiten` | `sommer` und `winter` als Text |
 | `preisniveau` | `€`, `€€` oder `€€€` |

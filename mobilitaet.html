@@ -34,6 +34,9 @@
 }
 </script>
 <!-- @head -->
+<!-- Statistik: Umami (cookiefrei). [UMAMI-ID] durch die Website-ID aus Umami ersetzen.
+     Bei eigenem Umami-Server die Adresse in src anpassen. data-domains verhindert Zählung bei lokaler Vorschau. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="[UMAMI-ID]" data-domains="[DOMAIN]"></script>
 <!-- /@head -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%230F2A43%22/><path d=%22M4 15c2 1.4 3.5 1.4 5.5 0s3.5-1.4 5.5 0 3.5 1.4 5.5 0%22 stroke=%22%23F5EFE2%22 stroke-width=%221.6%22 fill=%22none%22 stroke-linecap=%22round%22/></svg>">
 <link rel="stylesheet" href="css/style.css?v=23">
@@ -245,6 +248,7 @@
         <h2>Neu im Guide</h2>
       </div>
       <div class="card-grid cols-3" data-betriebe="fahrradverleih-service"></div>
+      <div class="karte" data-karte="fahrradverleih-service" style="margin-top:28px"></div>
       <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
@@ -272,6 +276,7 @@
           <li><a href="/geschaefte-einkaufen">Geschäfte &amp; Dienstleister</a></li>
           <li><a href="/mobilitaet">Fahrrad &amp; Mobilität</a></li>
           <li><a href="/aktivitaeten">Aktivitäten</a></li>
+          <li><a href="/karte">Inselkarte</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -317,6 +322,7 @@
 <!-- /@footer -->
 
 <script src="js/betriebe.js?v=23"></script>
+<script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>
 </body>
 </html>
