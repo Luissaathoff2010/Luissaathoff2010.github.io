@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECE1CB"/><stop offset="1" stop-color="#DFCDA8"/></linearGradient></defs>
+  <rect width="640" height="420" fill="url(#g)"/>
+  <g fill="none" stroke="#3D8A8F" stroke-width="3" stroke-linecap="round" opacity=".55" transform="translate(0 260)">
+    <path d="M0 0c53 22 106 22 160 0s106-22 160 0 106 22 160 0 106-22 160 0"/>
+    <path d="M0 40c53 22 106 22 160 0s106-22 160 0 106 22 160 0 106-22 160 0" opacity=".6"/>
+  </g>
+  <text x="50%" y="40%" text-anchor="middle" font-family="Georgia, serif" font-size="29" fill="#0F2A43" opacity=".55">Foto folgt</text>
+</svg>
