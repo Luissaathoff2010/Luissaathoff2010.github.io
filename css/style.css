@@ -1168,3 +1168,5 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 .karte-start p { max-width: 46ch; margin: 0; font-size: 0.9rem; background: rgba(251, 248, 242, 0.92); padding: 10px 14px; border-radius: 10px; }
 @media (max-width: 640px) { .karte { height: 340px; } }
 .karte--gross { height: 70vh; min-height: 420px; }
+@media (max-width: 1099px) { .footer-brand { grid-column: 1 / -1; } }
+@media (min-width: 480px) and (max-width: 719px) { .footer-grid { grid-template-columns: 1fr 1fr; } }

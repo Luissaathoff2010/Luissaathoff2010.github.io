@@ -5,7 +5,7 @@
     "name": "",
     "kategorie": "restaurants-cafes",
     "adresse": { "strasse": "", "plz": "26548", "ort": "Norderney" },
-    "koordinaten": [53.7072, 7.1478],
+    "koordinaten": [],
     "kurzbeschreibung": "",
     "oeffnungszeiten": { "sommer": "", "winter": "" },
     "preisniveau": "€€",
