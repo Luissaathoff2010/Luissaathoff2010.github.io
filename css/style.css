@@ -1113,3 +1113,24 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
   line-height: 1.45;
 }
 .card-hours svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; }
+
+/* ---------- Startseite: Fragen-Kacheln, Diese Woche, Unterkunft-Band ---------- */
+@media (min-width: 1000px) { .tile-grid--fragen { grid-template-columns: repeat(4, 1fr); } }
+.tile--frage h3 { font-size: 1.05rem; line-height: 1.25; }
+.woche-liste { display: grid; gap: 14px; list-style: none; padding: 0; margin: 0; }
+@media (min-width: 900px) { .woche-liste { grid-template-columns: repeat(3, 1fr); } }
+.woche-eintrag { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.woche-eintrag h3 { font-size: 1.1rem; margin: 0 0 4px; }
+.woche-eintrag p { margin: 0 0 4px; font-size: 0.92rem; color: var(--ink-muted); }
+.woche-tag { align-self: flex-start; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--teal-600); background: var(--sand-100); border-radius: 999px; padding: 4px 10px; }
+.unterkunft-band { background: linear-gradient(120deg, var(--navy-900), var(--teal-600)); color: var(--sand-100); }
+.unterkunft-band h2 { color: var(--white); }
+.unterkunft-band p { color: #D5E2E6; max-width: 52ch; }
+.unterkunft-band-inner { display: grid; gap: 24px; align-items: center; }
+@media (min-width: 800px) { .unterkunft-band-inner { grid-template-columns: 1fr auto; } }
+
+/* ---------- Footer: Projekt unterstützen ---------- */
+.footer-support { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-support p { margin: 0; font-size: 0.88rem; color: #93A4B1; max-width: 60ch; }
+.btn-support { background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #E6EDF1; font-size: 0.85rem; padding: 8px 16px; }
+.btn-support:hover { border-color: var(--white); color: var(--white); }
