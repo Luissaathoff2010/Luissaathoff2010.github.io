@@ -1155,3 +1155,9 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 .einbettung-frame { width: 100%; border: 0; display: block; }
 
 .card--eintrag .card-tags-row, .page-hero .card-tags-row { justify-content: flex-start; flex-wrap: wrap; }
+
+/* ---------- Geheimtipps ---------- */
+.geheimtipp { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.geheimtipp:first-of-type { padding-top: 0; }
+.geheimtipp:last-of-type { border-bottom: 0; }
+

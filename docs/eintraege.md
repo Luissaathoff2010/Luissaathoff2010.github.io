@@ -56,3 +56,12 @@ python3 -m http.server 8000
 ```
 
 und `http://localhost:8000/essen-trinken.html` öffnen. (Adressen ohne `.html` funktionieren erst auf GitHub Pages.)
+
+## Abzeichen „Luis’ Tipp“ auf festen Karten
+
+Für Einträge aus `betriebe.json` reicht das Feld `luis_tipp`. Auf den bestehenden Karten
+(z. B. in `essen-trinken.html`) diesen Block direkt unter `<p class="desc">…</p>` einfügen:
+
+```html
+<div class="luis-tipp"><span class="luis-tipp-badge">Luis’ Tipp</span><p>Dein Satz hier.</p></div>
+```
