@@ -5,5 +5,5 @@
     <path d="M0 0c53 22 106 22 160 0s106-22 160 0 106 22 160 0 106-22 160 0"/>
     <path d="M0 40c53 22 106 22 160 0s106-22 160 0 106 22 160 0 106-22 160 0" opacity=".6"/>
   </g>
-  <text x="50%" y="40%" text-anchor="middle" font-family="Georgia, serif" font-size="29" fill="#0F2A43" opacity=".55">Foto folgt</text>
+  <text x="50%" y="40%" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="29" fill="#0F2A43" opacity=".55">Foto folgt</text>
 </svg>

@@ -52,7 +52,7 @@ HEAD = """<!DOCTYPE html>
 <!-- @head -->
 <!-- /@head -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%230F2A43%22/><path d=%22M4 15c2 1.4 3.5 1.4 5.5 0s3.5-1.4 5.5 0 3.5 1.4 5.5 0%22 stroke=%22%23F5EFE2%22 stroke-width=%221.6%22 fill=%22none%22 stroke-linecap=%22round%22/></svg>">
-<link rel="stylesheet" href="css/style.css?v=23">
+<link rel="stylesheet" href="css/style.css?v=24">
 </head>
 <body>
 
@@ -82,7 +82,7 @@ HEAD = """<!DOCTYPE html>
 <!-- @footer -->
 <!-- /@footer -->
 
-<script src="js/main.js?v=23"></script>
+<script src="js/main.js?v=24"></script>
 </body>
 </html>
 """

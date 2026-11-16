@@ -7,7 +7,7 @@ Statische Website (HTML/CSS/JS), gehostet über GitHub Pages.
 | Ordner/Datei | Inhalt |
 |---|---|
 | `*.html` | Seiten (Adressen ohne `.html`, z. B. `/essen-trinken`) |
-| `css/style.css` | Design (Sand/Navy/Teal, Fraunces + Work Sans) |
+| `css/style.css` | Design (Sand/Navy/Teal, Inter) |
 | `js/main.js` | Menü, Filter, Akkordeon, Formulare/Karte erst nach Klick |
 | `daten/betriebe.json` | Alle Betriebe (Unterkünfte, Gastronomie, Geschäfte, Aktivitäten, Fahrrad), siehe `docs/eintraege.md` |
 | `js/betriebe.js`, `js/betriebe-felder.js` | Detailseite `/eintrag?id=…` (`betriebe-felder.js` wird erzeugt) |
