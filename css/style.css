@@ -1197,3 +1197,4 @@ hr.rule { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
 @media (max-width: 639px) {
   .unterstuetzen-box .btn { justify-self: stretch; justify-content: center; }
 }
+.check-list + p { margin-top: 14px; }
