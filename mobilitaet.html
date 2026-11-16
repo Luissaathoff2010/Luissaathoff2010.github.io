@@ -194,20 +194,35 @@
         <p class="eyebrow">Fahrradverleih</p>
         <h2>Rad leihen &amp; direkt losfahren</h2>
       </div>
+      <!-- @betriebe -->
+      <!-- Automatisch erzeugt aus daten/betriebe.json mit: python3 tools/betriebe.py – hier nichts von Hand ändern. -->
       <div class="card-grid">
-        <div class="card">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Fahrradverleih Rad Toni mit Reihen bunter Leihräder auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="rad-toni" data-betrieb-karte data-kategorie="fahrradverleih-service">
+          <a class="card-media" href="/eintrag?id=rad-toni" aria-label="Details zu Rad Toni"><img src="assets/images/platzhalter-karte.svg" alt="Fahrradverleih Rad Toni mit Reihen bunter Leihräder auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Fahrradverleih · E-Bikes</span>
-            <h3>Rad Toni</h3>
-            <p class="card-meta">Jann-Berghaus-Str. 62 · Mühlenstr. 17 · Winterstr. 4a</p>
+            <div class="card-tags-row"><span class="card-tag">Fahrradverleih · E-Bikes</span></div>
+            <h3><a href="/eintrag?id=rad-toni">Rad Toni</a></h3>
+            <p class="card-meta">Jann-Berghaus-Str. 62 · Weitere Standorte: Mühlenstr. 17 · Winterstr. 4a</p>
             <p class="desc">Verleih, Verkauf, Beratung und Reparatur an drei Standorten auf der Insel — von Cruisern mit breiten Reifen über Lastenräder bis zu E-Bikes für den Wind.</p>
-            <div class="card-foot">
-              <a href="tel:049323378" class="btn btn-outline btn-sm">04932 3378</a>
-              <a href="https://radtoni.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://radtoni.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=rad-toni" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=rad-toni">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=rad-toni#frag-luis">Fehler melden</a></p>
           </div>
         </div>
+        <div class="card card--eintrag is-beispiel" id="beispiel-radstation-duene" data-betrieb-karte data-kategorie="fahrradverleih-service" data-preis="€">
+          <a class="card-media" href="/eintrag?id=beispiel-radstation-duene" aria-label="Details zu Radstation Düne (Beispiel)"><img src="assets/images/platzhalter-quer.svg" alt="Platzhalter: Fahrräder vor dem Laden" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag card-tag--beispiel">Beispiel</span><span class="card-tag">Fahrradverleih &amp; Service</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=beispiel-radstation-duene">Radstation Düne (Beispiel)</a></h3>
+            <p class="card-meta">Musterweg 2</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sommer: täglich 8–19 Uhr · Winter: Mo–Sa 9–17 Uhr</p>
+            <p class="desc">So sieht ein Fahrradverleih aus: Räder, E-Bikes und Anhänger. Diesen Betrieb gibt es nicht.</p>
+            <div class="card-foot"><a href="https://example.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=beispiel-radstation-duene" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 15.11.2026 · Angaben vom Betrieb, ohne Gewähr · <a href="/kontakt?eintrag=beispiel-radstation-duene#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- /@betriebe -->
+      <div class="card-grid" style="margin-top:28px">
         <div class="card">
           <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Reihe abgestellter Leihräder verschiedener Anbieter auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
           <div class="card-body">
@@ -221,6 +236,8 @@
           </div>
         </div>
       </div>
+      <div class="karte" data-karte="fahrradverleih-service" style="margin-top:28px"></div>
+      <p class="betrieb-cta">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
 
@@ -240,18 +257,6 @@
     </div>
   </section>
 
-  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
-  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Von Betrieben eingetragen</p>
-        <h2>Neu im Guide</h2>
-      </div>
-      <div class="card-grid cols-3" data-betriebe="fahrradverleih-service"></div>
-      <div class="karte" data-karte="fahrradverleih-service" style="margin-top:28px"></div>
-      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
-    </div>
-  </section>
 
 </main>
 
@@ -321,6 +326,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe-felder.js?v=23"></script>
 <script src="js/betriebe.js?v=23"></script>
 <script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>

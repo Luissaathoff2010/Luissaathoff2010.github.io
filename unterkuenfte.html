@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unterkünfte auf Norderney — Hotels, Ferienwohnungen &amp; Pensionen | Norderney Guide</title>
-<meta name="description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: 30 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
+<meta name="description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: knapp 50 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
 <link rel="canonical" href="https://[DOMAIN]/unterkuenfte">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Norderney Guide">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Unterkünfte auf Norderney — Hotels, Ferienwohnungen &amp; Pensionen | Norderney Guide">
-<meta property="og:description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: 30 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
+<meta property="og:description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: knapp 50 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
 <meta property="og:url" content="https://[DOMAIN]/unterkuenfte">
 <meta property="og:image" content="https://[DOMAIN]/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Unterkünfte auf Norderney — Hotels, Ferienwohnungen &amp; Pensionen | Norderney Guide">
-<meta name="twitter:description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: 30 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
+<meta name="twitter:description" content="Hotels, Ferienwohnungen und Pensionen auf Norderney: knapp 50 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.">
 <meta name="twitter:image" content="https://[DOMAIN]/assets/og-image.png">
 <script type="application/ld+json">
 {
@@ -25,7 +25,7 @@
   "@type": "WebSite",
   "name": "Norderney Guide",
   "url": "https://[DOMAIN]/",
-  "description": "Hotels, Ferienwohnungen und Pensionen auf Norderney: 30 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.",
+  "description": "Hotels, Ferienwohnungen und Pensionen auf Norderney: knapp 50 Unterkünfte mit Bildern, Lage und Preisniveau, mit Direktlink zum Anbieter. Buchung erfolgt beim Anbieter.",
   "inLanguage": "de-DE",
   "publisher": {
     "@type": "Person",
@@ -131,7 +131,7 @@
     <div class="container">
       <div class="notice">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
-        <p><strong>Wichtig:</strong> Hier kannst du nicht buchen. Über „Website besuchen“ kommst du direkt zum Anbieter. Dort siehst du freie Termine und Preise.</p>
+        <p><strong>Wichtig:</strong> Hier kannst du nicht buchen. Über „Jetzt buchen“ kommst du direkt zum Anbieter. Dort siehst du freie Termine und Preise.</p>
       </div>
     </div>
   </section>
@@ -139,724 +139,588 @@
   <section class="section" style="padding-top:24px">
     <div class="container">
 
-      <div class="filter-bar pill-row" data-filter-group="[data-accommodation-card]" data-filter-attr="category">
-        <button class="pill is-active" data-filter="alle">Alle</button>
-        <button class="pill" data-filter="hotel">Hotels</button>
-        <button class="pill" data-filter="ferienwohnung">Ferienwohnungen &amp; -häuser</button>
-        <button class="pill" data-filter="pension">Pensionen</button>
-        <button class="pill" data-filter="vermittlung">Vermittlung &amp; Suche</button>
+      <!-- @betriebe -->
+      <!-- Automatisch erzeugt aus daten/betriebe.json mit: python3 tools/betriebe.py – hier nichts von Hand ändern. -->
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Art" data-filter-group="[data-betrieb-karte]" data-filter-attr="art">
+        <span class="filter-titel">Art</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alle Arten</button>
+        <button class="pill" type="button" data-filter="hotel">Hotel</button>
+        <button class="pill" type="button" data-filter="ferienwohnung">Ferienwohnung</button>
+        <button class="pill" type="button" data-filter="pension">Pension</button>
+        <button class="pill" type="button" data-filter="vermittlung">Vermittlung</button>
       </div>
-
-      <div class="filter-bar pill-row" data-filter-group="[data-accommodation-card]" data-filter-attr="location">
-        <button class="pill is-active" data-filter="alle">Alle Lagen</button>
-        <button class="pill" data-filter="weststrand">Weststrand</button>
-        <button class="pill" data-filter="oststrand">Oststrand</button>
-        <button class="pill" data-filter="nordstrand">Nordstrand</button>
-        <button class="pill" data-filter="stadt">Inselmitte &amp; Stadt</button>
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Lage" data-filter-group="[data-betrieb-karte]" data-filter-attr="lage">
+        <span class="filter-titel">Lage</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alle Lagen</button>
+        <button class="pill" type="button" data-filter="weststrand">Weststrand</button>
+        <button class="pill" type="button" data-filter="oststrand">Oststrand</button>
+        <button class="pill" type="button" data-filter="nordstrand">Nordstrand</button>
+        <button class="pill" type="button" data-filter="stadt">Inselmitte &amp; Stadt</button>
       </div>
-
-      <div class="filter-bar pill-row" data-filter-group="[data-accommodation-card]" data-filter-attr="price">
-        <button class="pill is-active" data-filter="alle">Alle Preisniveaus</button>
-        <button class="pill" data-filter="€">€ günstig</button>
-        <button class="pill" data-filter="€€">€€ mittel</button>
-        <button class="pill" data-filter="€€€">€€€ gehoben</button>
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Preis" data-filter-group="[data-betrieb-karte]" data-filter-attr="preis">
+        <span class="filter-titel">Preis</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alle Preise</button>
+        <button class="pill" type="button" data-filter="€">€ günstig</button>
+        <button class="pill" type="button" data-filter="€€">€€ mittel</button>
+        <button class="pill" type="button" data-filter="€€€">€€€ gehoben</button>
       </div>
-
       <div class="card-grid">
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=strandhotel-georgshoehe" aria-label="Details zu Strandhotel Georgshöhe"><img src="assets/images/platzhalter-karte.svg" alt="Strandhotel Georgshöhe direkt an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="strandhotel-georgshoehe" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=strandhotel-georgshoehe" aria-label="Details zu Strandhotel Georgshöhe"><img src="assets/images/platzhalter-karte.svg" alt="Strandhotel Georgshöhe direkt an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · Spa-Resort</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=strandhotel-georgshoehe">Strandhotel Georgshöhe</a></h3>
-            <!-- Lage-Einschätzung (Weststrand) auf Basis der Kaiserstraße-Adresse, nicht amtlich verifiziert -->
+            <h3><a href="/eintrag?id=strandhotel-georgshoehe">Strandhotel Georgshöhe</a></h3>
             <p class="card-meta">Kaiserstraße 24 · Weststrand · Wellness &amp; Fitness</p>
             <p class="desc">Das Superior Spa- und Resorthotel liegt direkt an der Strandpromenade und gehört zu den größeren Wellnesshäusern der Insel. Ein großzügiger Spa- und Saunabereich sowie ein Fitnessstudio sorgen dafür, dass sich der Aufenthalt auch bei schlechtem Wetter lohnt. Die Zimmer sind überwiegend auf Erholung und längere Aufenthalte ausgelegt, viele mit Balkon oder Blick auf Strand und Dünen. Besonders geeignet ist das Haus für Paare und Wellness-Urlauber, die Wert auf Service und ein umfangreiches Freizeitangebot im Haus legen. Die Lage an der Promenade bedeutet kurze Wege zum Strand und in den Ortskern.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=strandhotel-georgshoehe" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.georgshoehe.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.georgshoehe.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=strandhotel-georgshoehe" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=strandhotel-georgshoehe">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=strandhotel-georgshoehe#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-stranddistel" aria-label="Details zu Hotel Stranddistel"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Stranddistel unterhalb der Weststrandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-stranddistel" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-stranddistel" aria-label="Details zu Hotel Stranddistel"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Stranddistel unterhalb der Weststrandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-stranddistel">Hotel Stranddistel</a></h3>
+            <h3><a href="/eintrag?id=hotel-stranddistel">Hotel Stranddistel</a></h3>
             <p class="card-meta">Damenpfad 17 · unterhalb der Weststrandpromenade · 19 Zimmer</p>
             <p class="desc">Das familiär geführte Hotel liegt unterhalb der Weststrandpromenade und punktet vor allem mit der direkten Strandnähe. Mit 19 Zimmern ist es überschaubar und persönlich geführt, was viele Stammgäste schätzen. Von hier sind sowohl der Strand als auch der Ortskern in wenigen Minuten zu Fuß erreichbar. Das Haus eignet sich gut für Paare und Gäste, die unkomplizierten Komfort in bester Strandlage suchen, ohne die Größe eines Resorthotels.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-stranddistel" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://inselhaeuser-norderney.de/hotel-stranddistel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://inselhaeuser-norderney.de/hotel-stranddistel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-stranddistel" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-stranddistel">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-stranddistel#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=inselhotel-koenig" aria-label="Details zu Inselhotel König"><img src="assets/images/platzhalter-karte.svg" alt="Inselhotel König, historisches Gebäude von 1868 im Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselhotel-koenig" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=inselhotel-koenig" aria-label="Details zu Inselhotel König"><img src="assets/images/platzhalter-karte.svg" alt="Inselhotel König, historisches Gebäude von 1868 im Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · 4 Sterne</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=inselhotel-koenig">Inselhotel König</a></h3>
+            <h3><a href="/eintrag?id=inselhotel-koenig">Inselhotel König</a></h3>
             <p class="card-meta">Bülowallee 8 · Zentrum</p>
-            <p class="desc">Das 4-Sterne-Hotel liegt in einem historischen Gebäude mitten im Zentrum von Norderney. Zur Ausstattung gehören ein Wellness- und Saunabereich, das hauseigene Restaurant „Leib &amp; Seele" sowie die Bülow-Bar für den Abend. Die zentrale Lage bringt kurze Wege zu Geschäften, Restaurants und dem Kurplatz mit sich. Das Haus verbindet historisches Ambiente mit modernem Komfort und eignet sich für Gäste, die gehobenen Standard und Innenstadtlage schätzen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselhotel-koenig" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.inselhotel-koenig.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">Das 4-Sterne-Hotel liegt in einem historischen Gebäude mitten im Zentrum von Norderney. Zur Ausstattung gehören ein Wellness- und Saunabereich, das hauseigene Restaurant „Leib &amp; Seele&quot; sowie die Bülow-Bar für den Abend. Die zentrale Lage bringt kurze Wege zu Geschäften, Restaurants und dem Kurplatz mit sich. Das Haus verbindet historisches Ambiente mit modernem Komfort und eignet sich für Gäste, die gehobenen Standard und Innenstadtlage schätzen.</p>
+            <div class="card-foot"><a href="https://www.inselhotel-koenig.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselhotel-koenig" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselhotel-koenig">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselhotel-koenig#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-haus-waterkant" aria-label="Details zu Hotel Haus Waterkant"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Haus Waterkant mit Seeblick auf den Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-haus-waterkant" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-haus-waterkant" aria-label="Details zu Hotel Haus Waterkant"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Haus Waterkant mit Seeblick auf den Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-haus-waterkant">Hotel Haus Waterkant</a></h3>
-            <!-- Lage-Einschätzung (Weststrand) nicht amtlich verifiziert -->
+            <h3><a href="/eintrag?id=hotel-haus-waterkant">Hotel Haus Waterkant</a></h3>
             <p class="card-meta">Seeblick · Familienbetrieb seit 1959</p>
             <p class="desc">Das Traditionshotel wird bereits in dritter Generation familiär geführt und verfügt seit der Erweiterung um die Strandvilla Eils über 51 Doppel- und 21 Einzelzimmer. Viele Zimmer bieten Seeblick, was das Haus besonders bei Gästen beliebt macht, die morgens direkt aufs Wasser schauen möchten. Die gewachsene Struktur aus Stammhaus und Strandvilla sorgt für unterschiedliche Zimmerkategorien für verschiedene Ansprüche. Geeignet ist das Hotel für Gäste, die ein traditionsreiches, familiär geführtes Haus mit Meerblick suchen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-haus-waterkant" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://haus-waterkant.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://haus-waterkant.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-haus-waterkant" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-haus-waterkant">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-haus-waterkant#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=michels-inselhotel-vier-jahreszeiten" aria-label="Details zu Michels Inselhotel Vier Jahreszeiten"><img src="assets/images/platzhalter-karte.svg" alt="Michels Inselhotel Vier Jahreszeiten im Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-inselhotel-vier-jahreszeiten" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=michels-inselhotel-vier-jahreszeiten" aria-label="Details zu Michels Inselhotel Vier Jahreszeiten"><img src="assets/images/platzhalter-karte.svg" alt="Michels Inselhotel Vier Jahreszeiten im Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · 4 Sterne</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=michels-inselhotel-vier-jahreszeiten">Michels Inselhotel Vier Jahreszeiten</a></h3>
+            <h3><a href="/eintrag?id=michels-inselhotel-vier-jahreszeiten">Michels Inselhotel Vier Jahreszeiten</a></h3>
             <p class="card-meta">Herrenpfad 25 · Inselmitte</p>
             <p class="desc">Das moderne 4-Sterne-Hotel liegt zentral im Ort am Herrenpfad und verfügt über 95 individuell eingerichtete Zimmer. Ein Wellnessbereich mit Innenpool, Sauna und Spa-Lounge sowie eine Dachterrasse mit Inselblick prägen das Haus. Das Hotel ist ausdrücklich hundefreundlich und hat einen eigenen Frühstücksbereich für Gäste mit Hund. Geeignet für Wellness- und Erholungsurlauber sowie Hundebesitzer, die eine zentrale Lage schätzen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-inselhotel-vier-jahreszeiten" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/inselhotel-vier-jahreszeiten/hotel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/inselhotel-vier-jahreszeiten/hotel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-inselhotel-vier-jahreszeiten" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-inselhotel-vier-jahreszeiten">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-inselhotel-vier-jahreszeiten#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=michels-strandhotel-germania" aria-label="Details zu Michels Strandhotel Germania"><img src="assets/images/platzhalter-karte.svg" alt="Michels Strandhotel Germania nahe dem Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-strandhotel-germania" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=michels-strandhotel-germania" aria-label="Details zu Michels Strandhotel Germania"><img src="assets/images/platzhalter-karte.svg" alt="Michels Strandhotel Germania nahe dem Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · 4 Sterne</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=michels-strandhotel-germania">Michels Strandhotel Germania</a></h3>
+            <h3><a href="/eintrag?id=michels-strandhotel-germania">Michels Strandhotel Germania</a></h3>
             <p class="card-meta">Ortszentrum · rund 100 m zum Strand</p>
             <p class="desc">Das 4-Sterne-Hotel liegt im Ortszentrum, nur rund 100 Meter vom Nordseestrand entfernt. Bekannt ist es für die höchstgelegene Dachterrassen-Sauna der Insel mit Panoramablick sowie einen Spa-Bereich mit Innenpool, Dampfbad und finnischer Sauna. 86 Zimmer in verschiedenen Kategorien von Einzel- bis Suite sind mit Boxspringbetten ausgestattet. Passend für Gäste, die zentrale Lage mit kurzem Strandweg und Wellness verbinden möchten.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-strandhotel-germania" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/strandhotel-germania-norderney/hotel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/strandhotel-germania-norderney/hotel/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-strandhotel-germania" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-strandhotel-germania">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-strandhotel-germania#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-friese" aria-label="Details zu Hotel Friese"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Friese in der Fußgängerzone Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-friese" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-friese" aria-label="Details zu Hotel Friese"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Friese in der Fußgängerzone Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-friese">Hotel Friese</a></h3>
+            <h3><a href="/eintrag?id=hotel-friese">Hotel Friese</a></h3>
             <p class="card-meta">Friedrichstraße 34 · Fußgängerzone</p>
             <p class="desc">Das Traditionshotel liegt mitten in der Fußgängerzone. Die Zimmer sind mit Sat-TV, Safe und renovierten Bädern ausgestattet, ein Teil davon mit Balkon oder Terrasse; die Suiten bieten zusätzlich Minibar und Kaffeemaschine. Durch die zentrale Lage an der Friedrichstraße sind Geschäfte, Cafés und der Weg zum Strand kurz. Geeignet für Gäste, die klassischen Hotelkomfort in Laufnähe zu allem Wichtigen suchen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-friese" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.hotel-friese.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.hotel-friese.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-friese" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-friese">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-friese#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=pension-kama" aria-label="Details zu Pension Kama"><img src="assets/images/platzhalter-karte.svg" alt="Frühstückspension Kama auf Norderney, gemütliches Gästezimmer (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="pension-kama" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=pension-kama" aria-label="Details zu Pension Kama"><img src="assets/images/platzhalter-karte.svg" alt="Frühstückspension Kama auf Norderney, gemütliches Gästezimmer (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=pension-kama">Pension Kama</a></h3>
-            <p class="card-meta">Frühstückspension · zentral</p>
+            <h3><a href="/eintrag?id=pension-kama">Pension Kama</a></h3>
+            <p class="card-meta">Frühstückspension · zentral · Website derzeit nicht erreichbar</p>
             <p class="desc">Die familiär geführte Frühstückspension liegt zentral auf der Insel und punktet mit persönlicher Atmosphäre statt Hotel-Anonymität. Die überschaubare Zimmerzahl ermöglicht individuelle Betreuung der Gäste durch die Gastgeber. Das Frühstück ist im Preis inbegriffen und wird in familiärem Rahmen serviert. Geeignet ist die Pension für Gäste, die Wert auf persönlichen Kontakt und ein gutes Preis-Leistungs-Verhältnis legen, statt auf umfangreiche Hotel-Ausstattung.</p>
-            <!-- TODO: echte Website noch prüfen. pension-kama.de war am 01.09.2026 nicht
-                 erreichbar (Server antwortet nicht). Bis zur Klärung bewusst kein Link,
-                 statt auf ein fremdes Vermittlungsportal auszuweichen. -->
-            <div class="card-foot">
-              <a href="/anbieter?id=pension-kama" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <span class="card-meta">Website derzeit nicht erreichbar</span>
-            </div>
+            <div class="card-foot"><a href="/eintrag?id=pension-kama" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=pension-kama">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=pension-kama#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=haus-elimar-weber" aria-label="Details zu Haus Elimar Weber"><img src="assets/images/platzhalter-karte.svg" alt="Pension Haus Elimar Weber an der Adolfsreihe auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="haus-elimar-weber" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=haus-elimar-weber" aria-label="Details zu Haus Elimar Weber"><img src="assets/images/platzhalter-karte.svg" alt="Pension Haus Elimar Weber an der Adolfsreihe auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension &amp; Gästehaus</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=haus-elimar-weber">Haus Elimar Weber</a></h3>
+            <h3><a href="/eintrag?id=haus-elimar-weber">Haus Elimar Weber</a></h3>
             <p class="card-meta">Adolfsreihe 1 · am Kurplatz, in der Fußgängerzone</p>
             <p class="desc">Das Pensions- und Gästehaus liegt am Kurplatz, direkt gegenüber dem Conversations- und Badehaus und mitten in der Fußgängerzone. Die Gastgeber legen Wert auf persönliche Betreuung und einen familiären Umgang mit den Gästen. Wer kurze Wege zu Cafés, Geschäften und Veranstaltungen sucht, wohnt hier zentral. Umgekehrt sollte man wissen: In dieser Lage geht es tagsüber lebhaft zu.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=haus-elimar-weber" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.haus-elimar-weber.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.haus-elimar-weber.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=haus-elimar-weber" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=haus-elimar-weber">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=haus-elimar-weber#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=inselpension-henriette" aria-label="Details zu Inselpension Henriette"><img src="assets/images/platzhalter-karte.svg" alt="Inselpension Henriette mit angeschlossenem Café auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselpension-henriette" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=inselpension-henriette" aria-label="Details zu Inselpension Henriette"><img src="assets/images/platzhalter-karte.svg" alt="Inselpension Henriette mit angeschlossenem Café auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension &amp; Café</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=inselpension-henriette">Inselpension Henriette</a></h3>
+            <h3><a href="/eintrag?id=inselpension-henriette">Inselpension Henriette</a></h3>
             <p class="card-meta">13 Zimmer · Frühstück inklusive</p>
             <p class="desc">Die liebevoll geführte Pension mit angeschlossenem Café bietet 13 individuell gestaltete Zimmer und familiären Service. Das Frühstück ist inklusive und wird in gemütlicher Atmosphäre serviert. Persönliche Betreuung und eine ruhige, private Atmosphäre stehen im Vordergrund. Passend für Gäste, die eine ruhige, persönlich geführte Unterkunft abseits großer Hotelketten suchen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselpension-henriette" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://henriette-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://henriette-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselpension-henriette" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselpension-henriette">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselpension-henriette#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=seemoi" aria-label="Details zu Seemoi"><img src="assets/images/platzhalter-karte.svg" alt="Bed-and-Breakfast Pension Seemoi auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="seemoi" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=seemoi" aria-label="Details zu Seemoi"><img src="assets/images/platzhalter-karte.svg" alt="Bed-and-Breakfast Pension Seemoi auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension · Bed &amp; Breakfast</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=seemoi">Seemoi</a></h3>
+            <h3><a href="/eintrag?id=seemoi">Seemoi</a></h3>
             <p class="card-meta">Familiengeführt in dritter Generation</p>
-            <p class="desc">Die familiär geführte Bed-&amp;-Breakfast-Pension liegt rund 100&nbsp;m von der Strandpromenade und 200&nbsp;m von der Fußgängerzone entfernt. Ein persönliches, liebevoll zubereitetes Frühstück und gepflegte Zimmer prägen das Haus. Geeignet für Gäste, die familiäre Gastfreundschaft und kurze Wege gleichermaßen schätzen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=seemoi" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.seemoi.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">Die familiär geführte Bed-&amp;-Breakfast-Pension liegt rund 100 m von der Strandpromenade und 200 m von der Fußgängerzone entfernt. Ein persönliches, liebevoll zubereitetes Frühstück und gepflegte Zimmer prägen das Haus. Geeignet für Gäste, die familiäre Gastfreundschaft und kurze Wege gleichermaßen schätzen.</p>
+            <div class="card-foot"><a href="https://www.seemoi.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=seemoi" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=seemoi">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=seemoi#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=pension-haus-weierts" aria-label="Details zu Pension Haus Weierts"><img src="assets/images/platzhalter-karte.svg" alt="Pension Haus Weierts an der Kreuzstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="pension-haus-weierts" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=pension-haus-weierts" aria-label="Details zu Pension Haus Weierts"><img src="assets/images/platzhalter-karte.svg" alt="Pension Haus Weierts an der Kreuzstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=pension-haus-weierts">Pension Haus Weierts</a></h3>
-            <p class="card-meta">Kreuzstr. 8 · 15 Zimmer · Strand: ca. 200 m</p>
+            <h3><a href="/eintrag?id=pension-haus-weierts">Pension Haus Weierts</a></h3>
+            <p class="card-meta">Kreuzstr. 8 · 15 Zimmer · Strand: ca. 200 m · Website derzeit nicht erreichbar</p>
             <p class="desc">Familiär geführte Pension in zentraler, ruhiger Lage. Die Angaben zu Zimmerzahl und Ausstattung lassen sich derzeit nicht überprüfen, weil der Internetauftritt offline ist. Gut geeignet für preisbewusste Gäste, die dennoch zentral wohnen möchten.</p>
-            <!-- TODO: echte Website noch prüfen. pension-haus-weierts.de liefert nur eine
-                 geparkte Domain ("This domain is now reserved"), keine echte Website.
-                 Damit sind auch Zimmerzahl und Entfernungsangabe unbelegt. -->
-            <div class="card-foot">
-              <a href="/anbieter?id=pension-haus-weierts" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <span class="card-meta">Website derzeit nicht erreichbar</span>
-            </div>
+            <div class="card-foot"><a href="https://www.openstreetmap.org/search?query=Kreuzstr.%208%2C%2026548%20Norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Route anzeigen</a><a href="/eintrag?id=pension-haus-weierts" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=pension-haus-weierts">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=pension-haus-weierts#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=inselhaeuser-norderney" aria-label="Details zu Inselhäuser Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung von Inselhäuser Norderney mit großem Balkon (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselhaeuser-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=inselhaeuser-norderney" aria-label="Details zu Inselhäuser Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung von Inselhäuser Norderney mit großem Balkon (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Ferienwohnungen</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=inselhaeuser-norderney">Inselhäuser Norderney</a></h3>
+            <h3><a href="/eintrag?id=inselhaeuser-norderney">Inselhäuser Norderney</a></h3>
             <p class="card-meta">Familienbetrieb Deckena-Meyer</p>
             <p class="desc">Der Familienbetrieb Deckena-Meyer vermietet großzügig geschnittene, gepflegte Ferienwohnungen mit großen Balkonen in ruhiger Umgebung. Zum Angebot der Familie gehört auch das eigene Hotel Stranddistel, wodurch langjährige Erfahrung in der Gästebetreuung auf der Insel vorhanden ist. Die Wohnungen eignen sich durch ihre Größe besonders für Familien und Gruppen, die Selbstversorgung und Privatsphäre schätzen. Die ruhige Lage der Objekte bietet Erholung abseits des touristischen Trubels.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselhaeuser-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://inselhaeuser-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://inselhaeuser-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselhaeuser-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselhaeuser-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselhaeuser-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=insular" aria-label="Details zu Insular"><img src="assets/images/platzhalter-karte.svg" alt="Modernes Ferienhaus von Insular auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="insular" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=insular" aria-label="Details zu Insular"><img src="assets/images/platzhalter-karte.svg" alt="Modernes Ferienhaus von Insular auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Ferienhäuser &amp; Apartments</span>
-            <h3><a href="/anbieter?id=insular">Insular</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Ferienhäuser &amp; Apartments</span></div>
+            <h3><a href="/eintrag?id=insular">Insular</a></h3>
             <p class="card-meta">Vermittlung · Preise variieren je Objekt</p>
             <p class="desc">Insular vermittelt Ferienhäuser und Apartments unterschiedlichster Größen und Ausstattungsstufen über die ganze Insel verteilt. Das Angebot reicht von kompakten Apartments für Paare bis zu größeren Ferienhäusern für Familien oder Gruppen. Durch die Bandbreite der vermittelten Objekte lässt sich für sehr unterschiedliche Ansprüche und Budgets eine passende Unterkunft finden. Die Buchung und Preisauskunft erfolgt direkt über die Website des Vermittlers.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=insular" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.insular.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.insular.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=insular" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=insular">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=insular#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung">
-          <div class="card-media"><a href="/anbieter?id=die-insellotsen" aria-label="Details zu Die Insellotsen"><img src="assets/images/platzhalter-karte.svg" alt="Persönliche Schlüsselübergabe einer Ferienwohnung auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="die-insellotsen" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung">
+          <a class="card-media" href="/eintrag?id=die-insellotsen" aria-label="Details zu Die Insellotsen"><img src="assets/images/platzhalter-karte.svg" alt="Persönliche Schlüsselübergabe einer Ferienwohnung auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Ferienwohnungen</span>
-            <h3><a href="/anbieter?id=die-insellotsen">Die Insellotsen</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Ferienwohnungen</span></div>
+            <h3><a href="/eintrag?id=die-insellotsen">Die Insellotsen</a></h3>
             <p class="card-meta">Persönliche Schlüsselübergabe · Preise variieren</p>
             <p class="desc">Die Insellotsen vermitteln Ferienwohnungen auf Norderney und legen besonderen Wert auf den persönlichen Empfang der Gäste. Bei der Schlüsselübergabe vor Ort gibt es zusätzlich eine kurze Insel-Einweisung, die besonders Erstbesuchern die Orientierung erleichtert. Dieser persönliche Service unterscheidet die Agentur von rein digitalen Buchungsplattformen. Geeignet für Gäste, die bei der Ferienwohnungs-Buchung nicht auf persönlichen Kontakt verzichten möchten.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=die-insellotsen" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.dieinsellotsen.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.dieinsellotsen.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=die-insellotsen" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=die-insellotsen">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=die-insellotsen#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung">
-          <div class="card-media"><a href="/anbieter?id=onkes-fritsching-vermietung" aria-label="Details zu Onkes-Fritsching Vermietung"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnungs-Vermittlung Onkes-Fritsching auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="onkes-fritsching-vermietung" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung">
+          <a class="card-media" href="/eintrag?id=onkes-fritsching-vermietung" aria-label="Details zu Onkes-Fritsching Vermietung"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnungs-Vermittlung Onkes-Fritsching auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Ferienwohnungen · Große Auswahl</span>
-            <h3><a href="/anbieter?id=onkes-fritsching-vermietung">Onkes-Fritsching Vermietung</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Ferienwohnungen · Große Auswahl</span></div>
+            <h3><a href="/eintrag?id=onkes-fritsching-vermietung">Onkes-Fritsching Vermietung</a></h3>
             <p class="card-meta">Ferienwohnungen &amp; -häuser · Preise variieren</p>
             <p class="desc">Onkes-Fritsching vermittelt Ferienunterkünfte auf der ganzen Insel. Das Angebot reicht von der kleinen Wohnung bis zum Ferienhaus für größere Gruppen. Durch die schiere Größe des Portfolios ist die Auswahl entsprechend breit gefächert. Geeignet für Gäste, die aus einem sehr breiten Angebot verschiedenster Objekttypen wählen möchten.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=onkes-fritsching-vermietung" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.onkes-fritsching.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.onkes-fritsching.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=onkes-fritsching-vermietung" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=onkes-fritsching-vermietung">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=onkes-fritsching-vermietung#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung">
-          <div class="card-media"><a href="/anbieter?id=vermietservice-passepartout" aria-label="Details zu Vermietservice Passepartout"><img src="assets/images/platzhalter-karte.svg" alt="Vermietservice Passepartout Norderney im Zentrum der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="vermietservice-passepartout" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung">
+          <a class="card-media" href="/eintrag?id=vermietservice-passepartout" aria-label="Details zu Vermietservice Passepartout"><img src="assets/images/platzhalter-karte.svg" alt="Vermietservice Passepartout Norderney im Zentrum der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Ferienwohnungen · Persönlich</span>
-            <h3><a href="/anbieter?id=vermietservice-passepartout">Vermietservice Passepartout</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Ferienwohnungen · Persönlich</span></div>
+            <h3><a href="/eintrag?id=vermietservice-passepartout">Vermietservice Passepartout</a></h3>
             <p class="card-meta">Zentrum · Preise variieren</p>
             <p class="desc">Der Vermietservice betreut Ferienwohnungen im Zentrum von Norderney persönlich und unaufwändig. Als kleinerer, persönlicherer Anbieter unterscheidet er sich von den großen Vermietagenturen der Insel. Geeignet für Gäste, die zentral gelegene Ferienwohnungen mit persönlichem Ansprechpartner suchen, statt aus einem sehr großen Portfolio zu wählen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=vermietservice-passepartout" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.passepartout-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.passepartout-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=vermietservice-passepartout" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=vermietservice-passepartout">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=vermietservice-passepartout#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=norderney-vermietagentur" aria-label="Details zu Norderney Vermietagentur"><img src="assets/images/platzhalter-karte.svg" alt="Norderney Vermietagentur, Vermittlung von Ferienhäusern auf der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="norderney-vermietagentur" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=norderney-vermietagentur" aria-label="Details zu Norderney Vermietagentur"><img src="assets/images/platzhalter-karte.svg" alt="Norderney Vermietagentur, Vermittlung von Ferienhäusern auf der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Ferienwohnungen &amp; -häuser</span>
-            <h3><a href="/anbieter?id=norderney-vermietagentur">Norderney Vermietagentur</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Ferienwohnungen &amp; -häuser</span></div>
+            <h3><a href="/eintrag?id=norderney-vermietagentur">Norderney Vermietagentur</a></h3>
             <p class="card-meta">Vermittlung · Preise variieren</p>
             <p class="desc">Die Norderney Vermietagentur vermittelt Ferienwohnungen und Ferienhäuser für Eigentümer und Gäste über die ganze Insel verteilt. Das Spektrum umfasst Objekte verschiedener Größen und Lagen. Sie ist eine Alternative zu den größeren, etablierten Agenturen der Insel für Gäste, die gezielt vergleichen möchten.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=norderney-vermietagentur" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.norderney-vermietagentur.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney-vermietagentur.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=norderney-vermietagentur" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderney-vermietagentur">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderney-vermietagentur#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=norderney-zimmerservice" aria-label="Details zu Norderney Zimmerservice"><img src="assets/images/platzhalter-karte.svg" alt="Beratungsgespräch beim Norderney Zimmerservice (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="norderney-zimmerservice" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=norderney-zimmerservice" aria-label="Details zu Norderney Zimmerservice"><img src="assets/images/platzhalter-karte.svg" alt="Beratungsgespräch beim Norderney Zimmerservice (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Vermittlung · Größte Agentur</span>
-            <h3><a href="/anbieter?id=norderney-zimmerservice">Norderney Zimmerservice</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Vermittlung · Größte Agentur</span></div>
+            <h3><a href="/eintrag?id=norderney-zimmerservice">Norderney Zimmerservice</a></h3>
             <p class="card-meta">Rund 300 vermittelte Unterkünfte · Preise variieren</p>
             <p class="desc">Der Norderney Zimmerservice vermittelt rund 300 Unterkünfte auf der Insel. Im Portfolio finden sich private Ferienwohnungen und Ferienhäuser aller Kategorien und Preisklassen. Durch die Größe des Angebots ist die Chance hoch, für nahezu jeden Anspruch und Zeitraum etwas Passendes zu finden. Die Vermittlung erfolgt direkt über die eigene Website mit Verfügbarkeitssuche.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=norderney-zimmerservice" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.norderney-zs.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney-zs.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=norderney-zimmerservice" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderney-zimmerservice">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderney-zimmerservice#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=unterkunftssuche-der-staatsbad-norderney-gmbh" aria-label="Details zu Unterkunftssuche der Staatsbad Norderney GmbH"><img src="assets/images/platzhalter-karte.svg" alt="Blick auf das Conversationshaus, Sitz der Staatsbad Norderney GmbH (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="unterkunftssuche-der-staatsbad-norderney-gmbh" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=unterkunftssuche-der-staatsbad-norderney-gmbh" aria-label="Details zu Unterkunftssuche der Staatsbad Norderney GmbH"><img src="assets/images/platzhalter-karte.svg" alt="Blick auf das Conversationshaus, Sitz der Staatsbad Norderney GmbH (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Offizielle Suche</span>
-            <h3><a href="/anbieter?id=unterkunftssuche-der-staatsbad-norderney-gmbh">Unterkunftssuche der Staatsbad Norderney GmbH</a></h3>
+            <div class="card-tags-row"><span class="card-tag">Offizielle Suche</span></div>
+            <h3><a href="/eintrag?id=unterkunftssuche-der-staatsbad-norderney-gmbh">Unterkunftssuche der Staatsbad Norderney GmbH</a></h3>
             <p class="card-meta">Alle Kategorien · norderney.de</p>
             <p class="desc">Die offizielle Buchungsplattform der Staatsbad Norderney GmbH durchsucht Hotels, Ferienwohnungen und Pensionen der ganzen Insel nach Zeitraum, Personenzahl und gewünschter Ausstattung. Da sie von der offiziellen Tourismus-Organisation betrieben wird, bildet sie einen besonders breiten Querschnitt des Inselangebots ab. Für Gäste, die sich noch nicht auf einen bestimmten Anbieter festgelegt haben, ist sie ein guter Startpunkt für die Unterkunftssuche. Buchung und Verfügbarkeit werden direkt auf norderney.de angezeigt.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=unterkunftssuche-der-staatsbad-norderney-gmbh" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.norderney.de/urlaub-buchen" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney.de/urlaub-buchen" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=unterkunftssuche-der-staatsbad-norderney-gmbh" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=unterkunftssuche-der-staatsbad-norderney-gmbh">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=unterkunftssuche-der-staatsbad-norderney-gmbh#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=seesteg-norderney" aria-label="Details zu Seesteg Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Seesteg Norderney direkt am Weststrand (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="seesteg-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=seesteg-norderney" aria-label="Details zu Seesteg Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Seesteg Norderney direkt am Weststrand (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · Relais &amp; Châteaux</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=seesteg-norderney">Seesteg Norderney</a></h3>
+            <h3><a href="/eintrag?id=seesteg-norderney">Seesteg Norderney</a></h3>
             <p class="card-meta">Damenpfad 36A · direkt am Weststrand</p>
             <p class="desc">Kleines Luxushotel direkt am Strand, untergebracht in einem ehemaligen Speichergebäude aus Backstein. Die Zimmer blicken über die Nordsee in Richtung Sonnenuntergang. Das Haus gehört der Vereinigung Relais &amp; Châteaux an. Das hauseigene Restaurant trägt seit Jahren einen MICHELIN-Stern, Küchenchef ist seit 2012 Markus Kebschull.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=seesteg-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://seesteg-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://seesteg-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=seesteg-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=seesteg-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=seesteg-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=1884-norderney" aria-label="Details zu 1884 Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Boutique-Hotel 1884 Norderney in einer Villa im Bäderstil (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="1884-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=1884-norderney" aria-label="Details zu 1884 Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Boutique-Hotel 1884 Norderney in einer Villa im Bäderstil (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Boutique-Hotel</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=1884-norderney">1884 Norderney</a></h3>
-            <p class="card-meta">Am Weststrand 3–4 · Tel. 04932 5219900</p>
-            <p class="desc">Boutique-Hotel in einer 1884 erbauten und aufwendig sanierten Villa im Bäderstil, daher der Name. 20 individuell eingerichtete Zimmer und Suiten, viele mit Balkon und Blick auf die Nordsee. Zum Haus gehören ein Spa-Bereich und das Restaurant „Müllers" von Nelson Müller. Seit Juni 2023 unter neuer Leitung.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=1884-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://1884-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <h3><a href="/eintrag?id=1884-norderney">1884 Norderney</a></h3>
+            <p class="card-meta">Am Weststrand 3–4</p>
+            <p class="desc">Boutique-Hotel in einer 1884 erbauten und aufwendig sanierten Villa im Bäderstil, daher der Name. 20 individuell eingerichtete Zimmer und Suiten, viele mit Balkon und Blick auf die Nordsee. Zum Haus gehören ein Spa-Bereich und das Restaurant „Müllers&quot; von Nelson Müller. Seit Juni 2023 unter neuer Leitung.</p>
+            <div class="card-foot"><a href="https://1884-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=1884-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=1884-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=1884-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=villa-breeksee" aria-label="Details zu Villa Breeksee"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Villa Breeksee am Weststrand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="villa-breeksee" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=villa-breeksee" aria-label="Details zu Villa Breeksee"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Villa Breeksee am Weststrand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=villa-breeksee">Villa Breeksee</a></h3>
+            <h3><a href="/eintrag?id=villa-breeksee">Villa Breeksee</a></h3>
             <p class="card-meta">Damenpfad 20 · 18 Zimmer · direkt an der Brandung</p>
-            <p class="desc">Hotel mit 18 Zimmern direkt in der Brandungszone des Weststrands, wenige Schritte bis zum Meer und kurze Wege in den Ortskern. Die Zimmer reichen von 11&nbsp;m² als Einzelzimmer zur Landseite bis 22&nbsp;m² als Doppelzimmer mit Meerblick. Frühstück ist für Hotelgäste inbegriffen, im Haus liegt das Restaurant „Gute Stube". Vom Hafen sind es rund 2,4&nbsp;km.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=villa-breeksee" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.villabreeksee.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">Hotel mit 18 Zimmern direkt in der Brandungszone des Weststrands, wenige Schritte bis zum Meer und kurze Wege in den Ortskern. Die Zimmer reichen von 11 m² als Einzelzimmer zur Landseite bis 22 m² als Doppelzimmer mit Meerblick. Frühstück ist für Hotelgäste inbegriffen, im Haus liegt das Restaurant „Gute Stube&quot;. Vom Hafen sind es rund 2,4 km.</p>
+            <div class="card-foot"><a href="https://www.villabreeksee.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=villa-breeksee" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=villa-breeksee">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=villa-breeksee#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=haus-am-meer" aria-label="Details zu Haus am Meer"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Haus am Meer am Damenpfad auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="haus-am-meer" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=haus-am-meer" aria-label="Details zu Haus am Meer"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Haus am Meer am Damenpfad auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel &amp; Ferienwohnungen</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=haus-am-meer">Haus am Meer</a></h3>
-            <p class="card-meta">Damenpfad 35 · Tel. 04932 8930</p>
+            <h3><a href="/eintrag?id=haus-am-meer">Haus am Meer</a></h3>
+            <p class="card-meta">Damenpfad 35</p>
             <p class="desc">Kombination aus Hotelzimmern in mehreren Häusern und Ferienwohnungen, direkt am Weststrand gelegen. Zur Ausstattung gehören ein Schwimmbad mit Meerblick, ein Spa- und Saunabereich, eine Kaminbar sowie eine Seeterrasse. Hunde sind willkommen. Die Aufteilung auf mehrere Häuser erlaubt sehr unterschiedliche Zimmerkategorien.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=haus-am-meer" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://haus-am-meer-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://haus-am-meer-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=haus-am-meer" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=haus-am-meer">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=haus-am-meer#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=logierhaus-norderney" aria-label="Details zu Logierhaus Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Logierhaus Austernfischer an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="logierhaus-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=logierhaus-norderney" aria-label="Details zu Logierhaus Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Logierhaus Austernfischer an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotels &amp; Apartments</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=logierhaus-norderney">Logierhaus Norderney</a></h3>
+            <h3><a href="/eintrag?id=logierhaus-norderney">Logierhaus Norderney</a></h3>
             <p class="card-meta">Austernfischer: Friedrichstraße 11 · fünf Häuser</p>
-            <p class="desc">Betreiber von fünf Häusern auf der Insel: Austernfischer am Rand der Fußgängerzone mit rund 300&nbsp;m zum Sandstrand, am Denkmal mit acht Doppel- und zwei Familienzimmern, am Rathaus mit Zimmern und neuen Apartments, Rosa-Lena mit elf Apartments unter 250&nbsp;m zum Strand sowie Birkenhof mit Apartments in ruhiger Lage. Das Frühstücksbuffet wird zentral im Austernfischer serviert.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=logierhaus-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://logierhaus-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">Betreiber von fünf Häusern auf der Insel: Austernfischer am Rand der Fußgängerzone mit rund 300 m zum Sandstrand, am Denkmal mit acht Doppel- und zwei Familienzimmern, am Rathaus mit Zimmern und neuen Apartments, Rosa-Lena mit elf Apartments unter 250 m zum Strand sowie Birkenhof mit Apartments in ruhiger Lage. Das Frühstücksbuffet wird zentral im Austernfischer serviert.</p>
+            <div class="card-foot"><a href="https://logierhaus-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=logierhaus-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=logierhaus-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=logierhaus-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=gaestehaus-bakker" aria-label="Details zu Gästehaus Bakker"><img src="assets/images/platzhalter-karte.svg" alt="Gästehaus Bakker an der Heinrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="gaestehaus-bakker" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=gaestehaus-bakker" aria-label="Details zu Gästehaus Bakker"><img src="assets/images/platzhalter-karte.svg" alt="Gästehaus Bakker an der Heinrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=gaestehaus-bakker">Gästehaus Bakker</a></h3>
-            <p class="card-meta">Heinrichstraße 11 · Tel. 04932 93900</p>
+            <h3><a href="/eintrag?id=gaestehaus-bakker">Gästehaus Bakker</a></h3>
+            <p class="card-meta">Heinrichstraße 11</p>
             <p class="desc">Familiär geführte Frühstückspension mit Einzelzimmern und Doppelzimmern in drei Varianten. Die Buchung läuft über ein eigenes Online-System, Kartenzahlung ist möglich. Das Haus wird auf mehreren Bewertungsportalen durchweg gut bewertet. Passend für Gäste, die eine persönlich geführte Unterkunft zu moderatem Preis suchen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=gaestehaus-bakker" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://norderney-pension.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://norderney-pension.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=gaestehaus-bakker" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=gaestehaus-bakker">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=gaestehaus-bakker#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=michels-hotel-misan" aria-label="Details zu Michels Hotel Misan"><img src="assets/images/platzhalter-karte.svg" alt="Michels Hotel Misan auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-hotel-misan" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=michels-hotel-misan" aria-label="Details zu Michels Hotel Misan"><img src="assets/images/platzhalter-karte.svg" alt="Michels Hotel Misan auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=michels-hotel-misan">Michels Hotel Misan</a></h3>
+            <h3><a href="/eintrag?id=michels-hotel-misan">Michels Hotel Misan</a></h3>
             <p class="card-meta">Norderney · Teil der Michels-Hotelgruppe</p>
             <p class="desc">Eines von sechs Häusern der Michels-Gruppe auf Norderney. Details zu Zimmern, Ausstattung und Preisen stehen auf der Website der Hotelgruppe.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-hotel-misan" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-hotel-misan" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-hotel-misan">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-hotel-misan#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=michels-thalasso-hotel-nordseehaus" aria-label="Details zu Michels Thalasso Hotel Nordseehaus"><img src="assets/images/platzhalter-karte.svg" alt="Michels Thalasso Hotel Nordseehaus auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-thalasso-hotel-nordseehaus" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=michels-thalasso-hotel-nordseehaus" aria-label="Details zu Michels Thalasso Hotel Nordseehaus"><img src="assets/images/platzhalter-karte.svg" alt="Michels Thalasso Hotel Nordseehaus auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · Thalasso</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=michels-thalasso-hotel-nordseehaus">Michels Thalasso Hotel Nordseehaus</a></h3>
+            <h3><a href="/eintrag?id=michels-thalasso-hotel-nordseehaus">Michels Thalasso Hotel Nordseehaus</a></h3>
             <p class="card-meta">Norderney · Teil der Michels-Hotelgruppe</p>
             <p class="desc">Thalasso-Hotel der Michels-Gruppe mit Ausrichtung auf Meerwasser-Anwendungen und Wellness. Details zu Anwendungen, Zimmern und Preisen stehen auf der Website der Hotelgruppe.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-thalasso-hotel-nordseehaus" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-thalasso-hotel-nordseehaus" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-thalasso-hotel-nordseehaus">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-thalasso-hotel-nordseehaus#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=michels-hotel-hanseatic" aria-label="Details zu Michels Hotel Hanseatic"><img src="assets/images/platzhalter-karte.svg" alt="Michels Hotel Hanseatic auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-hotel-hanseatic" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=michels-hotel-hanseatic" aria-label="Details zu Michels Hotel Hanseatic"><img src="assets/images/platzhalter-karte.svg" alt="Michels Hotel Hanseatic auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=michels-hotel-hanseatic">Michels Hotel Hanseatic</a></h3>
+            <h3><a href="/eintrag?id=michels-hotel-hanseatic">Michels Hotel Hanseatic</a></h3>
             <p class="card-meta">Norderney · Teil der Michels-Hotelgruppe</p>
             <p class="desc">Weiteres Haus der Michels-Gruppe auf der Insel. Details zu Zimmern, Ausstattung und Preisen stehen auf der Website der Hotelgruppe.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-hotel-hanseatic" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-hotel-hanseatic" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-hotel-hanseatic">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-hotel-hanseatic#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=michels-gaestehaus-meerzeit" aria-label="Details zu Michels Gästehaus Meerzeit"><img src="assets/images/platzhalter-karte.svg" alt="Michels Gästehaus Meerzeit auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="michels-gaestehaus-meerzeit" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=michels-gaestehaus-meerzeit" aria-label="Details zu Michels Gästehaus Meerzeit"><img src="assets/images/platzhalter-karte.svg" alt="Michels Gästehaus Meerzeit auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Gästehaus</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=michels-gaestehaus-meerzeit">Michels Gästehaus Meerzeit</a></h3>
+            <h3><a href="/eintrag?id=michels-gaestehaus-meerzeit">Michels Gästehaus Meerzeit</a></h3>
             <p class="card-meta">Norderney · Teil der Michels-Hotelgruppe</p>
             <p class="desc">Gästehaus der Michels-Gruppe und damit die kompaktere Alternative zu den Hotels der Kette. Details zu Zimmern und Preisen stehen auf der Website der Hotelgruppe.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=michels-gaestehaus-meerzeit" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.michelshotels.de/hotels/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=michels-gaestehaus-meerzeit" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=michels-gaestehaus-meerzeit">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=michels-gaestehaus-meerzeit#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=strandloft-norderney" aria-label="Details zu Strandloft Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung im Strandloft Norderney im Ortskern (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="strandloft-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=strandloft-norderney" aria-label="Details zu Strandloft Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung im Strandloft Norderney im Ortskern (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Ferienwohnungen · vier Häuser</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=strandloft-norderney">Strandloft Norderney</a></h3>
+            <h3><a href="/eintrag?id=strandloft-norderney">Strandloft Norderney</a></h3>
             <p class="card-meta">Marienstraße 6, Herrenpfad 2, Marienstraße 3, Feldhausenstraße 6</p>
             <p class="desc">Anbieter mit vier eigenen Häusern im Ortskern: 18 Ferienwohnungen in den Strandlofts EINS, ZWEI und DREI sowie 7 Studios im Strandloft VIER. Die Einheiten reichen vom Studio für zwei Personen bis zur Wohnung für acht. Strandloft ZWEI liegt in einem denkmalgeschützten Gebäude. Alle Häuser liegen zentral und nah am Weststrand.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=strandloft-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.strandloft-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.strandloft-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=strandloft-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=strandloft-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=strandloft-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=vermietservice-trost" aria-label="Details zu Vermietservice Trost"><img src="assets/images/platzhalter-karte.svg" alt="Vermietservice Trost, Vermietagentur auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="vermietservice-trost" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=vermietservice-trost" aria-label="Details zu Vermietservice Trost"><img src="assets/images/platzhalter-karte.svg" alt="Vermietservice Trost, Vermietagentur auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Vermietagentur · rund 200 Objekte</span></div>
-            <h3><a href="/anbieter?id=vermietservice-trost">Vermietservice Trost</a></h3>
-            <p class="card-meta">Bülowallee 2 · Tel. 04932 910870</p>
+            <h3><a href="/eintrag?id=vermietservice-trost">Vermietservice Trost</a></h3>
+            <p class="card-meta">Bülowallee 2</p>
             <p class="desc">Vermiet- und Hausmeisterservice, der sich selbst als Unternehmen in zweiter Generation auf Norderney beschreibt. Vermittelt nach eigenen Angaben rund 200 Ferienwohnungen und Ferienhäuser. Das Angebot reicht von einfachen bis zu gehobenen Wohnungen, auch für Reisende mit Hund.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=vermietservice-trost" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.norderney.reisen/de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney.reisen/de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=vermietservice-trost" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=vermietservice-trost">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=vermietservice-trost#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=norderneyer-wohnungs-service" aria-label="Details zu Norderneyer Wohnungs Service"><img src="assets/images/platzhalter-karte.svg" alt="Norderneyer Wohnungs Service, Vermittlung von Ferienwohnungen (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="norderneyer-wohnungs-service" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=norderneyer-wohnungs-service" aria-label="Details zu Norderneyer Wohnungs Service"><img src="assets/images/platzhalter-karte.svg" alt="Norderneyer Wohnungs Service, Vermittlung von Ferienwohnungen (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Vermietagentur · über 80 Objekte</span></div>
-            <h3><a href="/anbieter?id=norderneyer-wohnungs-service">Norderneyer Wohnungs Service</a></h3>
-            <p class="card-meta">Herrenpfad 16 · Tel. 04932 927656</p>
+            <h3><a href="/eintrag?id=norderneyer-wohnungs-service">Norderneyer Wohnungs Service</a></h3>
+            <p class="card-meta">Herrenpfad 16</p>
             <p class="desc">Vermittlungsservice mit nach eigener Angabe mehr als 80 Objekten für eine bis sechs Personen. Die Wohnungen decken unterschiedliche Preisklassen ab und eignen sich für Paare ebenso wie für Familien und Gruppen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=norderneyer-wohnungs-service" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.ferienwohnung-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.ferienwohnung-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=norderneyer-wohnungs-service" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderneyer-wohnungs-service">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderneyer-wohnungs-service#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung">
-          <div class="card-media"><a href="/anbieter?id=urlaubskontor-norderney" aria-label="Details zu Urlaubskontor Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Urlaubskontor Norderney, Vermittlung von Ferienwohnungen (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="urlaubskontor-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung">
+          <a class="card-media" href="/eintrag?id=urlaubskontor-norderney" aria-label="Details zu Urlaubskontor Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Urlaubskontor Norderney, Vermittlung von Ferienwohnungen (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Vermietagentur</span></div>
-            <h3><a href="/anbieter?id=urlaubskontor-norderney">Urlaubskontor Norderney</a></h3>
-            <p class="card-meta">Im Gewerbegelände 9 · Tel. 04932 9108888</p>
+            <h3><a href="/eintrag?id=urlaubskontor-norderney">Urlaubskontor Norderney</a></h3>
+            <p class="card-meta">Im Gewerbegelände 9</p>
             <p class="desc">Vermietagentur, die nach eigenen Angaben moderne, gehobene Ferienwohnungen vermittelt und Eigentümern zusätzlich einen Verwaltungsservice anbietet. Die Gesamtzahl der Objekte nennt die Website nicht.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=urlaubskontor-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.urlaubskontor-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.urlaubskontor-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=urlaubskontor-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=urlaubskontor-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=urlaubskontor-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="vermittlung" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=inselbuden-norderney" aria-label="Details zu Inselbuden Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Inselbuden Norderney, Vermietagentur im Stadtzentrum (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselbuden-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="vermittlung" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=inselbuden-norderney" aria-label="Details zu Inselbuden Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Inselbuden Norderney, Vermietagentur im Stadtzentrum (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Vermietagentur · 13 Ferienanlagen</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=inselbuden-norderney">Inselbuden Norderney</a></h3>
-            <p class="card-meta">Bismarckstraße 5, am Denkmal · Tel. 04932 5219691</p>
+            <h3><a href="/eintrag?id=inselbuden-norderney">Inselbuden Norderney</a></h3>
+            <p class="card-meta">Bismarckstraße 5, am Denkmal</p>
             <p class="desc">Vermietagentur mit Büro im Stadtzentrum am Denkmal. Auf der Website sind 13 benannte Ferienanlagen aufgeführt, darunter Bismarck 1884, Haus Munke und die König Apartments. Neben der Vermietung übernimmt der Betrieb für Eigentümer auch Betreuung und Vermarktung.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselbuden-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.inselbuden-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.inselbuden-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselbuden-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselbuden-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselbuden-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=haus-an-den-duenen" aria-label="Details zu Haus an den Dünen"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnungshaus an den Dünen in der Emsstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="haus-an-den-duenen" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=haus-an-den-duenen" aria-label="Details zu Haus an den Dünen"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnungshaus an den Dünen in der Emsstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Ferienwohnungen</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=haus-an-den-duenen">Haus an den Dünen</a></h3>
-            <p class="card-meta">Emsstraße 14 · rund 200 m zum Strand · Tel. 04932 4678093</p>
+            <h3><a href="/eintrag?id=haus-an-den-duenen">Haus an den Dünen</a></h3>
+            <p class="card-meta">Emsstraße 14 · rund 200 m zum Strand</p>
             <p class="desc">Ferienwohnungshaus direkt an der Dünenlandschaft, nach eigenen Angaben nur rund 200 Meter vom Strand entfernt. Die genaue Zahl der Wohnungen nennt die Website nicht.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=haus-an-den-duenen" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.haus-andenduenen.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.haus-andenduenen.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=haus-an-den-duenen" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=haus-an-den-duenen">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=haus-an-den-duenen#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=thalasso-appartements-badehaus" aria-label="Details zu Thalasso Appartements im bade:haus"><img src="assets/images/platzhalter-karte.svg" alt="Thalasso Appartement im bade:haus am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="thalasso-appartements-badehaus" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=thalasso-appartements-badehaus" aria-label="Details zu Thalasso Appartements im bade:haus"><img src="assets/images/platzhalter-karte.svg" alt="Thalasso Appartement im bade:haus am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Appartements · 11 Einheiten</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=thalasso-appartements-badehaus">Thalasso Appartements im bade:haus</a></h3>
+            <h3><a href="/eintrag?id=thalasso-appartements-badehaus">Thalasso Appartements im bade:haus</a></h3>
             <p class="card-meta">Am Kurplatz 2 · rund 200 m zum Weststrand</p>
             <p class="desc">Elf individuell gestaltete Appartements für ein bis zwei Personen, direkt im bade:haus am Kurplatz. Der Weststrand liegt rund 200 Meter entfernt, das Thalasso-Angebot des Hauses ist unmittelbar erreichbar. Betrieben von der Staatsbad Norderney GmbH.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=thalasso-appartements-badehaus" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.norderney.de/badehaus/appartements" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney.de/badehaus/appartements" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=thalasso-appartements-badehaus" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=thalasso-appartements-badehaus">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=thalasso-appartements-badehaus#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=inselloft-norderney" aria-label="Details zu Inselloft Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Designhotel Inselloft hinter denkmalgeschützter Fassade am Damenpfad (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselloft-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=inselloft-norderney" aria-label="Details zu Inselloft Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Designhotel Inselloft hinter denkmalgeschützter Fassade am Damenpfad (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Designhotel</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=inselloft-norderney">Inselloft Norderney</a></h3>
-            <p class="card-meta">Damenpfad 37–40 · Tel. 04932 893800</p>
+            <h3><a href="/eintrag?id=inselloft-norderney">Inselloft Norderney</a></h3>
+            <p class="card-meta">Damenpfad 37–40</p>
             <p class="desc">Designhotel hinter einer denkmalgeschützten Fassade mit den Zimmerkategorien Studio, Loft und Penthouse. Zum Haus gehören ein Spa mit Sauna, ein Fitnessraum mit Nordseeblick, eine hauseigene Bäckerei und das Restaurant Esszimmer mit offener Küche. Dazu kommen ein Wein-Deli und ein Design-Shop.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselloft-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://inselloft-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://inselloft-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselloft-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselloft-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselloft-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=new-wave-norderney" aria-label="Details zu New Wave"><img src="assets/images/platzhalter-karte.svg" alt="Boutiquehotel New Wave mit Rooftop-Bar auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="new-wave-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=new-wave-norderney" aria-label="Details zu New Wave"><img src="assets/images/platzhalter-karte.svg" alt="Boutiquehotel New Wave mit Rooftop-Bar auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Boutiquehotel · Rooftop-Bar</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=new-wave-norderney">New Wave</a></h3>
+            <h3><a href="/eintrag?id=new-wave-norderney">New Wave</a></h3>
             <p class="card-meta">Luisenstraße 13–15</p>
             <p class="desc">Boutiquehotel auf halbem Weg zwischen Strandpromenade und Innenstadt. Auf dem Dach liegt eine rund um die Uhr zugängliche Rooftop-Bar, im Haus das Restaurant Oktopussy. Gäste haben Zugang zum bade:haus mit Meerwasserbädern, Saunen und Dampfbädern. Dazu kommt der Secret Garden, dienstags bis sonntags von 13 bis 20 Uhr.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=new-wave-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.new-wave.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.new-wave.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=new-wave-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=new-wave-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=new-wave-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-jann-von-norderney" aria-label="Details zu Hotel Jann von Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Barrierefreies Hotel Jann von Norderney an der Halemstraße (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-jann-von-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=hotel-jann-von-norderney" aria-label="Details zu Hotel Jann von Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Barrierefreies Hotel Jann von Norderney an der Halemstraße (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · barrierefrei</span><span class="price-badge">€€€</span></div>
-            <h3><a href="/anbieter?id=hotel-jann-von-norderney">Hotel Jann von Norderney</a></h3>
+            <h3><a href="/eintrag?id=hotel-jann-von-norderney">Hotel Jann von Norderney</a></h3>
             <p class="card-meta">Halemstr. 10–12 · rund 3 Gehminuten zum Strand</p>
-            <p class="desc">Als 4-Sterne-Haus ausgewiesen und konsequent auf Barrierefreiheit ausgerichtet: Es gibt barrierefreie Zimmer mit modernen Pflegebetten, mobile Pflegedienste lassen sich auf Anfrage organisieren. Das Hotel ist zertifizierter Partner von „Reisen für Alle". Sandstrand und Stadtzentrum liegen jeweils rund drei Gehminuten entfernt. Frühstücksbuffet und Sauna gehören dazu.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-jann-von-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.jann-von-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">Als 4-Sterne-Haus ausgewiesen und konsequent auf Barrierefreiheit ausgerichtet: Es gibt barrierefreie Zimmer mit modernen Pflegebetten, mobile Pflegedienste lassen sich auf Anfrage organisieren. Das Hotel ist zertifizierter Partner von „Reisen für Alle&quot;. Sandstrand und Stadtzentrum liegen jeweils rund drei Gehminuten entfernt. Frühstücksbuffet und Sauna gehören dazu.</p>
+            <div class="card-foot"><a href="https://www.jann-von-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-jann-von-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-jann-von-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-jann-von-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=villa-ney" aria-label="Details zu Villa NEY"><img src="assets/images/platzhalter-karte.svg" alt="Boutique Hotel garni Villa NEY im historischen Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="villa-ney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=villa-ney" aria-label="Details zu Villa NEY"><img src="assets/images/platzhalter-karte.svg" alt="Boutique Hotel garni Villa NEY im historischen Zentrum von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel garni · 17 Zimmer</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=villa-ney">Villa NEY</a></h3>
+            <h3><a href="/eintrag?id=villa-ney">Villa NEY</a></h3>
             <p class="card-meta">Gartenstraße 59 · am Kurtheater</p>
             <p class="desc">Hotel garni mit 17 Zimmern im historischen Zentrum am Kurtheater. Zum Kurplatz sind es nach eigenen Angaben etwa drei Gehminuten, zum Nordseestrand rund fünf. Das Frühstück ist im Zimmerpreis enthalten, ein Teil der Zimmer hat einen Balkon. Die Rezeption ist täglich besetzt.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=villa-ney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.villa-ney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.villa-ney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=villa-ney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=villa-ney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=villa-ney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-aquamarin" aria-label="Details zu Hotel Aquamarin"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Aquamarin in der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-aquamarin" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-aquamarin" aria-label="Details zu Hotel Aquamarin"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Aquamarin in der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Boutiquehotel</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-aquamarin">Hotel Aquamarin</a></h3>
-            <p class="card-meta">Friedrichstraße 5 · rund 100 m zum Strand · Tel. 04932 9285-0</p>
+            <h3><a href="/eintrag?id=hotel-aquamarin">Hotel Aquamarin</a></h3>
+            <p class="card-meta">Friedrichstraße 5 · rund 100 m zum Strand</p>
             <p class="desc">Boutiquehotel unmittelbar an Fußgängerzone, Einkaufsstraßen und Restaurants, etwa hundert Meter vom Nordseestrand entfernt. Das Haus wurde umfangreich renoviert und orientiert sich gestalterisch an der Bäderarchitektur um 1900. Es verfügt über einen Wellnessbereich.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-aquamarin" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://hotel-aquamarin-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://hotel-aquamarin-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-aquamarin" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-aquamarin">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-aquamarin#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-paula" aria-label="Details zu Hotel Paula"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Paula an der Bismarckstraße nahe dem Denkmal Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-paula" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-paula" aria-label="Details zu Hotel Paula"><img src="assets/images/platzhalter-karte.svg" alt="Hotel Paula an der Bismarckstraße nahe dem Denkmal Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · 22 Zimmer</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-paula">Hotel Paula</a></h3>
+            <h3><a href="/eintrag?id=hotel-paula">Hotel Paula</a></h3>
             <p class="card-meta">Bismarckstraße 10 · am Denkmal · rund 3 Min. zum Strand</p>
             <p class="desc">Hotel mit 17 Doppelzimmern und 5 Einzelzimmern in zentrumsnaher Lage am Denkmal. Zehn Zimmer bieten seitlichen Meerblick, mehrere haben einen Balkon. Morgens gibt es ein Frühstücksbuffet im hauseigenen Frühstücksraum.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-paula" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.paula-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.paula-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-paula" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-paula">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-paula#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=inselhotel-ihnken" aria-label="Details zu Inselhotel Ihnken"><img src="assets/images/platzhalter-karte.svg" alt="Inselhotel Ihnken in ruhiger Lage am Damenpfad Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="inselhotel-ihnken" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=inselhotel-ihnken" aria-label="Details zu Inselhotel Ihnken"><img src="assets/images/platzhalter-karte.svg" alt="Inselhotel Ihnken in ruhiger Lage am Damenpfad Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · zwei Häuser</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=inselhotel-ihnken">Inselhotel Ihnken</a></h3>
+            <h3><a href="/eintrag?id=inselhotel-ihnken">Inselhotel Ihnken</a></h3>
             <p class="card-meta">Damenpfad 14 · rund 150 m zum Weststrand</p>
             <p class="desc">Hotel in ruhiger Lage am Damenpfad, rund 150 Meter vom Weststrand und ebenso weit vom Stadtzentrum entfernt. Der Betrieb führt zwei Häuser, Ihnken und Cornelius, mit gemeinsamer Rezeption im Haus Ihnken. Es gibt allergikerfreundliche Zimmer mit Synthetikbettwaren, das ganze Haus ist Nichtraucherbereich. Bei Direktbuchung ist das Frühstück inbegriffen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=inselhotel-ihnken" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.hotel-ihnken.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.hotel-ihnken.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=inselhotel-ihnken" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselhotel-ihnken">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselhotel-ihnken#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="hotel" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=hotel-ennen" aria-label="Details zu Hotel &amp; Restaurant Ennen"><img src="assets/images/platzhalter-karte.svg" alt="Familiengeführtes Hotel Ennen mit Spa-Bereich auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="hotel-ennen" data-betrieb-karte data-kategorie="unterkuenfte" data-art="hotel" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=hotel-ennen" aria-label="Details zu Hotel &amp; Restaurant Ennen"><img src="assets/images/platzhalter-karte.svg" alt="Familiengeführtes Hotel Ennen mit Spa-Bereich auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Hotel · Spa · Restaurant</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=hotel-ennen">Hotel &amp; Restaurant Ennen</a></h3>
+            <h3><a href="/eintrag?id=hotel-ennen">Hotel &amp; Restaurant Ennen</a></h3>
             <p class="card-meta">Luisenstraße 16 · westlicher Inselteil</p>
             <p class="desc">Familiengeführtes Hotel im westlichen Inselteil mit angeschlossenem Restaurant, in dem abends à la carte serviert wird. Zum Haus gehören ein Spa- und Wellnessbereich mit Außensauna sowie ein Ruhebereich. Morgens gibt es ein Frühstücksbuffet. In einem separaten Gebäude am Deich vermietet der Betrieb zusätzlich Ferienwohnungen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=hotel-ennen" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://hotel-ennen.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://hotel-ennen.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=hotel-ennen" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=hotel-ennen">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=hotel-ennen#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=haus-waidmannsheil" aria-label="Details zu Haus Waidmannsheil"><img src="assets/images/platzhalter-karte.svg" alt="Frühstückspension Haus Waidmannsheil auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="haus-waidmannsheil" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=haus-waidmannsheil" aria-label="Details zu Haus Waidmannsheil"><img src="assets/images/platzhalter-karte.svg" alt="Frühstückspension Haus Waidmannsheil auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Frühstückspension · 8 Zimmer</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=haus-waidmannsheil">Haus Waidmannsheil</a></h3>
+            <h3><a href="/eintrag?id=haus-waidmannsheil">Haus Waidmannsheil</a></h3>
             <p class="card-meta">Knyphausenstraße · Mindestaufenthalt 6 Nächte</p>
             <p class="desc">In dritter Generation inhabergeführte Frühstückspension mit acht Zimmern, davon drei Einzel- und fünf Doppelzimmer. Die Zimmer haben helle Duschbäder, einzelne Doppelzimmer zusätzlich eine Kochnische. Das Frühstück wird auf Wunsch gegen Aufpreis in der Veranda serviert. Wichtig zu wissen: Hunde sind nicht erlaubt und der Mindestaufenthalt beträgt sechs Nächte.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=haus-waidmannsheil" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://haus-waidmannsheil-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://haus-waidmannsheil-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=haus-waidmannsheil" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=haus-waidmannsheil">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=haus-waidmannsheil#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="pension" data-location="stadt" data-price="€">
-          <div class="card-media"><a href="/anbieter?id=pension-haus-menno-janssen" aria-label="Details zu Pension Haus Menno Janssen"><img src="assets/images/platzhalter-karte.svg" alt="Inhabergeführte Pension Haus Menno Janssen in der Tollestraße (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="pension-haus-menno-janssen" data-betrieb-karte data-kategorie="unterkuenfte" data-art="pension" data-lage="stadt" data-preis="€">
+          <a class="card-media" href="/eintrag?id=pension-haus-menno-janssen" aria-label="Details zu Pension Haus Menno Janssen"><img src="assets/images/platzhalter-karte.svg" alt="Inhabergeführte Pension Haus Menno Janssen in der Tollestraße (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Pension · 5 Zimmer</span><span class="price-badge">€</span></div>
-            <h3><a href="/anbieter?id=pension-haus-menno-janssen">Pension Haus Menno Janssen</a></h3>
+            <h3><a href="/eintrag?id=pension-haus-menno-janssen">Pension Haus Menno Janssen</a></h3>
             <p class="card-meta">Tollestraße 6 · ruhige Seitenstraße</p>
             <p class="desc">Inhabergeführte Pension mit fünf renovierten Zimmern in einer ruhigen Seitenstraße zwischen Innenstadt und Weststrand. Alle Zimmer haben ein eigenes Duschbad, dazu gibt es eine Veranda mit Tee- und Kaffeeecke. Das Frühstück wird in einem 150 Meter entfernten Partnerhotel angeboten und kostet extra.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=pension-haus-menno-janssen" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="http://www.tolle-pension-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="http://www.tolle-pension-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=pension-haus-menno-janssen" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=pension-haus-menno-janssen">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=pension-haus-menno-janssen#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="stadt" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=sommerloft-norderney" aria-label="Details zu Sommerloft"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung Sommerloft in einem sanierten Bäderhaus auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="sommerloft-norderney" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="stadt" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=sommerloft-norderney" aria-label="Details zu Sommerloft"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung Sommerloft in einem sanierten Bäderhaus auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Ferienwohnungen &amp; -häuser</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=sommerloft-norderney">Sommerloft</a></h3>
+            <h3><a href="/eintrag?id=sommerloft-norderney">Sommerloft</a></h3>
             <p class="card-meta">Winterstraße 8, Karlstraße 3, Südhoffstraße 3</p>
             <p class="desc">Sieben Ferienwohnungen und drei Ferienhäuser in einem sanierten historischen Bäderhaus und einem alten Stadthaus zwischen Fußgängerzone und Strand. Die Räume verbinden hohe Decken und alte Stilelemente mit moderner Ausstattung. WLAN und Kinderbetten gehören dazu, SUP-Boards lassen sich leihen.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=sommerloft-norderney" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://www.sommerloft.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.sommerloft.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=sommerloft-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=sommerloft-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=sommerloft-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-accommodation-card data-category="ferienwohnung" data-location="weststrand" data-price="€€">
-          <div class="card-media"><a href="/anbieter?id=norderney-pur" aria-label="Details zu Norderney_pur"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung mit Meerblick an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a></div>
+        <div class="card card--eintrag" id="norderney-pur" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="weststrand" data-preis="€€">
+          <a class="card-media" href="/eintrag?id=norderney-pur" aria-label="Details zu Norderney_pur"><img src="assets/images/platzhalter-karte.svg" alt="Ferienwohnung mit Meerblick an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Ferienwohnungen · Meerblick</span><span class="price-badge">€€</span></div>
-            <h3><a href="/anbieter?id=norderney-pur">Norderney_pur</a></h3>
+            <h3><a href="/eintrag?id=norderney-pur">Norderney_pur</a></h3>
             <p class="card-meta">Kaiserstraße Ecke Bismarckstraße · an der Promenade</p>
             <p class="desc">Vier Ferienwohnungen mit Meerblick, verteilt auf die Häuser Nordseeblick und Kaiserhof an der Strandpromenade. Alle Wohnungen sind nach Osten ausgerichtet und blicken frei auf die Nordsee. Die Lage liegt am längsten Strandabschnitt der Insel.</p>
-            <div class="card-foot">
-              <a href="/anbieter?id=norderney-pur" class="btn btn-outline btn-sm">Details &amp; Bilder</a>
-              <a href="https://norderney-pur.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://norderney-pur.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=norderney-pur" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderney-pur">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderney-pur#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag is-beispiel" id="beispiel-haus-seeblick" data-betrieb-karte data-kategorie="unterkuenfte" data-art="ferienwohnung" data-lage="nordstrand" data-preis="€€€">
+          <a class="card-media" href="/eintrag?id=beispiel-haus-seeblick" aria-label="Details zu Ferienhaus Seeblick (Beispiel)"><img src="assets/images/platzhalter-quer.svg" alt="Platzhalter: Haus von außen" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag card-tag--beispiel">Beispiel</span><span class="card-tag">Unterkunft</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=beispiel-haus-seeblick">Ferienhaus Seeblick (Beispiel)</a></h3>
+            <p class="card-meta">Musterallee 3</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sommer: Anreise 15–18 Uhr · Winter: Anreise 15–18 Uhr</p>
+            <p class="desc">So sieht eine Unterkunft aus: zwei Wohnungen, fünf Minuten zum Strand. Diesen Betrieb gibt es nicht.</p>
+            <div class="card-foot"><a href="https://example.com/buchen" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=beispiel-haus-seeblick" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 15.11.2026 · Angaben vom Betrieb, ohne Gewähr · <a href="/kontakt?eintrag=beispiel-haus-seeblick#frag-luis">Fehler melden</a></p>
           </div>
         </div>
       </div>
+      <p class="filter-leer" data-filter-leer="[data-betrieb-karte]" hidden>Zu dieser Auswahl gibt es noch keinen Eintrag. Probier einen anderen Filter.</p>
+      <!-- /@betriebe -->
+      <div class="karte" data-karte="unterkuenfte" style="margin-top:28px"></div>
+      <p class="betrieb-cta">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
   <section class="section section--sand">
@@ -904,18 +768,6 @@
     </div>
   </section>
 
-  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
-  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Von Betrieben eingetragen</p>
-        <h2>Neu im Guide</h2>
-      </div>
-      <div class="card-grid cols-3" data-betriebe="unterkuenfte"></div>
-      <div class="karte" data-karte="unterkuenfte" style="margin-top:28px"></div>
-      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
-    </div>
-  </section>
 
 </main>
 
@@ -985,6 +837,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe-felder.js?v=23"></script>
 <script src="js/betriebe.js?v=23"></script>
 <script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>

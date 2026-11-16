@@ -130,259 +130,488 @@
   <section class="section" style="padding-top:36px">
     <div class="container">
 
-      <div class="filter-bar pill-row" data-filter-group="[data-food-card]" data-filter-attr="category">
-        <button class="pill is-active" data-filter="alle">Alle</button>
-        <button class="pill" data-filter="imbiss">Fischbrötchen &amp; Imbiss</button>
-        <button class="pill" data-filter="restaurant">Restaurants</button>
-        <button class="pill" data-filter="cafe">Cafés</button>
-        <button class="pill" data-filter="bar">Bars &amp; Kneipen</button>
-        <button class="pill" data-filter="eisdiele">Eisdielen</button>
+      <!-- @betriebe -->
+      <!-- Automatisch erzeugt aus daten/betriebe.json mit: python3 tools/betriebe.py – hier nichts von Hand ändern. -->
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Art" data-filter-group="[data-betrieb-karte]" data-filter-attr="kategorie">
+        <span class="filter-titel">Art</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alles</button>
+        <button class="pill" type="button" data-filter="restaurants-cafes">Restaurants &amp; Cafés</button>
+        <button class="pill" type="button" data-filter="bars">Bars</button>
       </div>
-
-      <div class="filter-bar pill-row" data-filter-group="[data-food-card]" data-filter-attr="kitchen">
-        <button class="pill is-active" data-filter="alle">Alle Küchen</button>
-        <button class="pill" data-filter="italienisch">Italienisch</button>
-        <button class="pill" data-filter="deutsch-regional">Deutsch &amp; Regional</button>
-        <button class="pill" data-filter="fisch">Fisch &amp; Meeresfrüchte</button>
-        <button class="pill" data-filter="asiatisch">Asiatisch</button>
-        <button class="pill" data-filter="vegetarisch-vegan">Vegetarisch &amp; Vegan</button>
-        <button class="pill" data-filter="mediterran">Mediterran</button>
-        <button class="pill" data-filter="cafe">Café &amp; Bäckerei</button>
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Küche" data-filter-group="[data-betrieb-karte]" data-filter-attr="kueche">
+        <span class="filter-titel">Küche</span>
+        <button class="pill is-active" type="button" data-filter="alle">Jede Küche</button>
+        <button class="pill" type="button" data-filter="fisch">Fisch</button>
+        <button class="pill" type="button" data-filter="deutsch-regional">Deutsch &amp; regional</button>
+        <button class="pill" type="button" data-filter="italienisch">Italienisch</button>
+        <button class="pill" type="button" data-filter="mediterran">Mediterran</button>
+        <button class="pill" type="button" data-filter="asiatisch">Asiatisch</button>
+        <button class="pill" type="button" data-filter="vegetarisch-vegan">Vegetarisch &amp; vegan</button>
+        <button class="pill" type="button" data-filter="cafe">Café &amp; Kuchen</button>
+        <button class="pill" type="button" data-filter="eis">Eis</button>
+        <button class="pill" type="button" data-filter="imbiss">Imbiss</button>
       </div>
-
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Reservierung" data-filter-group="[data-betrieb-karte]" data-filter-attr="reservierung">
+        <span class="filter-titel">Reservierung</span>
+        <button class="pill is-active" type="button" data-filter="alle">Egal</button>
+        <button class="pill" type="button" data-filter="ja">Reservierung empfohlen</button>
+      </div>
       <div class="card-grid">
-
-        <div class="card" data-food-card data-category="imbiss" data-kitchen="fisch" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Fischbrötchen-Theke der Fischgenießerei an der Knyphausenstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="fischgeniesserei" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="fisch imbiss" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=fischgeniesserei" aria-label="Details zu Fischgenießerei"><img src="assets/images/platzhalter-karte.svg" alt="Fischbrötchen-Theke der Fischgenießerei an der Knyphausenstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Fischbrötchen &amp; Imbiss</span><span class="price-badge">€</span></div>
-            <h3>Fischgenießerei</h3>
-            <p class="card-meta">Knyphausenstraße 9 · täglich ab 12 Uhr · Tel. 04932 28505</p>
+            <h3><a href="/eintrag?id=fischgeniesserei">Fischgenießerei</a></h3>
+            <p class="card-meta">Knyphausenstraße 9</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>täglich ab 12 Uhr</p>
             <p class="desc">Fischbrötchen, Backfisch und Krabben mit täglich wechselndem Angebot je nach Fang. Anders als eine reine Imbissbude hat das Stammhaus an der Knyphausenstraße Sitzplätze und nimmt Reservierungen an. Der Betrieb führt drei Standorte auf der Insel.</p>
-            <div class="card-foot">
-              <a href="https://www.fischgeniesserei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.fischgeniesserei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=fischgeniesserei" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=fischgeniesserei">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=fischgeniesserei#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="imbiss" data-kitchen="fisch" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Norderneyer Fischmann Imbissstand an der Jann-Berghaus-Straße (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="norderneyer-fischmann" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="fisch imbiss" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=norderneyer-fischmann" aria-label="Details zu Norderneyer Fischmann"><img src="assets/images/platzhalter-karte.svg" alt="Norderneyer Fischmann Imbissstand an der Jann-Berghaus-Straße (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Fischbrötchen &amp; Imbiss</span><span class="price-badge">€</span></div>
-            <h3>Norderneyer Fischmann</h3>
+            <h3><a href="/eintrag?id=norderneyer-fischmann">Norderneyer Fischmann</a></h3>
             <p class="card-meta">Jann-Berghaus-Straße 24</p>
             <p class="desc">Bekannte Adresse für frische Fischbrötchen, zentral zwischen Ort und Hafen gelegen. Gut geeignet für unterwegs oder als Snack auf dem Weg zum Strand.</p>
-            <div class="card-foot">
-              <a href="https://www.norderneyer-fischmann.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderneyer-fischmann.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=norderneyer-fischmann" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderneyer-fischmann">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderneyer-fischmann#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="fisch" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Fish and Chips im Bistro De Vries und Tretina auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="de-vries-und-tretina" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="fisch" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=de-vries-und-tretina" aria-label="Details zu De Vries &amp; Tretina"><img src="assets/images/platzhalter-karte.svg" alt="Fish and Chips im Bistro De Vries und Tretina auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Bistro</span><span class="price-badge">€€</span></div>
-            <h3>De Vries &amp; Tretina</h3>
+            <h3><a href="/eintrag?id=de-vries-und-tretina">De Vries &amp; Tretina</a></h3>
             <p class="card-meta">Fisch &amp; Fish and Chips</p>
             <p class="desc">Bistro mit Fischbrötchen-Variationen, Fish and Chips und selbstgeräucherten Fischspezialitäten. Etwas gehobener als ein reiner Imbiss, aber weiterhin unkompliziert und auf Fisch fokussiert.</p>
-            <div class="card-foot">
-              <a href="https://www.devries-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.devries-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=de-vries-und-tretina" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=de-vries-und-tretina">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=de-vries-und-tretina#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="fisch" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="GOSCH Fischrestaurant am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="gosch" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="fisch" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=gosch" aria-label="Details zu GOSCH"><img src="assets/images/platzhalter-karte.svg" alt="GOSCH Fischrestaurant am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant</span><span class="price-badge">€€</span></div>
-            <h3>GOSCH</h3>
+            <h3><a href="/eintrag?id=gosch">GOSCH</a></h3>
             <p class="card-meta">Am Kurplatz</p>
             <p class="desc">Bekannte Nordsee-Fischküche direkt am Kurplatz — frische Meeresdelikatessen und Fischbrötchen. Die überregional bekannte Marke sorgt für verlässliche Qualität und ein breites Angebot an Fischgerichten.</p>
-            <div class="card-foot">
-              <a href="https://gosch.de/standorte/norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://gosch.de/standorte/norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=gosch" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=gosch">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=gosch#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="mediterran" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Cornelius an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="restaurant-cornelius" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="mediterran" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=restaurant-cornelius" aria-label="Details zu Restaurant Cornelius"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Cornelius an der Strandpromenade Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Mediterran</span><span class="price-badge">€€</span></div>
-            <h3>Restaurant Cornelius</h3>
+            <h3><a href="/eintrag?id=restaurant-cornelius">Restaurant Cornelius</a></h3>
             <p class="card-meta">Am Nordstrand 3</p>
             <p class="desc">Mediterrane Küche und hausgemachte Eisspezialitäten aus eigener Manufaktur, mit Blick auf die Strandpromenade.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney-restaurant.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney-restaurant.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=restaurant-cornelius" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=restaurant-cornelius">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=restaurant-cornelius#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="italienisch" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Frisch gebackene Pizza im Restaurant Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="pizza-und-pasta-manufactura" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="italienisch" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=pizza-und-pasta-manufactura" aria-label="Details zu Pizza und Pasta Manufactura"><img src="assets/images/platzhalter-karte.svg" alt="Frisch gebackene Pizza im Restaurant Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Pizza &amp; Pasta</span><span class="price-badge">€€€</span></div>
-            <h3>Pizza und Pasta Manufactura</h3>
-            <p class="card-meta">Herrenpfad 20 · Tel. 04932 4671195 · Mittwoch Ruhetag</p>
+            <h3><a href="/eintrag?id=pizza-und-pasta-manufactura">Pizza und Pasta Manufactura</a></h3>
+            <p class="card-meta">Herrenpfad 20</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mittwoch Ruhetag</p>
             <p class="desc">Pizza und Pasta aus eigener Herstellung, dazu vegane und glutenfreie Gerichte. Mittwochs ist Ruhetag, sonst geöffnet ab dem Nachmittag.</p>
-            <div class="card-foot">
-              <a href="https://restaurant-norderney.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://restaurant-norderney.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=pizza-und-pasta-manufactura" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=pizza-und-pasta-manufactura">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=pizza-und-pasta-manufactura#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="cafe" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Hausgemachter Kuchen in der Kaffeegeniesserei an der Schmiedestraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="die-kaffeegeniesserei" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=die-kaffeegeniesserei" aria-label="Details zu Die Kaffeegeniesserei"><img src="assets/images/platzhalter-karte.svg" alt="Hausgemachter Kuchen in der Kaffeegeniesserei an der Schmiedestraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Café</span><span class="price-badge">€</span></div>
-            <h3>Die Kaffeegeniesserei</h3>
+            <h3><a href="/eintrag?id=die-kaffeegeniesserei">Die Kaffeegeniesserei</a></h3>
             <p class="card-meta">Schmiedestraße 16</p>
             <p class="desc">Hausgemachter Kuchen und herzhafte Snacks wie Panini in gemütlicher Café-Atmosphäre. Gut geeignet für eine Pause zwischen Einkaufsbummel und Strandbesuch.</p>
-            <div class="card-foot">
-              <a href="https://www.kaffeegeniesserei.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.kaffeegeniesserei.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=die-kaffeegeniesserei" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=die-kaffeegeniesserei">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=die-kaffeegeniesserei#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="cafe" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Terrasse des Surfcafés Norderney mit Meerblick (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="surfcafe-norderney" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=surfcafe-norderney" aria-label="Details zu Surfcafe Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Terrasse des Surfcafés Norderney mit Meerblick (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Café · Strandlage</span><span class="price-badge">€€</span></div>
-            <h3>Surfcafe Norderney</h3>
+            <h3><a href="/eintrag?id=surfcafe-norderney">Surfcafe Norderney</a></h3>
             <p class="card-meta">Direkt am Meer</p>
             <p class="desc">Helles, modernes Café mit Glasfront, windgeschützter Terrasse und Meerblick. Passt gut zu einem entspannten Vormittag oder Nachmittag mit Blick aufs Wasser.</p>
-            <div class="card-foot">
-              <a href="https://surfcafe-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://surfcafe-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=surfcafe-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=surfcafe-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=surfcafe-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="eisdiele" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Frieseneis, Eisdiele am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="frieseneis" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="eis" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=frieseneis" aria-label="Details zu Frieseneis"><img src="assets/images/platzhalter-karte.svg" alt="Frieseneis, Eisdiele am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Eisdiele</span><span class="price-badge">€</span></div>
-            <h3>Frieseneis</h3>
-            <p class="card-meta">Bülowallee 7 · Di–So 11–18 Uhr, Mo Ruhetag (März bis Oktober)</p>
-            <p class="desc">Die kleine Eisdiele gilt vielen als Ursprung der „Frieseneis"-Idee: Eis aus Küstenmilch, ohne künstliche Aromen und Farbstoffe, serviert in Waffel, Becher, Brötchen oder Flasche. Mit Außenplätzen direkt am Kurplatz gelegen, ideal für eine süße Pause zwischen Bummel und Strandbesuch. Etwas teurer als die meisten Eisdielen der Insel, dafür bekannt für Qualität ohne Zusatzstoffe.</p>
-            <div class="card-foot">
-              <a href="https://frieseneis.de/dielen/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <h3><a href="/eintrag?id=frieseneis">Frieseneis</a></h3>
+            <p class="card-meta">Bülowallee 7</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–So 11–18 Uhr, Mo Ruhetag (März bis Oktober)</p>
+            <p class="desc">Die kleine Eisdiele gilt vielen als Ursprung der „Frieseneis&quot;-Idee: Eis aus Küstenmilch, ohne künstliche Aromen und Farbstoffe, serviert in Waffel, Becher, Brötchen oder Flasche. Mit Außenplätzen direkt am Kurplatz gelegen, ideal für eine süße Pause zwischen Bummel und Strandbesuch. Etwas teurer als die meisten Eisdielen der Insel, dafür bekannt für Qualität ohne Zusatzstoffe.</p>
+            <div class="card-foot"><a href="https://frieseneis.de/dielen/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=frieseneis" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=frieseneis">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=frieseneis#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="eisdiele" data-kitchen="italienisch" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Eiscafé San Marco an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="eiscafe-san-marco" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="italienisch eis" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=eiscafe-san-marco" aria-label="Details zu Eiscafé San Marco"><img src="assets/images/platzhalter-karte.svg" alt="Eiscafé San Marco an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Eisdiele · Italienisch</span><span class="price-badge">€</span></div>
-            <h3>Eiscafé San Marco</h3>
-            <!-- Saisonal geöffnet, im Winter geschlossen -->
+            <h3><a href="/eintrag?id=eiscafe-san-marco">Eiscafé San Marco</a></h3>
             <p class="card-meta">Herrenpfad 23 / Eingang Jann-Berghaus-Straße</p>
-            <p class="desc">Italienisch geführtes Eiscafé mit italienischem Personal und wechselnden saisonalen Sorten — ein Stück „Klein-Italien" an der belebten Jann-Berghaus-Straße. Außenplätze direkt an der Einkaufsstraße bieten Blick auf das Inseltreiben. Saisonal geöffnet, im Winter geschlossen.</p>
-            <div class="card-foot">
-              <a href="https://www.facebook.com/EisCafeSanMarcoNorderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
+            <p class="desc">Italienisch geführtes Eiscafé mit italienischem Personal und wechselnden saisonalen Sorten — ein Stück „Klein-Italien&quot; an der belebten Jann-Berghaus-Straße. Außenplätze direkt an der Einkaufsstraße bieten Blick auf das Inseltreiben. Saisonal geöffnet, im Winter geschlossen.</p>
+            <div class="card-foot"><a href="https://www.facebook.com/EisCafeSanMarcoNorderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=eiscafe-san-marco" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=eiscafe-san-marco">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=eiscafe-san-marco#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Haifischbar mit blau gestrichener Fassade an der Osterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="haifischbar" data-betrieb-karte data-kategorie="bars" data-preis="€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=haifischbar" aria-label="Details zu Haifischbar"><img src="assets/images/platzhalter-karte.svg" alt="Haifischbar mit blau gestrichener Fassade an der Osterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Bar &amp; Kneipe</span><span class="price-badge">€</span></div>
-            <h3>Haifischbar</h3>
-            <p class="card-meta">Osterstraße 6 · Tel. 04932 934799</p>
+            <h3><a href="/eintrag?id=haifischbar">Haifischbar</a></h3>
+            <p class="card-meta">Osterstraße 6</p>
             <p class="desc">Urige Kneipe mit komplett blau gestrichener Fassade, gemalten Hai-Silhouetten und einem hölzernen Schwertfisch am Eingang — maritimes Ambiente pur. Bitburger vom Fass, Sky-Sport-Übertragungen und regelmäßige Live-Musik-Abende sorgen für Stimmung bis in die Nacht. Geeignet für Erwachsene, die einen urigen Abend mit Sport oder Live-Musik suchen, weniger für ein klassisches Abendessen.</p>
-            <div class="card-foot">
-              <a href="tel:+494932934799" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.facebook.com/HaifischbarNorderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
+            <div class="card-foot"><a href="https://www.facebook.com/HaifischbarNorderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=haifischbar" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=haifischbar">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=haifischbar#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Klabautermann Kneipe an der Kirchstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="klabautermann" data-betrieb-karte data-kategorie="bars" data-preis="€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=klabautermann" aria-label="Details zu Klabautermann"><img src="assets/images/platzhalter-karte.svg" alt="Klabautermann Kneipe an der Kirchstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Bar &amp; Kneipe</span><span class="price-badge">€</span></div>
-            <h3>Klabautermann</h3>
-            <!-- Keine eigene Domain vorhanden (klabautermann-norderney.de löst nicht auf).
-                 Die offizielle Facebook-Seite ist über die Betreiberseite Creutzenberg
-                 GmbH & Co. KG bestätigt, die den Klabautermann dorthin verlinkt. -->
+            <h3><a href="/eintrag?id=klabautermann">Klabautermann</a></h3>
             <p class="card-meta">Kirchstraße 17</p>
             <p class="desc">Klassische, unprätentiöse Bier-Kneipe mit Tradition und Bitburger vom Fass — von morgens bis in den späten Abend geöffnet, sowohl für ein schnelles Bier als auch für einen langen Thekenabend. Im selben Gebäude befindet sich im Obergeschoss die Cocktailbar Pasadena.</p>
-            <div class="card-foot">
-              <a href="https://www.facebook.com/Klabautermann.Norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
+            <div class="card-foot"><a href="https://www.facebook.com/Klabautermann.Norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=klabautermann" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=klabautermann">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=klabautermann#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="cafe" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Milchbar, historischer Strandpavillon am Weststrand Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="milchbar" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=milchbar" aria-label="Details zu Milchbar"><img src="assets/images/platzhalter-karte.svg" alt="Milchbar, historischer Strandpavillon am Weststrand Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Café · Bistro · Strandbar</span><span class="price-badge">€€</span></div>
-            <h3>Milchbar</h3>
-            <p class="card-meta">Damenpfad 33 · Promenade Weststrand · Tel. 04932 893880</p>
+            <h3><a href="/eintrag?id=milchbar">Milchbar</a></h3>
+            <p class="card-meta">Damenpfad 33 · Promenade Weststrand</p>
             <p class="desc">Historischer Pavillon, 1910 als Lesehalle erbaut und seit 1996 Milchbar, heute mit verglastem Vorbau und weitem Blick auf die Nordsee — gleichzeitig Café, Bistro, Restaurant, Tee-Lounge und Strandbar. Ideal für Sundowner mit Meerblick ebenso wie für ein entspanntes Frühstück oder Mittagessen direkt am Weststrand. Mittwochs Ruhetag, Küche schließt um 20 Uhr.</p>
-            <div class="card-foot">
-              <a href="https://milchbar-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://milchbar-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=milchbar" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=milchbar">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=milchbar#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional vegetarisch-vegan" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="de Leckerbeck, ostfriesische Küche an der Schmiedestraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="de-leckerbeck" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional vegetarisch-vegan" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=de-leckerbeck" aria-label="Details zu de Leckerbeck"><img src="assets/images/platzhalter-karte.svg" alt="de Leckerbeck, ostfriesische Küche an der Schmiedestraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Deutsch &amp; Regional</span><span class="price-badge">€€</span></div>
-            <h3>de Leckerbeck</h3>
-            <p class="card-meta">Schmiedestr. 6 · Tel. 04932 990753</p>
-            <p class="desc">Restaurant mit regionaler Küche nach dem eigenen Motto „frisch, regional und ohne Zusatzstoffe", also mit bewusstem Verzicht auf Fertigprodukte. Die Karte ist übersichtlich gehalten und wechselt saisonal. Reservierung nur telefonisch.</p>
-            <div class="card-foot">
-              <a href="tel:+494932990753" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.leckerbeck-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <h3><a href="/eintrag?id=de-leckerbeck">de Leckerbeck</a></h3>
+            <p class="card-meta">Schmiedestr. 6</p>
+            <p class="desc">Restaurant mit regionaler Küche nach dem eigenen Motto „frisch, regional und ohne Zusatzstoffe&quot;, also mit bewusstem Verzicht auf Fertigprodukte. Die Karte ist übersichtlich gehalten und wechselt saisonal. Reservierung nur telefonisch.</p>
+            <div class="card-foot"><a href="https://www.leckerbeck-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=de-leckerbeck" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=de-leckerbeck">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=de-leckerbeck#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional vegetarisch-vegan" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Meine Meierei, Traditionslokal in ehemaliger Molkerei Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="meine-meierei" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional vegetarisch-vegan" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=meine-meierei" aria-label="Details zu Meine Meierei"><img src="assets/images/platzhalter-karte.svg" alt="Meine Meierei, Traditionslokal in ehemaliger Molkerei Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Wirtshaus</span><span class="price-badge">€€</span></div>
-            <h3>Meine Meierei</h3>
+            <h3><a href="/eintrag?id=meine-meierei">Meine Meierei</a></h3>
             <p class="card-meta">Lippestraße 24</p>
-            <p class="desc">1881 ursprünglich als Molkerei erbaut, heute ein kultiges Traditionslokal und ostfriesisches Wirtshaus mit moderner Regionalküche und Spezialitäten vom Holzkohlegrill. Highlight ist „Rückers Käsefondue", dazu ein Teezimmer mit Teeflatrate sowie ausdrücklich vegetarische und vegane Optionen. Außenterrasse vorhanden, Reservierungen werden nicht angenommen.</p>
-            <div class="card-foot">
-              <a href="https://meine-meierei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <p class="desc">1881 ursprünglich als Molkerei erbaut, heute ein kultiges Traditionslokal und ostfriesisches Wirtshaus mit moderner Regionalküche und Spezialitäten vom Holzkohlegrill. Highlight ist „Rückers Käsefondue&quot;, dazu ein Teezimmer mit Teeflatrate sowie ausdrücklich vegetarische und vegane Optionen. Außenterrasse vorhanden, Reservierungen werden nicht angenommen.</p>
+            <div class="card-foot"><a href="https://meine-meierei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=meine-meierei" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=meine-meierei">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=meine-meierei#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="asiatisch vegetarisch-vegan" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Bambusgarten, asiatisches Restaurant in der HS2-Passage Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="bambusgarten" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="asiatisch vegetarisch-vegan" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=bambusgarten" aria-label="Details zu Bambusgarten"><img src="assets/images/platzhalter-karte.svg" alt="Bambusgarten, asiatisches Restaurant in der HS2-Passage Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Asiatisch</span><span class="price-badge">€€</span></div>
-            <h3>Bambusgarten</h3>
-            <p class="card-meta">Bülowallee 2 (HS2-Passage) · Tel. 04932 9356889</p>
-            <p class="desc">Seit über 15 Jahren familiengeführtes asiatisches Restaurant mit Fokus auf Sushi und vietnamesische Küche, modernes Design mit traditionellen Akzenten. Lieferservice ab 20&nbsp;€ Bestellwert, Räumlichkeiten für private Feiern bis 60 Gäste.</p>
-            <div class="card-foot">
-              <a href="tel:+4949329356889" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://bambusgarten-ney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <h3><a href="/eintrag?id=bambusgarten">Bambusgarten</a></h3>
+            <p class="card-meta">Bülowallee 2 (HS2-Passage)</p>
+            <p class="desc">Seit über 15 Jahren familiengeführtes asiatisches Restaurant mit Fokus auf Sushi und vietnamesische Küche, modernes Design mit traditionellen Akzenten. Lieferservice ab 20 € Bestellwert, Räumlichkeiten für private Feiern bis 60 Gäste.</p>
+            <div class="card-foot"><a href="https://bambusgarten-ney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=bambusgarten" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=bambusgarten">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=bambusgarten#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="asiatisch" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Champa Ney, asiatisches Fusion-Restaurant an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="champa-ney" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="asiatisch" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=champa-ney" aria-label="Details zu Champa Ney"><img src="assets/images/platzhalter-karte.svg" alt="Champa Ney, asiatisches Fusion-Restaurant an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
             <div class="card-tags-row"><span class="card-tag">Restaurant · Asiatische Fusion</span><span class="price-badge">€€</span></div>
-            <h3>Champa Ney</h3>
-            <p class="card-meta">Jann-Berghaus-Straße 22 · Tel. 04932 93454222</p>
-            <p class="desc">Asiatisches Fusion-Restaurant mit Anspruch auf hochwertige, originalgetreue Gerichte, dazu hausgemachte Kuchen am Nachmittag sowie eine kleine Wein-Auswahl. Zusätzlich betreibt das Haus einen „Champa Ney To Go"-Stand für schnelle Snacks wie Frühlingsrollen.</p>
-            <div class="card-foot">
-              <a href="tel:+49493293454222" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.champaney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <h3><a href="/eintrag?id=champa-ney">Champa Ney</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 22</p>
+            <p class="desc">Asiatisches Fusion-Restaurant mit Anspruch auf hochwertige, originalgetreue Gerichte, dazu hausgemachte Kuchen am Nachmittag sowie eine kleine Wein-Auswahl. Zusätzlich betreibt das Haus einen „Champa Ney To Go&quot;-Stand für schnelle Snacks wie Frühlingsrollen.</p>
+            <div class="card-foot"><a href="https://www.champaney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=champa-ney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=champa-ney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=champa-ney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant">
+        <div class="card card--eintrag" id="restaurant-seesteg" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="fisch" data-reservierung="ja">
+          <a class="card-media" href="/eintrag?id=restaurant-seesteg" aria-label="Details zu Restaurant Seesteg"><img src="assets/images/platzhalter-karte.svg" alt="Gedeckter Tisch im Sternerestaurant Seesteg mit Blick auf die Nordsee (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Fine Dining</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=restaurant-seesteg">Restaurant Seesteg</a></h3>
+            <p class="card-meta">Damenpfad 36A</p>
+            <p class="merkmale"><span class="merkmal">Reservierung empfohlen</span></p>
+            <p class="desc">Sternerestaurant im gleichnamigen Hotel direkt am Weststrand, ausgezeichnet mit einem MICHELIN-Stern und 15 Gault-Millau-Punkten. Küchenchef ist seit 2012 Markus Kebschull, seine Küche ist klassisch grundiert mit modernen Akzenten. Offene Küche, Blick auf die Nordsee und eine Terrasse zum Meer. Reservierung wird dringend empfohlen.</p>
+            <div class="card-foot"><a href="https://seesteg-norderney.de/restaurant/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=restaurant-seesteg" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=restaurant-seesteg">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=restaurant-seesteg#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="muellers-auf-norderney" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="mediterran" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=muellers-auf-norderney" aria-label="Details zu Müllers auf Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Brasserie Müllers auf Norderney mit Blick auf die Strandpromenade (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Brasserie</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=muellers-auf-norderney">Müllers auf Norderney</a></h3>
+            <p class="card-meta">Am Weststrand 3–4 · im Hotel 1884</p>
+            <p class="desc">Restaurant von Nelson Müller, eröffnet im Mai 2023 als dritter Standort der Marke. Direkt an der Strandpromenade mit Meerblick und Terrasse, innen modern und zurückhaltend eingerichtet. Auf der Karte stehen Brasserie-Klassiker wie Tatar und Bouillabaisse neben Schnitzel, frischem Fisch und Austern. Vom MICHELIN Guide 2025 mit einem MICHELIN Key ausgezeichnet.</p>
+            <div class="card-foot"><a href="https://1884-norderney.de/restaurant/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=muellers-auf-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=muellers-auf-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=muellers-auf-norderney#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="weisse-duene" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional" data-reservierung="ja">
+          <a class="card-media" href="/eintrag?id=weisse-duene" aria-label="Details zu Weisse Düne"><img src="assets/images/platzhalter-karte.svg" alt="Strandlokal Weisse Düne am Oststrand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Strandlokal</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=weisse-duene">Weisse Düne</a></h3>
+            <p class="card-meta">Weisse Düne 1 · Oststrand</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>täglich ab 11 Uhr</p>
+            <p class="merkmale"><span class="merkmal">Reservierung empfohlen</span></p>
+            <p class="desc">Strandlokal mit über 300 m² direkt am Oststrand. Tagsüber gibt es eine unkomplizierte Karte mit regionalen Gerichten wie Kartoffelsuppe mit Krabben oder Strandburger, abends ab 18 Uhr wird à la carte im gehobeneren Rahmen serviert. Dazu kommen ein Chef&#x27;s Table für vier Gäste in der Küche und Weinabende. Hunde sind willkommen; mittags ohne Reservierung, abends mit.</p>
+            <div class="card-foot"><a href="https://weisseduene.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=weisse-duene" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=weisse-duene">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=weisse-duene#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="marienhoehe" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=marienhoehe" aria-label="Details zu Marienhöhe"><img src="assets/images/platzhalter-karte.svg" alt="Achteckiger Pavillon der Marienhöhe mit gelben Sonnenschirmen auf der Hohen Düne (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Café &amp; Restaurant</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=marienhoehe">Marienhöhe</a></h3>
+            <p class="card-meta">Damenpfad 42a</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. 10–22 Uhr, Di Ruhetag</p>
+            <p class="desc">Traditionslokal im achteckigen Pavillon auf der Hohen Düne im Nordwesten der Insel, mit seinen gelben Sonnenschirmen weithin sichtbar. Von dort geht der Blick weit über Strand und Meer. Die Karte beschreibt sich selbst als friesisch mit einem Hauch der weiten Welt: Krabbenbrot und Backfisch stehen neben Nordsee-Bruschetta und Couscous. Nachmittags gibt es hausgebackene Kuchen, Frühstück von 10 bis 12 Uhr.</p>
+            <div class="card-foot"><a href="https://www.marienhoehe-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=marienhoehe" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=marienhoehe">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=marienhoehe#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="gute-stube" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional vegetarisch-vegan" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=gute-stube" aria-label="Details zu Gute Stube"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Gute Stube im Hotel Villa Breeksee auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Regional</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=gute-stube">Gute Stube</a></h3>
+            <p class="card-meta">Damenpfad 20 · im Hotel Villa Breeksee</p>
+            <p class="desc">Restaurant im Hotel Villa Breeksee am Weststrand mit Klassikern à la carte und saisonalen Spezialitäten. Neben Gerichten von Land und See stehen ausdrücklich vegetarische und vegane Optionen auf der Karte. Auch für Gäste offen, die nicht im Hotel wohnen.</p>
+            <div class="card-foot"><a href="https://www.gutestube-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=gute-stube" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=gute-stube">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=gute-stube#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="norderneys-konditorei" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=norderneys-konditorei" aria-label="Details zu Norderneys Konditorei"><img src="assets/images/platzhalter-karte.svg" alt="Handwerkliche Konditorei auf Norderney mit Teegebäck und Backwaren (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Konditorei</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=norderneys-konditorei">Norderneys Konditorei</a></h3>
+            <p class="card-meta">Gewerbegelände 20a</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 7:30–12 Uhr</p>
+            <p class="desc">Kleine handwerkliche Konditorei mit Konfitüren, Teegebäck und Brötchen. Torten auf Bestellung bietet der Betrieb nach eigenen Angaben nicht mehr an. Saisonal gibt es Spezialitäten wie Stutenkerle zu Nikolaus und Osterhasen auf Vorbestellung. Brötchen lassen sich zur Abholung in der Backstube vorbestellen.</p>
+            <div class="card-foot"><a href="https://www.norderneys-konditorei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=norderneys-konditorei" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderneys-konditorei">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderneys-konditorei#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="oktopussy" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="deutsch-regional" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=oktopussy" aria-label="Details zu Oktopussy"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Oktopussy im Hotel New Wave auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · MICHELIN Guide</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=oktopussy">Oktopussy</a></h3>
+            <p class="card-meta">Luisenstraße 13–15</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. 17–22 Uhr</p>
+            <p class="desc">Restaurant des Hotels New Wave, aufgenommen in den MICHELIN Guide Deutschland 2026. Die Küche ist regional geprägt mit internationalen Akzenten, der Raum modern-maritim mit offener Küche. Frühstück täglich von 8 bis 11:30 Uhr, abends ab 17 Uhr.</p>
+            <div class="card-foot"><a href="https://www.oktopussy-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=oktopussy" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=oktopussy">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=oktopussy#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="n-eys" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="mediterran" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=n-eys" aria-label="Details zu N&#x27;eys"><img src="assets/images/platzhalter-karte.svg" alt="Gourmetrestaurant N&#x27;eys im Wintergarten des Strandhotels Georgshöhe (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Gourmet</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=n-eys">N&#x27;eys</a></h3>
+            <p class="card-meta">Kaiserstraße 24</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>nur Fr–So geöffnet</p>
+            <p class="desc">Gourmetrestaurant im Wintergarten des Strandhotels Georgshöhe mit Meerblick. Die Küche verbindet nach eigener Beschreibung friesische Bodenständigkeit mit mediterraner Leichtigkeit. Ausdrücklich auch für Gäste offen, die nicht im Hotel wohnen. Geöffnet nur von Freitag bis Sonntag.</p>
+            <div class="card-foot"><a href="https://www.georgshoehe.de/gastronomie/neys" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=n-eys" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=n-eys">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=n-eys#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="neysplace" data-betrieb-karte data-kategorie="bars" data-preis="€€" data-kueche="mediterran" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=neysplace" aria-label="Details zu neysPLACE"><img src="assets/images/platzhalter-karte.svg" alt="Seeterrasse und Lounge neysPLACE am Strandhotel Georgshöhe (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Bar · Lounge · Seeterrasse</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=neysplace">neysPLACE</a></h3>
+            <p class="card-meta">Kaiserstraße 24</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. ab 13 Uhr</p>
+            <p class="desc">Seeterrasse, Bar und Lounge am Strandhotel Georgshöhe mit direktem Blick auf die Nordsee. Die Karte reicht nach eigener Beschreibung von edel bis rustikal, von Bratwurst mit Pommes bis zum Hummermenü. Bei schlechtem Wetter steht ein Innenbereich bereit.</p>
+            <div class="card-foot"><a href="https://www.neysplace.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=neysplace" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=neysplace">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=neysplace#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="esszimmer" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€€" data-kueche="deutsch-regional" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=esszimmer" aria-label="Details zu Esszimmer"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Esszimmer im Hotel Inselloft mit offener Küche (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Wein-Deli</span><span class="price-badge">€€€</span></div>
+            <h3><a href="/eintrag?id=esszimmer">Esszimmer</a></h3>
+            <p class="card-meta">Damenpfad 39</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Sa 13–22 Uhr · Mo &amp; So Ruhetag</p>
+            <p class="desc">Restaurant des Hotels Inselloft mit junger, frischer Küche, serviert an einer Tafel mit Blick in die offene Küche. Im selben Raum liegt ein Wein-Deli mit wandhohem Weinregal, dazu gibt es regelmäßig Wine-and-Dine-Abende. Abendservice ab 18 Uhr. Hunde sind hier nicht erlaubt.</p>
+            <div class="card-foot"><a href="https://inselloft-norderney.de/essen-trinken/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=esszimmer" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=esszimmer">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=esszimmer#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="inselloft-baeckerei" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=inselloft-baeckerei" aria-label="Details zu Inselloft Bäckerei"><img src="assets/images/platzhalter-karte.svg" alt="Handgemachte Backwaren in der Inselloft Bäckerei auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Bäckerei &amp; Café</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=inselloft-baeckerei">Inselloft Bäckerei</a></h3>
+            <p class="card-meta">Damenpfad 38</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–So 7–17 Uhr · Mo geschlossen</p>
+            <p class="desc">Handgemachte Brote, Brötchen, Croissants und Kuchen, dazu Kaffee und Tee. Ab 10:30 Uhr werden frische Waffeln gebacken. Gehört zum Hotel Inselloft, ist aber für alle offen.</p>
+            <div class="card-foot"><a href="https://inselloft-norderney.de/essen-trinken/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=inselloft-baeckerei" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselloft-baeckerei">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselloft-baeckerei#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="cafe-extrablatt" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=cafe-extrablatt" aria-label="Details zu Café Extrablatt"><img src="assets/images/platzhalter-karte.svg" alt="Café Extrablatt am Kurplatz neben dem bade:haus Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Café · Frühstück</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=cafe-extrablatt">Café Extrablatt</a></h3>
+            <p class="card-meta">Am Kurplatz 3</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. 9–23 Uhr</p>
+            <p class="desc">Café direkt am Kurplatz neben dem bade:haus, seit 2006 auf der Insel. Es gibt ein Frühstücksbuffet, dazu Pizza, Burger, Wraps und warme Gerichte. Ab 18 Uhr läuft die Shaker Time mit Cocktails zum Einheitspreis.</p>
+            <div class="card-foot"><a href="https://cafe-extrablatt.de/standorte/details/cafe-extrablatt-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=cafe-extrablatt" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=cafe-extrablatt">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=cafe-extrablatt#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="duene13" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€" data-kueche="deutsch-regional" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=duene13" aria-label="Details zu Düne13"><img src="assets/images/platzhalter-karte.svg" alt="Biergarten Düne13 mit Strandkörben am Leuchtturm Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Biergarten · Leuchtturm</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=duene13">Düne13</a></h3>
+            <p class="card-meta">Am Leuchtturm 2</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>ab 10 Uhr, Küche 11–19 Uhr</p>
+            <p class="desc">Insel-Biergarten mit Oberdeck direkt am Leuchtturm, gesessen wird teils in Strandkörben. Auf der Karte stehen Schnitzel, Currywurst, Kibbeling, Scholle und frisch geräucherter Aal, dazu selbstgebackener Kuchen und Ostfriesentee. Das Oberdeck öffnet ab 11 Uhr.</p>
+            <div class="card-foot"><a href="https://www.duene13-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=duene13" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=duene13">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=duene13#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="das-alte-brauhaus" data-betrieb-karte data-kategorie="bars" data-preis="€€" data-kueche="deutsch-regional" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=das-alte-brauhaus" aria-label="Details zu Das Alte Brauhaus"><img src="assets/images/platzhalter-karte.svg" alt="Das Alte Brauhaus, Stammhaus der Norderneyer Hausbrauerei (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Hausbrauerei</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=das-alte-brauhaus">Das Alte Brauhaus</a></h3>
+            <p class="card-meta">Damenpfad 5</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>So–Do 16–23 Uhr, Fr–Sa 16–24 Uhr</p>
+            <p class="desc">Stammhaus der 2012 gegründeten Norderneyer Hausbrauerei mit Ausschank der eigenen Biere und wechselnder Speisekarte. Reservierungen sind nicht möglich, man kommt einfach vorbei.</p>
+            <div class="card-foot"><a href="https://www.norderneyer-brauhaus.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=das-alte-brauhaus" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=das-alte-brauhaus">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=das-alte-brauhaus#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="weststrand-bar" data-betrieb-karte data-kategorie="bars" data-preis="€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=weststrand-bar" aria-label="Details zu Weststrand-Bar"><img src="assets/images/platzhalter-karte.svg" alt="Weststrand-Bar an der Strandpromenade von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Strandbar · Saison</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=weststrand-bar">Weststrand-Bar</a></h3>
+            <p class="card-meta">Strandpromenade Weststrand</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>März bis Oktober</p>
+            <p class="desc">Strandbar des Norderneyer Brauhauses direkt an der Promenade mit Ausschank der eigenen Biere im Freien. Geöffnet nach eigener Angabe ab 12 Uhr, bis die Sonne untergeht, bei kühlem Wetter auch kürzer.</p>
+            <div class="card-foot"><a href="https://www.norderneyer-brauhaus.de/unsere-standorte/weststrandbar/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=weststrand-bar" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=weststrand-bar">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=weststrand-bar#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="die-brauhalle" data-betrieb-karte data-kategorie="bars" data-preis="€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=die-brauhalle" aria-label="Details zu Die Brauhalle"><img src="assets/images/platzhalter-karte.svg" alt="Die Brauhalle, Ausschank in der Brauerei des Norderneyer Brauhauses (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Brauerei-Ausschank</span><span class="price-badge">€</span></div>
+            <h3><a href="/eintrag?id=die-brauhalle">Die Brauhalle</a></h3>
+            <p class="card-meta">Im Gewerbegelände 18</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. 12–18 Uhr</p>
+            <p class="desc">Ausschank direkt in der Brauerei im Gewerbegebiet, wo das Norderneyer Bier heute produziert wird. Es gibt Bier mit einer Auswahl an Snacks in Brauereiatmosphäre.</p>
+            <div class="card-foot"><a href="https://www.norderneyer-brauhaus.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=die-brauhalle" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=die-brauhalle">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=die-brauhalle#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="giftbude" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="italienisch mediterran" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=giftbude" aria-label="Details zu Giftbude"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Giftbude mit windgeschützter Terrasse am Weststrand (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Weststrand</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=giftbude">Giftbude</a></h3>
+            <p class="card-meta">Am Weststrand 2</p>
+            <p class="desc">Restaurant direkt am Weststrand mit großer windgeschützter Terrasse. Trotz des ungewöhnlichen Namens steht eine überwiegend italienisch-mediterrane Karte auf dem Tisch. Zu den Ruhetagen machen die Quellen unterschiedliche Angaben, ein Anruf lohnt sich.</p>
+            <div class="card-foot"><a href="http://www.giftbude.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=giftbude" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=giftbude">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=giftbude#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="schmuggler" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional fisch" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=schmuggler" aria-label="Details zu Schmuggler"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Schmuggler mit schiffsförmigem Tresen und maritimer Einrichtung (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · seit über 45 Jahren</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=schmuggler">Schmuggler</a></h3>
+            <p class="card-meta">Birkenweg 24</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>tägl. 11–14 &amp; 17–20 Uhr · Mi Ruhetag</p>
+            <p class="desc">Eines der ältesten Restaurants der Insel, seit über 45 Jahren in Betrieb und seit 2018 von Michael Kleimann geführt, zuvor unter dem Namen Old Smuggler. Dunkle Holzmöbel, ein schiffsförmiger Tresen und maritime Deko prägen den Raum. Auf der Karte stehen Fleischgerichte und Fischspezialitäten.</p>
+            <div class="card-foot"><a href="http://www.oldsmuggler-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=schmuggler" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=schmuggler">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=schmuggler#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="diamonds-club" data-betrieb-karte data-kategorie="bars" data-preis="€€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=diamonds-club" aria-label="Details zu Diamonds Club"><img src="assets/images/platzhalter-karte.svg" alt="Diskothek Diamonds Club an der Osterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Diskothek · Cocktailbar</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=diamonds-club">Diamonds Club</a></h3>
+            <p class="card-meta">Osterstraße 6</p>
+            <p class="desc">Diskothek mit Tanzfläche, DJ-Musik aus House, R&amp;B und Charts sowie einer Cocktailbar. Eröffnet im April 2024 in den früheren Räumen von Tante Jens.</p>
+            <div class="card-foot"><a href="https://www.diamondclubnorderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=diamonds-club" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=diamonds-club">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=diamonds-club#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="pasadena" data-betrieb-karte data-kategorie="bars" data-preis="€€" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=pasadena" aria-label="Details zu Pasadena"><img src="assets/images/platzhalter-karte.svg" alt="Cocktailbar Pasadena im Obergeschoss über dem Klabautermann (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Cocktailbar</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=pasadena">Pasadena</a></h3>
+            <p class="card-meta">Kirchstraße 17 · im Obergeschoss</p>
+            <p class="desc">Cocktailbar im Obergeschoss über der Kneipe Klabautermann, spezialisiert auf verschiedene Gin-Sorten. Der Raum hat Tradition als Tanzlokal. Eine eigene Website gibt es nicht, wohl aber eine gepflegte offizielle Facebook-Seite.</p>
+            <div class="card-foot"><a href="https://www.facebook.com/Pasadena.Norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zur Webseite</a><a href="/eintrag?id=pasadena" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=pasadena">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=pasadena#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="friesenschaenke" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="deutsch-regional" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=friesenschaenke" aria-label="Details zu Friesenschänke"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Friesenschänke im Hotel Friese in der Fußgängerzone (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Restaurant · Hotelrestaurant</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=friesenschaenke">Friesenschänke</a></h3>
+            <p class="card-meta">Friedrichstr. 34 · im Hotel Friese</p>
+            <p class="desc">À-la-carte-Restaurant des Hotel Friese mitten in der Fußgängerzone. Auch für Gäste geöffnet, die nicht im Hotel wohnen.</p>
+            <div class="card-foot"><a href="https://www.hotel-friese.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=friesenschaenke" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=friesenschaenke">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=friesenschaenke#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag is-beispiel" id="beispiel-cafe-strandgut" data-betrieb-karte data-kategorie="restaurants-cafes" data-preis="€€" data-kueche="cafe" data-reservierung="nein">
+          <a class="card-media" href="/eintrag?id=beispiel-cafe-strandgut" aria-label="Details zu Café Strandgut (Beispiel)"><img src="assets/images/platzhalter-quer.svg" alt="Platzhalter: Café von außen" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag card-tag--beispiel">Beispiel</span><span class="card-tag">Restaurant &amp; Café</span><span class="price-badge">€€</span></div>
+            <h3><a href="/eintrag?id=beispiel-cafe-strandgut">Café Strandgut (Beispiel)</a></h3>
+            <p class="card-meta">Musterstraße 1</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sommer: täglich 9–18 Uhr · Winter: Mi–So 10–17 Uhr</p>
+            <p class="desc">So sieht ein Eintrag aus: Kuchen, Kaffee und Blick aufs Meer. Diesen Betrieb gibt es nicht.</p>
+            <div class="luis-tipp"><span class="luis-tipp-badge">Luis’ Tipp</span><p>[LUIS-TIPP: kurzer persönlicher Satz]</p></div>
+            <div class="card-foot"><a href="https://example.com/reservieren" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Tisch reservieren</a><a href="/eintrag?id=beispiel-cafe-strandgut" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 15.11.2026 · Angaben vom Betrieb, ohne Gewähr · <a href="/kontakt?eintrag=beispiel-cafe-strandgut#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="filter-leer" data-filter-leer="[data-betrieb-karte]" hidden>Zu dieser Auswahl gibt es noch keinen Eintrag. Probier einen anderen Filter.</p>
+      <!-- /@betriebe -->
+      <div class="card-grid" style="margin-top:28px">
+        <div class="card" data-category="restaurant">
           <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Gedeckter Restauranttisch mit Meerblick, sinnbildlich für weitere Gastronomie auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
           <div class="card-body">
             <span class="card-tag">Übersicht</span>
@@ -394,279 +623,9 @@
             </div>
           </div>
         </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="fisch" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Gedeckter Tisch im Sternerestaurant Seesteg mit Blick auf die Nordsee (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Fine Dining</span><span class="price-badge">€€€</span></div>
-            <h3>Restaurant Seesteg</h3>
-            <p class="card-meta">Damenpfad 36A · Tel. 04932 893600</p>
-            <p class="desc">Sternerestaurant im gleichnamigen Hotel direkt am Weststrand, ausgezeichnet mit einem MICHELIN-Stern und 15 Gault-Millau-Punkten. Küchenchef ist seit 2012 Markus Kebschull, seine Küche ist klassisch grundiert mit modernen Akzenten. Offene Küche, Blick auf die Nordsee und eine Terrasse zum Meer. Reservierung wird dringend empfohlen.</p>
-            <div class="card-foot">
-              <a href="https://seesteg-norderney.de/restaurant/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="mediterran" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Brasserie Müllers auf Norderney mit Blick auf die Strandpromenade (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Brasserie</span><span class="price-badge">€€€</span></div>
-            <h3>Müllers auf Norderney</h3>
-            <p class="card-meta">Am Weststrand 3–4 · im Hotel 1884</p>
-            <p class="desc">Restaurant von Nelson Müller, eröffnet im Mai 2023 als dritter Standort der Marke. Direkt an der Strandpromenade mit Meerblick und Terrasse, innen modern und zurückhaltend eingerichtet. Auf der Karte stehen Brasserie-Klassiker wie Tatar und Bouillabaisse neben Schnitzel, frischem Fisch und Austern. Vom MICHELIN Guide 2025 mit einem MICHELIN Key ausgezeichnet.</p>
-            <div class="card-foot">
-              <a href="https://1884-norderney.de/restaurant/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Strandlokal Weisse Düne am Oststrand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Strandlokal</span><span class="price-badge">€€</span></div>
-            <h3>Weisse Düne</h3>
-            <p class="card-meta">Weisse Düne 1 · Oststrand · täglich ab 11 Uhr</p>
-            <p class="desc">Strandlokal mit über 300&nbsp;m² direkt am Oststrand. Tagsüber gibt es eine unkomplizierte Karte mit regionalen Gerichten wie Kartoffelsuppe mit Krabben oder Strandburger, abends ab 18 Uhr wird à la carte im gehobeneren Rahmen serviert. Dazu kommen ein Chef's Table für vier Gäste in der Küche und Weinabende. Hunde sind willkommen; mittags ohne Reservierung, abends mit.</p>
-            <div class="card-foot">
-              <a href="https://weisseduene.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="deutsch-regional cafe" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Achteckiger Pavillon der Marienhöhe mit gelben Sonnenschirmen auf der Hohen Düne (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Café &amp; Restaurant</span><span class="price-badge">€€</span></div>
-            <h3>Marienhöhe</h3>
-            <p class="card-meta">Damenpfad 42a · tägl. 10–22 Uhr, Di Ruhetag · Tel. 04932 9350153</p>
-            <p class="desc">Traditionslokal im achteckigen Pavillon auf der Hohen Düne im Nordwesten der Insel, mit seinen gelben Sonnenschirmen weithin sichtbar. Von dort geht der Blick weit über Strand und Meer. Die Karte beschreibt sich selbst als friesisch mit einem Hauch der weiten Welt: Krabbenbrot und Backfisch stehen neben Nordsee-Bruschetta und Couscous. Nachmittags gibt es hausgebackene Kuchen, Frühstück von 10 bis 12 Uhr.</p>
-            <div class="card-foot">
-              <a href="https://www.marienhoehe-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional vegetarisch-vegan" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Gute Stube im Hotel Villa Breeksee auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Regional</span><span class="price-badge">€€</span></div>
-            <h3>Gute Stube</h3>
-            <p class="card-meta">Damenpfad 20 · im Hotel Villa Breeksee</p>
-            <p class="desc">Restaurant im Hotel Villa Breeksee am Weststrand mit Klassikern à la carte und saisonalen Spezialitäten. Neben Gerichten von Land und See stehen ausdrücklich vegetarische und vegane Optionen auf der Karte. Auch für Gäste offen, die nicht im Hotel wohnen.</p>
-            <div class="card-foot">
-              <a href="https://www.gutestube-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="cafe" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Handwerkliche Konditorei auf Norderney mit Teegebäck und Backwaren (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Konditorei</span><span class="price-badge">€</span></div>
-            <h3>Norderneys Konditorei</h3>
-            <p class="card-meta">Gewerbegelände 20a · Mo–Sa 7:30–12 Uhr · Tel. 04932 81353</p>
-            <p class="desc">Kleine handwerkliche Konditorei mit Konfitüren, Teegebäck und Brötchen. Torten auf Bestellung bietet der Betrieb nach eigenen Angaben nicht mehr an. Saisonal gibt es Spezialitäten wie Stutenkerle zu Nikolaus und Osterhasen auf Vorbestellung. Brötchen lassen sich zur Abholung in der Backstube vorbestellen.</p>
-            <div class="card-foot">
-              <a href="https://www.norderneys-konditorei.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Oktopussy im Hotel New Wave auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · MICHELIN Guide</span><span class="price-badge">€€€</span></div>
-            <h3>Oktopussy</h3>
-            <p class="card-meta">Luisenstraße 13–15 · tägl. 17–22 Uhr · Tel. 04932 9342050</p>
-            <p class="desc">Restaurant des Hotels New Wave, aufgenommen in den MICHELIN Guide Deutschland 2026. Die Küche ist regional geprägt mit internationalen Akzenten, der Raum modern-maritim mit offener Küche. Frühstück täglich von 8 bis 11:30 Uhr, abends ab 17 Uhr.</p>
-            <div class="card-foot">
-              <a href="https://www.oktopussy-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="mediterran" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Gourmetrestaurant N'eys im Wintergarten des Strandhotels Georgshöhe (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Gourmet</span><span class="price-badge">€€€</span></div>
-            <h3>N'eys</h3>
-            <p class="card-meta">Kaiserstraße 24 · nur Fr–So geöffnet</p>
-            <p class="desc">Gourmetrestaurant im Wintergarten des Strandhotels Georgshöhe mit Meerblick. Die Küche verbindet nach eigener Beschreibung friesische Bodenständigkeit mit mediterraner Leichtigkeit. Ausdrücklich auch für Gäste offen, die nicht im Hotel wohnen. Geöffnet nur von Freitag bis Sonntag.</p>
-            <div class="card-foot">
-              <a href="https://www.georgshoehe.de/gastronomie/neys" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-kitchen="mediterran" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Seeterrasse und Lounge neysPLACE am Strandhotel Georgshöhe (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Bar · Lounge · Seeterrasse</span><span class="price-badge">€€</span></div>
-            <h3>neysPLACE</h3>
-            <p class="card-meta">Kaiserstraße 24 · tägl. ab 13 Uhr · Tel. 04932 898404</p>
-            <p class="desc">Seeterrasse, Bar und Lounge am Strandhotel Georgshöhe mit direktem Blick auf die Nordsee. Die Karte reicht nach eigener Beschreibung von edel bis rustikal, von Bratwurst mit Pommes bis zum Hummermenü. Bei schlechtem Wetter steht ein Innenbereich bereit.</p>
-            <div class="card-foot">
-              <a href="https://www.neysplace.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional" data-price="€€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Esszimmer im Hotel Inselloft mit offener Küche (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Wein-Deli</span><span class="price-badge">€€€</span></div>
-            <h3>Esszimmer</h3>
-            <p class="card-meta">Damenpfad 39 · Di–Sa 13–22 Uhr · Mo &amp; So Ruhetag</p>
-            <p class="desc">Restaurant des Hotels Inselloft mit junger, frischer Küche, serviert an einer Tafel mit Blick in die offene Küche. Im selben Raum liegt ein Wein-Deli mit wandhohem Weinregal, dazu gibt es regelmäßig Wine-and-Dine-Abende. Abendservice ab 18 Uhr. Hunde sind hier nicht erlaubt.</p>
-            <div class="card-foot">
-              <a href="https://inselloft-norderney.de/essen-trinken/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="cafe" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Handgemachte Backwaren in der Inselloft Bäckerei auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Bäckerei &amp; Café</span><span class="price-badge">€</span></div>
-            <h3>Inselloft Bäckerei</h3>
-            <p class="card-meta">Damenpfad 38 · Di–So 7–17 Uhr · Mo geschlossen</p>
-            <p class="desc">Handgemachte Brote, Brötchen, Croissants und Kuchen, dazu Kaffee und Tee. Ab 10:30 Uhr werden frische Waffeln gebacken. Gehört zum Hotel Inselloft, ist aber für alle offen.</p>
-            <div class="card-foot">
-              <a href="https://inselloft-norderney.de/essen-trinken/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="cafe" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Café Extrablatt am Kurplatz neben dem bade:haus Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Café · Frühstück</span><span class="price-badge">€€</span></div>
-            <h3>Café Extrablatt</h3>
-            <p class="card-meta">Am Kurplatz 3 · tägl. 9–23 Uhr · Tel. 04932 991613</p>
-            <p class="desc">Café direkt am Kurplatz neben dem bade:haus, seit 2006 auf der Insel. Es gibt ein Frühstücksbuffet, dazu Pizza, Burger, Wraps und warme Gerichte. Ab 18 Uhr läuft die Shaker Time mit Cocktails zum Einheitspreis.</p>
-            <div class="card-foot">
-              <a href="https://cafe-extrablatt.de/standorte/details/cafe-extrablatt-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="cafe" data-kitchen="deutsch-regional" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Biergarten Düne13 mit Strandkörben am Leuchtturm Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Biergarten · Leuchtturm</span><span class="price-badge">€</span></div>
-            <h3>Düne13</h3>
-            <p class="card-meta">Am Leuchtturm 2 · ab 10 Uhr, Küche 11–19 Uhr</p>
-            <p class="desc">Insel-Biergarten mit Oberdeck direkt am Leuchtturm, gesessen wird teils in Strandkörben. Auf der Karte stehen Schnitzel, Currywurst, Kibbeling, Scholle und frisch geräucherter Aal, dazu selbstgebackener Kuchen und Ostfriesentee. Das Oberdeck öffnet ab 11 Uhr.</p>
-            <div class="card-foot">
-              <a href="https://www.duene13-norderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-kitchen="deutsch-regional" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Das Alte Brauhaus, Stammhaus der Norderneyer Hausbrauerei (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Hausbrauerei</span><span class="price-badge">€€</span></div>
-            <h3>Das Alte Brauhaus</h3>
-            <p class="card-meta">Damenpfad 5 · So–Do 16–23 Uhr, Fr–Sa 16–24 Uhr</p>
-            <p class="desc">Stammhaus der 2012 gegründeten Norderneyer Hausbrauerei mit Ausschank der eigenen Biere und wechselnder Speisekarte. Reservierungen sind nicht möglich, man kommt einfach vorbei.</p>
-            <div class="card-foot">
-              <a href="https://www.norderneyer-brauhaus.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Weststrand-Bar an der Strandpromenade von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Strandbar · Saison</span><span class="price-badge">€</span></div>
-            <h3>Weststrand-Bar</h3>
-            <p class="card-meta">Strandpromenade Weststrand · März bis Oktober</p>
-            <p class="desc">Strandbar des Norderneyer Brauhauses direkt an der Promenade mit Ausschank der eigenen Biere im Freien. Geöffnet nach eigener Angabe ab 12 Uhr, bis die Sonne untergeht, bei kühlem Wetter auch kürzer.</p>
-            <div class="card-foot">
-              <a href="https://www.norderneyer-brauhaus.de/unsere-standorte/weststrandbar/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Die Brauhalle, Ausschank in der Brauerei des Norderneyer Brauhauses (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Brauerei-Ausschank</span><span class="price-badge">€</span></div>
-            <h3>Die Brauhalle</h3>
-            <p class="card-meta">Im Gewerbegelände 18 · tägl. 12–18 Uhr</p>
-            <p class="desc">Ausschank direkt in der Brauerei im Gewerbegebiet, wo das Norderneyer Bier heute produziert wird. Es gibt Bier mit einer Auswahl an Snacks in Brauereiatmosphäre.</p>
-            <div class="card-foot">
-              <a href="https://www.norderneyer-brauhaus.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="italienisch mediterran" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Giftbude mit windgeschützter Terrasse am Weststrand (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Weststrand</span><span class="price-badge">€€</span></div>
-            <h3>Giftbude</h3>
-            <p class="card-meta">Am Weststrand 2 · Tel. 04932 991372</p>
-            <p class="desc">Restaurant direkt am Weststrand mit großer windgeschützter Terrasse. Trotz des ungewöhnlichen Namens steht eine überwiegend italienisch-mediterrane Karte auf dem Tisch. Zu den Ruhetagen machen die Quellen unterschiedliche Angaben, ein Anruf lohnt sich.</p>
-            <div class="card-foot">
-              <a href="http://www.giftbude.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional fisch" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Schmuggler mit schiffsförmigem Tresen und maritimer Einrichtung (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · seit über 45 Jahren</span><span class="price-badge">€€</span></div>
-            <h3>Schmuggler</h3>
-            <p class="card-meta">Birkenweg 24 · tägl. 11–14 &amp; 17–20 Uhr · Mi Ruhetag · Tel. 04932 3568</p>
-            <p class="desc">Eines der ältesten Restaurants der Insel, seit über 45 Jahren in Betrieb und seit 2018 von Michael Kleimann geführt, zuvor unter dem Namen Old Smuggler. Dunkle Holzmöbel, ein schiffsförmiger Tresen und maritime Deko prägen den Raum. Auf der Karte stehen Fleischgerichte und Fischspezialitäten.</p>
-            <div class="card-foot">
-              <a href="http://www.oldsmuggler-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Diskothek Diamonds Club an der Osterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Diskothek · Cocktailbar</span><span class="price-badge">€€</span></div>
-            <h3>Diamonds Club</h3>
-            <p class="card-meta">Osterstraße 6</p>
-            <p class="desc">Diskothek mit Tanzfläche, DJ-Musik aus House, R&amp;B und Charts sowie einer Cocktailbar. Eröffnet im April 2024 in den früheren Räumen von Tante Jens.</p>
-            <div class="card-foot">
-              <a href="https://www.diamondclubnorderney.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="bar" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Cocktailbar Pasadena im Obergeschoss über dem Klabautermann (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Cocktailbar</span><span class="price-badge">€€</span></div>
-            <h3>Pasadena</h3>
-            <p class="card-meta">Kirchstraße 17, im Obergeschoss · Tel. 04932 809127</p>
-            <p class="desc">Cocktailbar im Obergeschoss über der Kneipe Klabautermann, spezialisiert auf verschiedene Gin-Sorten. Der Raum hat Tradition als Tanzlokal. Eine eigene Website gibt es nicht, wohl aber eine gepflegte offizielle Facebook-Seite.</p>
-            <div class="card-foot">
-              <a href="https://www.facebook.com/Pasadena.Norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-food-card data-category="restaurant" data-kitchen="deutsch-regional" data-price="€€">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Restaurant Friesenschänke im Hotel Friese in der Fußgängerzone (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <div class="card-tags-row"><span class="card-tag">Restaurant · Hotelrestaurant</span><span class="price-badge">€€</span></div>
-            <h3>Friesenschänke</h3>
-            <p class="card-meta">Friedrichstr. 34 · im Hotel Friese · Tel. 04932 802-0</p>
-            <p class="desc">À-la-carte-Restaurant des Hotel Friese mitten in der Fußgängerzone. Auch für Gäste geöffnet, die nicht im Hotel wohnen.</p>
-            <div class="card-foot">
-              <a href="https://www.hotel-friese.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="karte" data-karte="restaurants-cafes,bars" style="margin-top:28px"></div>
+      <p class="betrieb-cta">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
   <section class="section section--sand">
@@ -694,18 +653,6 @@
     </div>
   </section>
 
-  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
-  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Von Betrieben eingetragen</p>
-        <h2>Neu im Guide</h2>
-      </div>
-      <div class="card-grid cols-3" data-betriebe="restaurants-cafes,bars"></div>
-      <div class="karte" data-karte="restaurants-cafes,bars" style="margin-top:28px"></div>
-      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
-    </div>
-  </section>
 
 </main>
 
@@ -775,6 +722,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe-felder.js?v=23"></script>
 <script src="js/betriebe.js?v=23"></script>
 <script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>

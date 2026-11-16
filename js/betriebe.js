@@ -1,26 +1,22 @@
 /* ==========================================================================
    Norderney Guide — Einträge von Betrieben
    Daten: daten/betriebe.json (Anleitung: docs/eintraege.md)
+   Bezeichnungen und Button-Texte: js/betriebe-felder.js (erzeugt von tools/betriebe.py)
 
-   - Auf Kategorieseiten: <section data-betriebe-bereich hidden> mit
-     <div data-betriebe="kategorie1,kategorie2"> wird mit Karten gefüllt.
-   - Auf eintrag.html?id=... wird die Detailseite aufgebaut.
-   Der Button-Text hängt fest an der Kategorie, der Betrieb wählt ihn nicht.
+   - Die Karten auf den Übersichtsseiten schreibt tools/betriebe.py fest ins HTML.
+   - Dieses Skript baut nur die Detailseite eintrag.html?id=... auf und stellt
+     NG_BETRIEBE_LADEN für die Karte (js/karte.js) bereit.
+   Button-Logik (gleich wie in tools/betriebe.py): Buchungslink → Webseite →
+   Instagram → Anrufen → Route anzeigen. Der Button-Text hängt an der Kategorie.
    ========================================================================== */
 (function () {
-  var KATEGORIEN = {
-    'unterkuenfte':           { label: 'Unterkunft',               knopf: 'Jetzt buchen',      buchung: true,  seite: '/unterkuenfte',         schema: 'LodgingBusiness' },
-    'restaurants-cafes':      { label: 'Restaurant & Café',        knopf: 'Tisch reservieren', buchung: true,  seite: '/essen-trinken',        schema: 'Restaurant' },
-    'bars':                   { label: 'Bar',                      knopf: 'Zur Webseite',      buchung: false, seite: '/essen-trinken',        schema: 'BarOrPub' },
-    'geschaefte-mode':        { label: 'Geschäft & Mode',          knopf: 'Zum Shop',          buchung: false, seite: '/geschaefte-einkaufen', schema: 'Store' },
-    'freizeit-aktivitaeten':  { label: 'Freizeit & Aktivität',     knopf: 'Jetzt buchen',      buchung: true,  seite: '/aktivitaeten',         schema: 'TouristAttraction' },
-    'fahrradverleih-service': { label: 'Fahrradverleih & Service', knopf: 'Zur Webseite',      buchung: false, seite: '/mobilitaet',           schema: 'LocalBusiness' }
-  };
+  var F = window.NG_FELDER || { kategorien: {}, felder: {}, kategorieFelder: {}, hinweis: {} };
+  var KATEGORIEN = F.kategorien;
   window.NG_KATEGORIEN = KATEGORIEN;
 
   var ICON_INFO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>';
 
-  // Alles, was aus der JSON-Datei kommt, wird maskiert (Betriebe liefern die Texte).
+  // Alles, was aus der JSON-Datei kommt, wird maskiert.
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -31,6 +27,13 @@
     u = String(u || '').trim();
     return /^https?:\/\//i.test(u) ? u : '';
   }
+  function telLink(t) {
+    var z = String(t || '').replace(/[^\d+]/g, '');
+    if (!z) return '';
+    if (z.indexOf('00') === 0) z = '+' + z.slice(2);
+    else if (z.charAt(0) === '0') z = '+49' + z.slice(1);
+    return 'tel:' + z;
+  }
   function datum(iso) {
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
     return m ? m[3] + '.' + m[2] + '.' + m[1] : esc(iso);
@@ -39,23 +42,33 @@
     var a = e.adresse || {};
     return [a.strasse, [a.plz, a.ort].filter(Boolean).join(' ')].filter(Boolean).join(', ');
   }
+  function routeLink(e) {
+    var a = e.adresse || {};
+    return a.strasse ? 'https://www.openstreetmap.org/search?query=' + encodeURIComponent(adresse(e)) : '';
+  }
   function fotos(e) {
     var f = (e.fotos || []).filter(function (b) { return b && b.src; }).slice(0, 6);
     return f.length ? f : [{ src: 'assets/images/platzhalter-quer.svg', alt: '' }];
   }
-  function ziellink(e) {
+  function knopfDaten(e) {
     var k = KATEGORIEN[e.kategorie] || {};
-    return k.buchung ? (url(e.buchungslink) || url(e.webseite)) : (url(e.webseite) || url(e.buchungslink));
+    if (url(e.buchungslink)) return [k.knopf, url(e.buchungslink), true];
+    if (url(e.webseite)) return [k.knopf, url(e.webseite), true];
+    if (url(e.instagram)) return ['Zu Instagram', url(e.instagram), true];
+    if (telLink(e.telefon)) return ['Anrufen', telLink(e.telefon), false];
+    if (routeLink(e)) return ['Route anzeigen', routeLink(e), true];
+    return null;
   }
-  function knopf(e, extraKlasse) {
-    var k = KATEGORIEN[e.kategorie];
-    var ziel = ziellink(e);
-    if (!k || !ziel) return '';
-    return '<a href="' + esc(ziel) + '" target="_blank" rel="noopener" class="btn btn-primary ' + (extraKlasse || '') + '">' + k.knopf + '</a>';
+  function knopf(e) {
+    var d = knopfDaten(e);
+    if (!d) return '';
+    return '<a href="' + esc(d[1]) + '"' + (d[2] ? ' target="_blank" rel="noopener"' : '') + ' class="btn btn-primary">' + esc(d[0]) + '</a>';
   }
   function hinweise(e) {
+    var id = encodeURIComponent(e.id);
+    var text = (F.hinweis[e.quelle] || F.hinweis.betrieb || '').replace('{id}', id);
     return '<p class="eintrag-hinweis">Zuletzt aktualisiert: ' + datum(e.zuletzt_aktualisiert) +
-      ' · Angaben vom Betrieb, ohne Gewähr · <a href="/kontakt?eintrag=' + encodeURIComponent(e.id) + '#frag-luis">Fehler melden</a></p>';
+      ' · ' + text + ' · <a href="/kontakt?eintrag=' + id + '#frag-luis">Fehler melden</a></p>';
   }
   function tipp(e) {
     if (!e.luis_tipp) return '';
@@ -65,27 +78,15 @@
     var k = KATEGORIEN[e.kategorie] || {};
     return '<div class="card-tags-row">' +
       (e.beispiel ? '<span class="card-tag card-tag--beispiel">Beispiel</span>' : '') +
-      '<span class="card-tag">' + esc(k.label || '') + '</span>' +
+      '<span class="card-tag">' + esc(e.untertitel || k.label || '') + '</span>' +
       (e.preisniveau ? '<span class="price-badge">' + esc(e.preisniveau) + '</span>' : '') +
       '</div>';
   }
-
-  function karte(e) {
-    var bild = fotos(e)[0];
-    var detail = '/eintrag?id=' + encodeURIComponent(e.id);
-    return '<div class="card card--eintrag' + (e.beispiel ? ' is-beispiel' : '') + '">' +
-      '<a class="card-media" href="' + detail + '"><img src="' + esc(bild.src) + '" alt="' + esc(bild.alt || e.name) + '" loading="lazy"></a>' +
-      '<div class="card-body">' +
-        tags(e) +
-        '<h3><a href="' + detail + '">' + esc(e.name) + '</a></h3>' +
-        (adresse(e) ? '<p class="card-meta">' + esc(adresse(e)) + '</p>' : '') +
-        '<p class="desc">' + esc(e.kurzbeschreibung) + '</p>' +
-        tipp(e) +
-        '<div class="card-foot">' + knopf(e, 'btn-sm') +
-          '<a href="' + detail + '" class="btn btn-outline btn-sm">Details</a></div>' +
-        hinweise(e) +
-      '</div>' +
-    '</div>';
+  // Werte eines Filterfelds lesbar machen, z. B. ["fisch","cafe"] → "Fisch, Café & Kuchen"
+  function lesbar(feld, wert) {
+    var namen = (F.felder || {})[feld] || {};
+    var liste = Array.isArray(wert) ? wert : (wert ? [wert] : []);
+    return liste.map(function (w) { return namen[w] || w; }).join(', ');
   }
 
   function laden() {
@@ -94,21 +95,6 @@
       .then(function (d) { return (d.eintraege || []).filter(function (e) { return e && e.id && KATEGORIEN[e.kategorie]; }); });
   }
   window.NG_BETRIEBE_LADEN = laden;
-
-  // ---------- Kategorieseiten ----------
-  var listen = document.querySelectorAll('[data-betriebe]');
-  if (listen.length) {
-    laden().then(function (alle) {
-      listen.forEach(function (liste) {
-        var kats = liste.getAttribute('data-betriebe').split(',');
-        var treffer = alle.filter(function (e) { return kats.indexOf(e.kategorie) !== -1; });
-        if (!treffer.length) return;
-        liste.innerHTML = treffer.map(karte).join('');
-        var bereich = liste.closest('[data-betriebe-bereich]');
-        if (bereich) bereich.hidden = false;
-      });
-    }).catch(function () { /* Ohne Daten bleibt der Bereich einfach ausgeblendet. */ });
-  }
 
   // ---------- Detailseite ----------
   var ziel = document.getElementById('eintrag-inhalt');
@@ -129,14 +115,23 @@
     var k = KATEGORIEN[e.kategorie];
     var bilder = fotos(e);
     var oz = e.oeffnungszeiten || {};
+    var felder = F.kategorieFelder[e.kategorie] || [];
 
     var zeilen = [];
-    if (adresse(e)) zeilen.push(['Adresse', esc(adresse(e))]);
+    if (adresse(e)) zeilen.push(['Adresse', esc(adresse(e)) + (e.kurzinfo ? '<br><span class="kv-zusatz">' + esc(e.kurzinfo) + '</span>' : '')]);
+    else if (e.kurzinfo) zeilen.push(['Lage', esc(e.kurzinfo)]);
+    if (felder.indexOf('art') !== -1 && e.art) zeilen.push(['Art', esc(lesbar('art', e.art))]);
+    if (felder.indexOf('lage') !== -1 && e.lage) zeilen.push(['Lage', esc(lesbar('lage', e.lage))]);
+    if (felder.indexOf('kueche') !== -1 && e.kueche && e.kueche.length) zeilen.push(['Küche', esc(lesbar('kueche', e.kueche))]);
+    if (felder.indexOf('reservierung_empfohlen') !== -1) zeilen.push(['Reservierung', e.reservierung_empfohlen ? 'empfohlen' : 'nicht nötig']);
+    if (felder.indexOf('sortiment') !== -1 && e.sortiment && e.sortiment.length) zeilen.push(['Sortiment', esc(lesbar('sortiment', e.sortiment))]);
+    if (felder.indexOf('thema') !== -1 && e.thema && e.thema.length) zeilen.push(['Thema', esc(lesbar('thema', e.thema))]);
+    if (oz.allgemein) zeilen.push(['Öffnungszeiten', esc(oz.allgemein)]);
     if (oz.sommer) zeilen.push(['Öffnungszeiten Sommer', esc(oz.sommer)]);
     if (oz.winter) zeilen.push(['Öffnungszeiten Winter', esc(oz.winter)]);
     if (e.preisniveau) zeilen.push(['Preisniveau', esc(e.preisniveau)]);
-    if (e.telefon) zeilen.push(['Telefon', '<a href="tel:' + esc(String(e.telefon).replace(/[^\d+]/g, '')) + '">' + esc(e.telefon) + '</a>']);
-    if (url(e.webseite)) zeilen.push(['Webseite', '<a href="' + esc(url(e.webseite)) + '" target="_blank" rel="noopener">' + esc(url(e.webseite).replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')) + '</a>']);
+    if (e.telefon) zeilen.push(['Telefon', '<a href="' + esc(telLink(e.telefon)) + '">' + esc(e.telefon) + '</a>']);
+    if (url(e.webseite)) zeilen.push(['Webseite', '<a href="' + esc(url(e.webseite)) + '" target="_blank" rel="noopener">' + esc(url(e.webseite).replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '').split('/')[0]) + '</a>']);
     if (url(e.instagram)) zeilen.push(['Instagram', '<a href="' + esc(url(e.instagram)) + '" target="_blank" rel="noopener">Profil ansehen</a>']);
     var eckdaten = zeilen.map(function (z) { return '<div class="kv-row"><dt>' + z[0] + '</dt><dd>' + z[1] + '</dd></div>'; }).join('');
 
@@ -146,6 +141,8 @@
     var pfeile = bilder.length > 1 ?
       '<button class="galerie-pfeil galerie-pfeil--zurueck" type="button" aria-label="Vorheriges Bild"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>' +
       '<button class="galerie-pfeil galerie-pfeil--vor" type="button" aria-label="Nächstes Bild"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>' : '';
+
+    var langtext = e.beschreibung && e.beschreibung !== e.kurzbeschreibung ? '<p>' + esc(e.beschreibung) + '</p>' : '';
 
     ziel.innerHTML =
       '<section class="page-hero page-hero--compact"><div class="container">' +
@@ -159,7 +156,7 @@
           '<img id="galerie-gross" src="' + esc(bilder[0].src) + '" alt="' + esc(bilder[0].alt || e.name) + '">' +
           (bilder.length > 1 ? '<span class="galerie-zaehler"><span id="galerie-nr">1</span> / ' + bilder.length + '</span>' : '') + pfeile +
         '</div>' + (vorschau ? '<div class="galerie-leiste">' + vorschau + '</div>' : '') + '</div></div>' +
-        '<div class="anbieter-text">' + tipp(e) +
+        '<div class="anbieter-text">' + langtext + tipp(e) +
           '<div class="eintrag-karte" data-eintrag-karte></div>' +
         '</div>' +
         '<aside class="anbieter-info">' +
@@ -177,6 +174,14 @@
     document.title = e.name + ' auf Norderney — Norderney Guide';
     var beschr = document.querySelector('meta[name="description"]');
     if (beschr) beschr.setAttribute('content', String(e.kurzbeschreibung || '').slice(0, 155));
+    var kanon = document.querySelector('link[rel="canonical"]');
+    if (kanon) kanon.setAttribute('href', kanon.getAttribute('href').replace(/\/eintrag.*$/, '/eintrag?id=' + encodeURIComponent(e.id)));
+    if (e.beispiel) {
+      var robots = document.createElement('meta');
+      robots.name = 'robots';
+      robots.content = 'noindex';
+      document.head.appendChild(robots);
+    }
 
     // Strukturierte Daten nur für echte Einträge, nicht für Beispiele
     if (!e.beispiel) {

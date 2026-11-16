@@ -130,109 +130,191 @@
   <section class="section" style="padding-top:36px">
     <div class="container">
 
-      <div class="filter-bar pill-row" data-filter-group="[data-activity-card]">
-        <button class="pill is-active" data-filter="alle">Alle</button>
-        <button class="pill" data-filter="aktiv">Aktiv &amp; Sport</button>
-        <button class="pill" data-filter="kultur">Kultur</button>
-        <button class="pill" data-filter="natur">Natur beobachten</button>
-        <button class="pill" data-filter="familie">Familie &amp; Ausflug</button>
+      <!-- @betriebe -->
+      <!-- Automatisch erzeugt aus daten/betriebe.json mit: python3 tools/betriebe.py – hier nichts von Hand ändern. -->
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Thema" data-filter-group="[data-betrieb-karte]" data-filter-attr="thema">
+        <span class="filter-titel">Thema</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alle</button>
+        <button class="pill" type="button" data-filter="aktiv">Aktiv &amp; Sport</button>
+        <button class="pill" type="button" data-filter="familie">Familie</button>
+        <button class="pill" type="button" data-filter="kultur">Kultur</button>
+        <button class="pill" type="button" data-filter="natur">Natur</button>
       </div>
-
       <div class="card-grid">
-
-        <div class="card" data-activity-card data-category="aktiv" id="leuchtturm">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Leuchtturm Norderney mit rot-weißer Turmspitze im Nordosten der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="leuchtturm-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=leuchtturm-norderney" aria-label="Details zu Leuchtturm Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Leuchtturm Norderney mit rot-weißer Turmspitze im Nordosten der Insel (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Wahrzeichen · Aktiv</span>
-            <h3>Leuchtturm Norderney</h3>
+            <div class="card-tags-row"><span class="card-tag">Wahrzeichen · Aktiv</span></div>
+            <h3><a href="/eintrag?id=leuchtturm-norderney">Leuchtturm Norderney</a></h3>
             <p class="card-meta">Nordosten der Insel · 253 Stufen</p>
-            <p class="desc">54&nbsp;Meter hoch, erbaut 1874 — einer der ältesten Leuchttürme der deutschen Nordseeküste. Die Aussichtsplattform in 52&nbsp;m Höhe bietet einen Rundumblick über Insel, Watt und Meer.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Aktuelle Öffnungszeiten</a>
-            </div>
+            <p class="desc">54 Meter hoch, erbaut 1874 — einer der ältesten Leuchttürme der deutschen Nordseeküste. Die Aussichtsplattform in 52 m Höhe bietet einen Rundumblick über Insel, Watt und Meer.</p>
+            <div class="card-foot"><a href="https://www.norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=leuchtturm-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=leuchtturm-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=leuchtturm-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Geführte Wattwanderung mit Nationalpark-Guide vor Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="watt-welten-nationalpark-haus" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=watt-welten-nationalpark-haus" aria-label="Details zu Watt Welten — Nationalpark-Haus"><img src="assets/images/platzhalter-karte.svg" alt="Geführte Wattwanderung mit Nationalpark-Guide vor Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Geführte Tour</span>
-            <h3>Watt Welten — Nationalpark-Haus</h3>
+            <div class="card-tags-row"><span class="card-tag">Geführte Tour</span></div>
+            <h3><a href="/eintrag?id=watt-welten-nationalpark-haus">Watt Welten — Nationalpark-Haus</a></h3>
             <p class="card-meta">Am Hafen 2 · UNESCO-Weltnaturerbe</p>
             <p class="desc">Ausstellung und geführte Wattwanderungen mit zertifizierten Nationalpark-Guides, von kurzen Familientouren bis zur großen Wattwanderung zum Festland.</p>
-            <div class="card-foot">
-              <a href="https://www.nationalparkhaus-wattenmeer.de/nationalpark-haus-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.nationalparkhaus-wattenmeer.de/nationalpark-haus-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=watt-welten-nationalpark-haus" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=watt-welten-nationalpark-haus">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=watt-welten-nationalpark-haus#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Grüner Abschlag auf dem 9-Loch-Links-Golfplatz des Golfclub Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="golfclub-norderney-e-v" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=golfclub-norderney-e-v" aria-label="Details zu Golfclub Norderney e.V."><img src="assets/images/platzhalter-karte.svg" alt="Grüner Abschlag auf dem 9-Loch-Links-Golfplatz des Golfclub Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Golf</span>
-            <h3>Golfclub Norderney e.V.</h3>
+            <div class="card-tags-row"><span class="card-tag">Golf</span></div>
+            <h3><a href="/eintrag?id=golfclub-norderney-e-v">Golfclub Norderney e.V.</a></h3>
             <p class="card-meta">9-Loch-Links-Course</p>
             <p class="desc">Der einzige typische Links-Golfplatz Deutschlands — 9 Löcher in offener Dünenlandschaft direkt am Meer.</p>
-            <div class="card-foot">
-              <a href="https://www.facebook.com/GolfclubNorderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
+            <div class="card-foot"><a href="https://www.facebook.com/GolfclubNorderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=golfclub-norderney-e-v" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=golfclub-norderney-e-v">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=golfclub-norderney-e-v#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Reiterin auf Ausritt durch die Dünen von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="reitschule-junkmann" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=reitschule-junkmann" aria-label="Details zu Reitschule Junkmann"><img src="assets/images/platzhalter-karte.svg" alt="Reiterin auf Ausritt durch die Dünen von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Reiten</span>
-            <h3>Reitschule Junkmann</h3>
-            <p class="card-meta">Karl-Rieger-Weg 1A · Tel. 04932 92410</p>
-            <p class="desc">Reitbetrieb mit Strandritten zur Weißen Düne, Ausritten durch die Dünen, Reitunterricht und Ponyreiten für Kinder. Auf der Insel gibt es rund 50&nbsp;km ausgewiesene Reitwege. Im September findet traditionell die Jagdreiterwoche mit Turnieren statt.</p>
-            <div class="card-foot">
-              <a href="tel:+49493292410" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.reitschule-junkmann.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-tags-row"><span class="card-tag">Reiten</span></div>
+            <h3><a href="/eintrag?id=reitschule-junkmann">Reitschule Junkmann</a></h3>
+            <p class="card-meta">Karl-Rieger-Weg 1A</p>
+            <p class="desc">Reitbetrieb mit Strandritten zur Weißen Düne, Ausritten durch die Dünen, Reitunterricht und Ponyreiten für Kinder. Auf der Insel gibt es rund 50 km ausgewiesene Reitwege. Im September findet traditionell die Jagdreiterwoche mit Turnieren statt.</p>
+            <div class="card-foot"><a href="https://www.reitschule-junkmann.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=reitschule-junkmann" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=reitschule-junkmann">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=reitschule-junkmann#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Surfschüler mit Board am Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="surfschule-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=surfschule-norderney" aria-label="Details zu Surfschule Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Surfschüler mit Board am Strand von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Wassersport</span>
-            <h3>Surfschule Norderney</h3>
+            <div class="card-tags-row"><span class="card-tag">Wassersport</span></div>
+            <h3><a href="/eintrag?id=surfschule-norderney">Surfschule Norderney</a></h3>
             <p class="card-meta">Kurse am Hafen</p>
             <p class="desc">Kurse für Einsteiger und Fortgeschrittene direkt am Hafen — Surfen, Stand-up-Paddling und mehr.</p>
-            <div class="card-foot">
-              <a href="https://www.surfschule-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.surfschule-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=surfschule-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=surfschule-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=surfschule-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="kultur">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Historischer Zuschauerraum des Kurtheaters Norderney in Rot, Weiß und Gold (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="kurtheater-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="kultur">
+          <a class="card-media" href="/eintrag?id=kurtheater-norderney" aria-label="Details zu Kurtheater Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Historischer Zuschauerraum des Kurtheaters Norderney in Rot, Weiß und Gold (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Theater &amp; Kino</span>
-            <h3>Kurtheater Norderney</h3>
+            <div class="card-tags-row"><span class="card-tag">Theater &amp; Kino</span></div>
+            <h3><a href="/eintrag?id=kurtheater-norderney">Kurtheater Norderney</a></h3>
             <p class="card-meta">Eröffnet 1894</p>
             <p class="desc">Eines der schönsten Theater Ostfrieslands, dem Opernhaus Hannover nachempfunden. Seit 1961 auch Kino im Haus, seit 1990 Spielstätte des Internationalen Filmfests Emden-Norderney.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney.de/poi/freizeitgestaltung/kultur-unterhaltung/kino-theater/100035357-kurtheater" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.norderney.de/poi/freizeitgestaltung/kultur-unterhaltung/kino-theater/100035357-kurtheater" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=kurtheater-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=kurtheater-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=kurtheater-norderney#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="kultur">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Historisches Fischerhaus-Museum im Argonnerwäldchen auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="fischerhaus-museum" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="kultur">
+          <a class="card-media" href="/eintrag?id=fischerhaus-museum" aria-label="Details zu Fischerhaus-Museum"><img src="assets/images/platzhalter-karte.svg" alt="Historisches Fischerhaus-Museum im Argonnerwäldchen auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Museum</span>
-            <h3>Fischerhaus-Museum</h3>
-            <p class="card-meta">Argonnerwäldchen · erbaut 1803</p>
-            <p class="desc">Altes Fischerhaus als Heimatmuseum: Wohnkultur, Arbeit der Fischer und Norderneys Wandel vom Fischerdorf zum Staatsbad.</p>
-            <div class="card-foot">
-              <a href="https://www.stadt-norderney.de/soziales-gesundheit/kirche-kultur-vereine/kultur-museen-theater/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-tags-row"><span class="card-tag">Museum · Kultur</span></div>
+            <h3><a href="/eintrag?id=fischerhaus-museum">Fischerhaus-Museum</a></h3>
+            <p class="card-meta">Im Argonnerwald · erbaut 1803</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>April bis Oktober</p>
+            <p class="desc">Das Museum des Heimatvereins zeigt im Nachbau eines Norderneyer Fischerhauses aus dem 19. Jahrhundert, wie karg das Leben der ersten Inselbewohner war, und erzählt die Geschichte des ältesten deutschen Nordseebades. Nebenan gehört das Teehuus zum Verein. Geöffnet montags und freitags ab 11 Uhr, mittwochs ab 15 Uhr, jeweils mit öffentlicher Führung.</p>
+            <div class="card-foot"><a href="https://www.heimatverein-norderney.de/oeffnungszeiten.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=fischerhaus-museum" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=fischerhaus-museum">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=fischerhaus-museum#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-activity-card data-category="natur">
+        <div class="card card--eintrag" id="bade-haus-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="familie">
+          <a class="card-media" href="/eintrag?id=bade-haus-norderney" aria-label="Details zu bade:haus norderney"><img src="assets/images/platzhalter-karte.svg" alt="Meerwasserbecken im bade:haus norderney am Kurplatz (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Thalasso · Familie</span></div>
+            <h3><a href="/eintrag?id=bade-haus-norderney">bade:haus norderney</a></h3>
+            <p class="card-meta">Am Kurplatz 2</p>
+            <p class="desc">Thalasso-Zentrum mit drei Bereichen: das Spassbad als Familienbereich mit Meerwasser-Wellenbecken und Rutsche, die Wasserebene mit warmen Meerwasserbecken und die Feuerebene mit mehreren Saunen. Das Spassbad öffnet täglich von 9:30 bis 17:30 Uhr, Spa und Sauna bis 20:30 Uhr.</p>
+            <div class="card-foot"><a href="https://www.norderney.de/badehaus" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=bade-haus-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=bade-haus-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=bade-haus-norderney#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="boemmelbahn" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="familie">
+          <a class="card-media" href="/eintrag?id=boemmelbahn" aria-label="Details zu Bömmelbahn"><img src="assets/images/platzhalter-karte.svg" alt="Nostalgische Bimmelbahn auf Inselrundfahrt über Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Inselrundfahrt</span></div>
+            <h3><a href="/eintrag?id=boemmelbahn">Bömmelbahn</a></h3>
+            <p class="card-meta">Ab Haltestelle Rosengarten</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>März bis Oktober</p>
+            <p class="desc">Rundfahrt in nostalgischen Bimmelbahnen vorbei an Leuchtturm, Dünenlandschaft, Yachthafen und Wasserturm. Die Fahrt dauert rund 1 Stunde 45 Minuten inklusive einer halbstündigen Pause. Abfahrten täglich um 11, 12, 13, 14 und 15 Uhr. Gut geeignet, um die Insel mit wenig Aufwand einmal ganz zu sehen.</p>
+            <div class="card-foot"><a href="https://www.boemmelbahn.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=boemmelbahn" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=boemmelbahn">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=boemmelbahn#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="fahrt-zu-den-seehundbaenken" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="natur">
+          <a class="card-media" href="/eintrag?id=fahrt-zu-den-seehundbaenken" aria-label="Details zu Fahrt zu den Seehundbänken"><img src="assets/images/platzhalter-karte.svg" alt="Seehunde auf einer Sandbank im Wattenmeer vor Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Schiffsausflug · Natur</span></div>
+            <h3><a href="/eintrag?id=fahrt-zu-den-seehundbaenken">Fahrt zu den Seehundbänken</a></h3>
+            <p class="card-meta">Am Hafen 1 · Ab Fährbrücke 3</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>April bis Oktober</p>
+            <p class="desc">Ausflugsfahrten mit den Fahrgastschiffen FRISIA X und FRISIA XI ins Wattenmeer zu den Seehundbänken. Vom selben Anbieter gibt es außerdem Tagesfahrten zu den Nachbarinseln Baltrum, Juist, Borkum und Spiekeroog. Die Fahrten hängen von den Gezeiten ab, deshalb lohnt ein Blick auf den aktuellen Fahrplan.</p>
+            <div class="card-foot"><a href="https://www.inseltouristik.de/norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=fahrt-zu-den-seehundbaenken" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=fahrt-zu-den-seehundbaenken">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=fahrt-zu-den-seehundbaenken#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="charly-s-minigolf" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="familie">
+          <a class="card-media" href="/eintrag?id=charly-s-minigolf" aria-label="Details zu Charly&#x27;s Minigolf"><img src="assets/images/platzhalter-karte.svg" alt="Minigolfbahn am Nordstrand von Norderney mit Blick aufs Meer (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Minigolf · Familie</span></div>
+            <h3><a href="/eintrag?id=charly-s-minigolf">Charly&#x27;s Minigolf</a></h3>
+            <p class="card-meta">Zwei Anlagen: Januskopf am Nordstrand &amp; Deichstraße</p>
+            <p class="desc">Zwei Minigolfanlagen mit je 18 Bahnen, eine davon direkt am Nordstrand mit Blick über das Meer, die zweite am Anfang der Deichstraße. Eine Reservierung ist nicht nötig, man kommt einfach vorbei. Erwachsene zahlen 6 Euro, Kinder bis 10 Jahre 5 Euro.</p>
+            <div class="card-foot"><a href="https://norderney.cc/pages/minigolf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=charly-s-minigolf" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=charly-s-minigolf">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=charly-s-minigolf#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="tennisanlage-tus-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=tennisanlage-tus-norderney" aria-label="Details zu Tennisanlage TuS Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Tennisplatz des TuS Norderney an der Mühle (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Tennis</span></div>
+            <h3><a href="/eintrag?id=tennisanlage-tus-norderney">Tennisanlage TuS Norderney</a></h3>
+            <p class="card-meta">An der Mühle 13</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Sommersaison</p>
+            <p class="desc">Die Tennisplätze des TuS Norderney liegen an der Mühle und können in der Sommersaison auch von Gästen gebucht werden, nicht nur von Vereinsmitgliedern. Die Buchung läuft über ein Online-System des Vereins. Eine Tennishalle gibt es auf der Insel nicht, gespielt wird also im Freien.</p>
+            <div class="card-foot"><a href="https://tus-norderney.de/tennis/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=tennisanlage-tus-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=tennisanlage-tus-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=tennisanlage-tus-norderney#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="norderney-aktiv" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="aktiv">
+          <a class="card-media" href="/eintrag?id=norderney-aktiv" aria-label="Details zu Norderney aktiv"><img src="assets/images/platzhalter-karte.svg" alt="Yoga-Gruppe am Weststrand von Norderney bei Sonnenaufgang (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Yoga &amp; Fitness</span></div>
+            <h3><a href="/eintrag?id=norderney-aktiv">Norderney aktiv</a></h3>
+            <p class="card-meta">Bismarckstr. 14 · Kurse auch am Weststrand</p>
+            <p class="desc">Angebot von Julia Ristow mit Yogakursen drinnen und draußen, dazu Lauf- und Ausdauertraining, Smovey-Walks, Personal Training und Ernährungscoaching. Trainiert wird unter anderem am Weststrand und in der Yogapraxis in der Bismarckstraße. Viele Kurse lassen sich spontan ohne feste Anmeldung buchen.</p>
+            <div class="card-foot"><a href="https://www.norderney-aktiv.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=norderney-aktiv" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderney-aktiv">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderney-aktiv#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="kegel-und-bowlingbahn-anzel-janko" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="familie">
+          <a class="card-media" href="/eintrag?id=kegel-und-bowlingbahn-anzel-janko" aria-label="Details zu Kegel- und Bowlingbahn Anzel Janko"><img src="assets/images/platzhalter-karte.svg" alt="Kegelbahn beim Kurtheater auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Kegeln &amp; Bowling</span></div>
+            <h3><a href="/eintrag?id=kegel-und-bowlingbahn-anzel-janko">Kegel- und Bowlingbahn Anzel Janko</a></h3>
+            <p class="card-meta">Am Kurtheater 2</p>
+            <p class="desc">Kegel- und Bowlingbahn direkt beim Kurtheater und damit eine der wenigen Möglichkeiten, einen Regentag drinnen zu verbringen. Für Gruppen empfiehlt sich eine telefonische Voranmeldung.</p>
+            <div class="card-foot"><a href="tel:+4949322783" class="btn btn-primary btn-sm">Anrufen</a><a href="/eintrag?id=kegel-und-bowlingbahn-anzel-janko" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=kegel-und-bowlingbahn-anzel-janko">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=kegel-und-bowlingbahn-anzel-janko#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="kutschfahrten-norderney" data-betrieb-karte data-kategorie="freizeit-aktivitaeten" data-thema="familie">
+          <a class="card-media" href="/eintrag?id=kutschfahrten-norderney" aria-label="Details zu Kutschfahrten Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Pferdekutsche auf dem Weg zur Weißen Düne auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Kutschfahrt · Ausflug</span></div>
+            <h3><a href="/eintrag?id=kutschfahrten-norderney">Kutschfahrten Norderney</a></h3>
+            <p class="card-meta">Windjammerkai Ecke Habenpad</p>
+            <p class="desc">Pferdekutschfahrten von Ulf Holler und Carola de Vries in mehreren Varianten: Strandfahrten für bis zu 4 Personen, Inselrundfahrten für bis zu 12 Personen sowie Hochzeitsfahrten. Eine entspannte Alternative zum Radweg, besonders mit Kindern oder wenig Zeit.</p>
+            <div class="card-foot"><a href="https://www.facebook.com/norderney.planwagenfahrten/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Jetzt buchen</a><a href="/eintrag?id=kutschfahrten-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=kutschfahrten-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=kutschfahrten-norderney#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="filter-leer" data-filter-leer="[data-betrieb-karte]" hidden>Zu dieser Auswahl gibt es noch keinen Eintrag. Probier einen anderen Filter.</p>
+      <!-- /@betriebe -->
+      <div class="card-grid" style="margin-top:28px">
+        <div class="card" data-category="natur">
           <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Vögel im Flachwasser des Südstrandpolders auf Norderney bei Sonnenuntergang (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
           <div class="card-body">
             <span class="card-tag">Vogelbeobachtung</span>
@@ -244,131 +326,9 @@
             </div>
           </div>
         </div>
-
-
-        <div class="card" data-activity-card data-category="familie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Meerwasserbecken im bade:haus norderney am Kurplatz (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Thalasso · Familie</span>
-            <h3>bade:haus norderney</h3>
-            <p class="card-meta">Am Kurplatz 2 · Tel. 04932 891-400</p>
-            <p class="desc">Thalasso-Zentrum mit drei Bereichen: das Spassbad als Familienbereich mit Meerwasser-Wellenbecken und Rutsche, die Wasserebene mit warmen Meerwasserbecken und die Feuerebene mit mehreren Saunen. Das Spassbad öffnet täglich von 9:30 bis 17:30 Uhr, Spa und Sauna bis 20:30 Uhr.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney.de/badehaus" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="familie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Nostalgische Bimmelbahn auf Inselrundfahrt über Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Inselrundfahrt</span>
-            <h3>Bömmelbahn</h3>
-            <p class="card-meta">Ab Haltestelle Rosengarten · März bis Oktober</p>
-            <p class="desc">Rundfahrt in nostalgischen Bimmelbahnen vorbei an Leuchtturm, Dünenlandschaft, Yachthafen und Wasserturm. Die Fahrt dauert rund 1 Stunde 45 Minuten inklusive einer halbstündigen Pause. Abfahrten täglich um 11, 12, 13, 14 und 15 Uhr. Gut geeignet, um die Insel mit wenig Aufwand einmal ganz zu sehen.</p>
-            <div class="card-foot">
-              <a href="https://www.boemmelbahn.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="natur">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Seehunde auf einer Sandbank im Wattenmeer vor Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Schiffsausflug · Natur</span>
-            <h3>Fahrt zu den Seehundbänken</h3>
-            <p class="card-meta">Ab Fährbrücke 3, Am Hafen 1 · April bis Oktober</p>
-            <p class="desc">Ausflugsfahrten mit den Fahrgastschiffen FRISIA X und FRISIA XI ins Wattenmeer zu den Seehundbänken. Vom selben Anbieter gibt es außerdem Tagesfahrten zu den Nachbarinseln Baltrum, Juist, Borkum und Spiekeroog. Die Fahrten hängen von den Gezeiten ab, deshalb lohnt ein Blick auf den aktuellen Fahrplan.</p>
-            <div class="card-foot">
-              <a href="https://www.inseltouristik.de/norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="familie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Minigolfbahn am Nordstrand von Norderney mit Blick aufs Meer (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Minigolf · Familie</span>
-            <h3>Charly's Minigolf</h3>
-            <p class="card-meta">Zwei Anlagen: Januskopf am Nordstrand &amp; Deichstraße</p>
-            <p class="desc">Zwei Minigolfanlagen mit je 18 Bahnen, eine davon direkt am Nordstrand mit Blick über das Meer, die zweite am Anfang der Deichstraße. Eine Reservierung ist nicht nötig, man kommt einfach vorbei. Erwachsene zahlen 6&nbsp;Euro, Kinder bis 10 Jahre 5&nbsp;Euro.</p>
-            <div class="card-foot">
-              <a href="https://norderney.cc/pages/minigolf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Tennisplatz des TuS Norderney an der Mühle (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Tennis</span>
-            <h3>Tennisanlage TuS Norderney</h3>
-            <!-- Platzanzahl und Belag werden auf der Vereinsseite nicht genannt, deshalb hier bewusst offen gelassen -->
-            <p class="card-meta">An der Mühle 13 · Sommersaison</p>
-            <p class="desc">Die Tennisplätze des TuS Norderney liegen an der Mühle und können in der Sommersaison auch von Gästen gebucht werden, nicht nur von Vereinsmitgliedern. Die Buchung läuft über ein Online-System des Vereins. Eine Tennishalle gibt es auf der Insel nicht, gespielt wird also im Freien.</p>
-            <div class="card-foot">
-              <a href="https://tus-norderney.de/tennis/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="aktiv">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Yoga-Gruppe am Weststrand von Norderney bei Sonnenaufgang (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Yoga &amp; Fitness</span>
-            <h3>Norderney aktiv</h3>
-            <p class="card-meta">Bismarckstr. 14 · Kurse auch am Weststrand</p>
-            <p class="desc">Angebot von Julia Ristow mit Yogakursen drinnen und draußen, dazu Lauf- und Ausdauertraining, Smovey-Walks, Personal Training und Ernährungscoaching. Trainiert wird unter anderem am Weststrand und in der Yogapraxis in der Bismarckstraße. Viele Kurse lassen sich spontan ohne feste Anmeldung buchen.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney-aktiv.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="kultur">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Reetgedecktes Fischerhaus-Museum im Argonnerwald auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Museum · Kultur</span>
-            <h3>Fischerhaus-Museum</h3>
-            <p class="card-meta">Im Argonnerwald · April bis Oktober</p>
-            <p class="desc">Das Museum des Heimatvereins zeigt im Nachbau eines Norderneyer Fischerhauses aus dem 19. Jahrhundert, wie karg das Leben der ersten Inselbewohner war, und erzählt die Geschichte des ältesten deutschen Nordseebades. Nebenan gehört das Teehuus zum Verein. Geöffnet montags und freitags ab 11 Uhr, mittwochs ab 15 Uhr, jeweils mit öffentlicher Führung.</p>
-            <div class="card-foot">
-              <a href="https://www.heimatverein-norderney.de/oeffnungszeiten.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="familie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Kegelbahn beim Kurtheater auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Kegeln &amp; Bowling</span>
-            <h3>Kegel- und Bowlingbahn Anzel Janko</h3>
-            <!-- TODO: echte Website noch prüfen. Es war nur ein Verzeichniseintrag auffindbar,
-                 keine eigene Website und keine offizielle Facebook-Seite. Deshalb bewusst
-                 kein Link statt eines Verweises auf ein fremdes Portal. -->
-            <p class="card-meta">Am Kurtheater 2 · Tel. 04932 2783</p>
-            <p class="desc">Kegel- und Bowlingbahn direkt beim Kurtheater und damit eine der wenigen Möglichkeiten, einen Regentag drinnen zu verbringen. Für Gruppen empfiehlt sich eine telefonische Voranmeldung.</p>
-            <div class="card-foot">
-              <a href="tel:+4949322783" class="btn btn-primary btn-sm">Anrufen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-activity-card data-category="familie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Pferdekutsche auf dem Weg zur Weißen Düne auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Kutschfahrt · Ausflug</span>
-            <h3>Kutschfahrten Norderney</h3>
-            <!-- Kein eigener Internetauftritt vorhanden, deshalb die offizielle Facebook-Seite des Betriebs -->
-            <p class="card-meta">Windjammerkai Ecke Habenpad · Tel. 0151 64408979</p>
-            <p class="desc">Pferdekutschfahrten von Ulf Holler und Carola de Vries in mehreren Varianten: Strandfahrten für bis zu 4 Personen, Inselrundfahrten für bis zu 12 Personen sowie Hochzeitsfahrten. Eine entspannte Alternative zum Radweg, besonders mit Kindern oder wenig Zeit.</p>
-            <div class="card-foot">
-              <a href="tel:+4915164408979" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.facebook.com/norderney.planwagenfahrten/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Facebook-Seite</a>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="karte" data-karte="freizeit-aktivitaeten" style="margin-top:28px"></div>
+      <p class="betrieb-cta">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
 
@@ -397,18 +357,6 @@
     </div>
   </section>
 
-  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
-  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Von Betrieben eingetragen</p>
-        <h2>Neu im Guide</h2>
-      </div>
-      <div class="card-grid cols-3" data-betriebe="freizeit-aktivitaeten"></div>
-      <div class="karte" data-karte="freizeit-aktivitaeten" style="margin-top:28px"></div>
-      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
-    </div>
-  </section>
 
 </main>
 
@@ -478,6 +426,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe-felder.js?v=23"></script>
 <script src="js/betriebe.js?v=23"></script>
 <script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>

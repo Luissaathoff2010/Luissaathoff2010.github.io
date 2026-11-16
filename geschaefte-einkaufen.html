@@ -139,168 +139,404 @@
   <section class="section" style="padding-top:24px">
     <div class="container">
 
-      <div class="filter-bar pill-row" data-filter-group="[data-shop-card]">
-        <button class="pill is-active" data-filter="alle">Alle</button>
-        <button class="pill" data-filter="supermarkt">Supermarkt</button>
-        <button class="pill" data-filter="baeckerei">Bäckerei</button>
-        <button class="pill" data-filter="apotheke">Apotheke</button>
-        <button class="pill" data-filter="mode-souvenir">Mode &amp; Souvenirs</button>
-        <button class="pill" data-filter="bank">Bank &amp; Sparkasse</button>
-        <button class="pill" data-filter="post">Post</button>
-        <button class="pill" data-filter="fahrrad">Fahrradladen</button>
-        <button class="pill" data-filter="drogerie">Drogerie</button>
-        <button class="pill" data-filter="buch">Buchhandlung</button>
-        <button class="pill" data-filter="lebensmittel">Fleischerei &amp; Feinkost</button>
-        <button class="pill" data-filter="dienstleistung">Dienstleister</button>
+      <!-- @betriebe -->
+      <!-- Automatisch erzeugt aus daten/betriebe.json mit: python3 tools/betriebe.py – hier nichts von Hand ändern. -->
+      <div class="filter-bar pill-row" role="group" aria-label="Filter: Sortiment" data-filter-group="[data-betrieb-karte]" data-filter-attr="sortiment">
+        <span class="filter-titel">Sortiment</span>
+        <button class="pill is-active" type="button" data-filter="alle">Alle</button>
+        <button class="pill" type="button" data-filter="supermarkt">Supermarkt</button>
+        <button class="pill" type="button" data-filter="baeckerei">Bäckerei</button>
+        <button class="pill" type="button" data-filter="lebensmittel">Lebensmittel &amp; Feinkost</button>
+        <button class="pill" type="button" data-filter="cafe">Café</button>
+        <button class="pill" type="button" data-filter="mode">Mode &amp; Schuhe</button>
+        <button class="pill" type="button" data-filter="souvenirs">Souvenirs &amp; Geschenke</button>
+        <button class="pill" type="button" data-filter="schmuck">Schmuck</button>
+        <button class="pill" type="button" data-filter="apotheke">Apotheke</button>
+        <button class="pill" type="button" data-filter="drogerie">Drogerie &amp; Kosmetik</button>
+        <button class="pill" type="button" data-filter="buch">Bücher</button>
+        <button class="pill" type="button" data-filter="blumen">Blumen</button>
+        <button class="pill" type="button" data-filter="fahrrad">Fahrrad</button>
+        <button class="pill" type="button" data-filter="bank">Bank</button>
+        <button class="pill" type="button" data-filter="post">Post</button>
+        <button class="pill" type="button" data-filter="dienstleistung">Dienstleistung</button>
       </div>
-
       <div class="card-grid">
-
-        <div class="card" data-shop-card data-category="supermarkt">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="EDEKA Pittelkow Supermarkt am Gorch-Fock-Weg auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="edeka-pittelkow" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="supermarkt">
+          <a class="card-media" href="/eintrag?id=edeka-pittelkow" aria-label="Details zu EDEKA Pittelkow"><img src="assets/images/platzhalter-karte.svg" alt="EDEKA Pittelkow Supermarkt am Gorch-Fock-Weg auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Supermarkt</span>
-            <h3>EDEKA Pittelkow</h3>
+            <div class="card-tags-row"><span class="card-tag">Supermarkt</span></div>
+            <h3><a href="/eintrag?id=edeka-pittelkow">EDEKA Pittelkow</a></h3>
             <p class="card-meta">Gorch-Fock-Weg 13–15</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 8–19 Uhr, So 10–17 Uhr</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 8–19 Uhr, So 10–17 Uhr</p>
             <p class="desc">Vollsortiment-Supermarkt für den täglichen Einkauf, zentral auf der Insel gelegen. Sonntags geöffnet.</p>
-            <div class="card-foot">
-              <a href="https://www.edeka.de/eh/minden-hannover/edeka-pittelkow-gorch-fock-weg-13-15/index.jsp" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.edeka.de/eh/minden-hannover/edeka-pittelkow-gorch-fock-weg-13-15/index.jsp" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=edeka-pittelkow" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=edeka-pittelkow">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=edeka-pittelkow#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="supermarkt">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Combi Verbrauchermarkt an der Knyphausenstraße auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="combi-verbrauchermarkt" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="supermarkt">
+          <a class="card-media" href="/eintrag?id=combi-verbrauchermarkt" aria-label="Details zu Combi Verbrauchermarkt"><img src="assets/images/platzhalter-karte.svg" alt="Combi Verbrauchermarkt an der Knyphausenstraße auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Supermarkt</span>
-            <h3>Combi Verbrauchermarkt</h3>
+            <div class="card-tags-row"><span class="card-tag">Supermarkt</span></div>
+            <h3><a href="/eintrag?id=combi-verbrauchermarkt">Combi Verbrauchermarkt</a></h3>
             <p class="card-meta">Knyphausenstraße 23</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 6–23 Uhr, So 10–18 Uhr</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 6–23 Uhr, So 10–18 Uhr</p>
             <p class="desc">Verbrauchermarkt mit sehr langen Öffnungszeiten, praktisch für spontane Einkäufe und auch sonntags geöffnet.</p>
-            <div class="card-foot">
-              <a href="https://www.combi.de/marktauswahl/Norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.combi.de/marktauswahl/Norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=combi-verbrauchermarkt" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=combi-verbrauchermarkt">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=combi-verbrauchermarkt#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="baeckerei">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Frische Brötchen in der Auslage der Inselbäckerei Bethke auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="inselbaeckerei-bethke" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="baeckerei cafe">
+          <a class="card-media" href="/eintrag?id=inselbaeckerei-bethke" aria-label="Details zu Inselbäckerei Bethke"><img src="assets/images/platzhalter-karte.svg" alt="Frische Brötchen in der Auslage der Inselbäckerei Bethke auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Bäckerei &amp; Café</span>
-            <h3>Inselbäckerei Bethke</h3>
-            <p class="card-meta">Winterstraße 15 (Ecke Jann-Berghaus-Straße)</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Sa 6:30–17 Uhr, So 7:30–12 Uhr, Mo geschlossen</p>
+            <div class="card-tags-row"><span class="card-tag">Bäckerei &amp; Café</span></div>
+            <h3><a href="/eintrag?id=inselbaeckerei-bethke">Inselbäckerei Bethke</a></h3>
+            <p class="card-meta">Winterstraße 15 · Ecke Jann-Berghaus-Straße</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Sa 6:30–17 Uhr, So 7:30–12 Uhr, Mo geschlossen</p>
             <p class="desc">Brot, Brötchen und Kuchen aus eigener Backstube. Die Inselbäckerei betreibt drei Filialen: Winterstraße, Birkenweg und Bäckerstraße.</p>
-            <div class="card-foot">
-              <a href="https://bethke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://bethke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=inselbaeckerei-bethke" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselbaeckerei-bethke">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselbaeckerei-bethke#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="baeckerei">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Bäckerei Middelberg Filiale an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="baeckerei-wilhelm-middelberg" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="baeckerei">
+          <a class="card-media" href="/eintrag?id=baeckerei-wilhelm-middelberg" aria-label="Details zu Bäckerei Wilhelm Middelberg"><img src="assets/images/platzhalter-karte.svg" alt="Bäckerei Middelberg Filiale an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Bäckerei</span>
-            <h3>Bäckerei Wilhelm Middelberg</h3>
+            <div class="card-tags-row"><span class="card-tag">Bäckerei</span></div>
+            <h3><a href="/eintrag?id=baeckerei-wilhelm-middelberg">Bäckerei Wilhelm Middelberg</a></h3>
             <p class="card-meta">Jann-Berghaus-Straße 66</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Täglich 6–18 Uhr, auch sonn- und feiertags</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Täglich 6–18 Uhr, auch sonn- und feiertags</p>
             <p class="desc">Ostfriesische Bäckerei-Tradition mit Filiale mitten im Ortszentrum.</p>
-            <div class="card-foot">
-              <a href="https://www.baeckerei-middelberg.de/filialen/norderney-jann-berghaus-strasse" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.baeckerei-middelberg.de/filialen/norderney-jann-berghaus-strasse" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=baeckerei-wilhelm-middelberg" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=baeckerei-wilhelm-middelberg">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=baeckerei-wilhelm-middelberg#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="apotheke">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Park-Apotheke am Kurplatz auf Norderney, Verkaufsraum mit Beratungstheke (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="park-apotheke-am-kurplatz" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="apotheke">
+          <a class="card-media" href="/eintrag?id=park-apotheke-am-kurplatz" aria-label="Details zu Park-Apotheke am Kurplatz"><img src="assets/images/platzhalter-karte.svg" alt="Park-Apotheke am Kurplatz auf Norderney, Verkaufsraum mit Beratungstheke (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Apotheke</span>
-            <h3>Park-Apotheke am Kurplatz</h3>
-            <p class="card-meta">Adolfsreihe 2 · Tel. 04932 92870</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr</p>
+            <div class="card-tags-row"><span class="card-tag">Apotheke</span></div>
+            <h3><a href="/eintrag?id=park-apotheke-am-kurplatz">Park-Apotheke am Kurplatz</a></h3>
+            <p class="card-meta">Adolfsreihe 2</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr</p>
             <p class="desc">Eine der drei Inselapotheken, beteiligt am rotierenden Apotheken-Notdienst.</p>
-            <div class="card-foot">
-              <a href="tel:+49493292870" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.park-apotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.park-apotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=park-apotheke-am-kurplatz" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=park-apotheke-am-kurplatz">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=park-apotheke-am-kurplatz#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="apotheke">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Kur-Apotheke an der Kirchstraße auf Norderney, Insel-Apotheke mit Tradition (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="kur-apotheke-insel-apotheke" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="apotheke">
+          <a class="card-media" href="/eintrag?id=kur-apotheke-insel-apotheke" aria-label="Details zu Kur-Apotheke (Insel-Apotheke)"><img src="assets/images/platzhalter-karte.svg" alt="Kur-Apotheke an der Kirchstraße auf Norderney, Insel-Apotheke mit Tradition (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Apotheke</span>
-            <h3>Kur-Apotheke (Insel-Apotheke)</h3>
-            <p class="card-meta">Kirchstraße 12 · Tel. 04932 927000</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr (Nov–März mittwochs nur vormittags)</p>
+            <div class="card-tags-row"><span class="card-tag">Apotheke</span></div>
+            <h3><a href="/eintrag?id=kur-apotheke-insel-apotheke">Kur-Apotheke (Insel-Apotheke)</a></h3>
+            <p class="card-meta">Kirchstraße 12</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr (Nov–März mittwochs nur vormittags)</p>
             <p class="desc">Traditionsreiche Apotheke im Ortskern, ebenfalls im Notdienst-Rotationssystem der Insel.</p>
-            <div class="card-foot">
-              <a href="tel:+494932927000" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.kurapotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.kurapotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=kur-apotheke-insel-apotheke" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=kur-apotheke-insel-apotheke">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=kur-apotheke-insel-apotheke#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="apotheke">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Rathaus-Apotheke an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="rathaus-apotheke" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="apotheke">
+          <a class="card-media" href="/eintrag?id=rathaus-apotheke" aria-label="Details zu Rathaus-Apotheke"><img src="assets/images/platzhalter-karte.svg" alt="Rathaus-Apotheke an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Apotheke</span>
-            <h3>Rathaus-Apotheke</h3>
-            <p class="card-meta">Friedrichstraße 12 · Tel. 04932 588</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr (Nov–März mittwochs nur vormittags)</p>
+            <div class="card-tags-row"><span class="card-tag">Apotheke</span></div>
+            <h3><a href="/eintrag?id=rathaus-apotheke">Rathaus-Apotheke</a></h3>
+            <p class="card-meta">Friedrichstraße 12</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8–13 &amp; 15–18:30 Uhr, Sa 9–13 Uhr (Nov–März mittwochs nur vormittags)</p>
             <p class="desc">Seit 2017 Zweigstelle der Kur-Apotheke, geführt von Antje Kürten &amp; Elgin Wondratschek. Dritte der drei Insel-Apotheken im Notdienst-Rotationssystem.</p>
-            <div class="card-foot">
-              <a href="tel:+494932588" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.rathausapotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.rathausapotheke-norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=rathaus-apotheke" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=rathaus-apotheke">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=rathaus-apotheke#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Nachhaltige Mode im Boutique-Schaufenster von Mia Coprian Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="mia-coprian" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="mode">
+          <a class="card-media" href="/eintrag?id=mia-coprian" aria-label="Details zu Mia Coprian"><img src="assets/images/platzhalter-karte.svg" alt="Nachhaltige Mode im Boutique-Schaufenster von Mia Coprian Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Boutique · Nachhaltige Mode</span>
-            <h3>Mia Coprian</h3>
-            <p class="card-meta">Friedrichstraße 26 · Tel. 04932 2000</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–13 &amp; 15–18 Uhr, Sa 10–14 Uhr</p>
+            <div class="card-tags-row"><span class="card-tag">Boutique · Nachhaltige Mode</span></div>
+            <h3><a href="/eintrag?id=mia-coprian">Mia Coprian</a></h3>
+            <p class="card-meta">Friedrichstraße 26</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–13 &amp; 15–18 Uhr, Sa 10–14 Uhr</p>
             <p class="desc">Inhabergeführte Boutique von Maria Coprian mit nachhaltiger, fairer Mode aus Skandinavien und den Niederlanden, darunter Marken wie Armedangels und Lanius.</p>
-            <div class="card-foot">
-              <a href="https://mia-coprian.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="https://mia-coprian.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=mia-coprian" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=mia-coprian">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=mia-coprian#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="ModeVitrine, Fachgeschäft für Damen- und Herrenmode an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="modevitrine" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="mode">
+          <a class="card-media" href="/eintrag?id=modevitrine" aria-label="Details zu ModeVitrine"><img src="assets/images/platzhalter-karte.svg" alt="ModeVitrine, Fachgeschäft für Damen- und Herrenmode an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Mode</span>
-            <h3>ModeVitrine</h3>
+            <div class="card-tags-row"><span class="card-tag">Mode</span></div>
+            <h3><a href="/eintrag?id=modevitrine">ModeVitrine</a></h3>
             <p class="card-meta">Friedrichstraße 25</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9:30–17:30 Uhr, Sa 9:30–12:30 Uhr</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9:30–17:30 Uhr, Sa 9:30–12:30 Uhr</p>
             <p class="desc">Familiengeführtes Fachgeschäft für Damen- und Herrenmode mit persönlicher Beratung im Herzen der Einkaufsstraße.</p>
-            <div class="card-foot">
-              <a href="http://modevitrine.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
+            <div class="card-foot"><a href="http://modevitrine.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=modevitrine" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=modevitrine">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=modevitrine#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Strand GmbH, Modegeschäft mit maritimem Fokus an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
+        <div class="card card--eintrag" id="strand-mode-am-meer" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="mode">
+          <a class="card-media" href="/eintrag?id=strand-mode-am-meer" aria-label="Details zu Strand — Mode am Meer"><img src="assets/images/platzhalter-karte.svg" alt="Strand GmbH, Modegeschäft mit maritimem Fokus an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
           <div class="card-body">
-            <span class="card-tag">Mode · Maritim</span>
-            <h3>Strand — Mode am Meer</h3>
+            <div class="card-tags-row"><span class="card-tag">Mode · Maritim</span></div>
+            <h3><a href="/eintrag?id=strand-mode-am-meer">Strand — Mode am Meer</a></h3>
             <p class="card-meta">Friedrichstraße 13</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–So 10–18 Uhr</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–So 10–18 Uhr</p>
             <p class="desc">Modegeschäft mit maritimem Fokus mitten in der Friedrichstraße, passend zum Insel-Lebensgefühl.</p>
-            <div class="card-foot">
-              <a href="https://www.instagram.com/strand_mode_meer/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Auf Instagram ansehen</a>
-            </div>
+            <div class="card-foot"><a href="https://www.instagram.com/strand_mode_meer/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zu Instagram</a><a href="/eintrag?id=strand-mode-am-meer" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=strand-mode-am-meer">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=strand-mode-am-meer#frag-luis">Fehler melden</a></p>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
+        <div class="card card--eintrag" id="sparkasse-aurich-norden" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="bank">
+          <a class="card-media" href="/eintrag?id=sparkasse-aurich-norden" aria-label="Details zu Sparkasse Aurich-Norden"><img src="assets/images/platzhalter-karte.svg" alt="Sparkasse Aurich-Norden Filiale an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Bank &amp; Sparkasse</span></div>
+            <h3><a href="/eintrag?id=sparkasse-aurich-norden">Sparkasse Aurich-Norden</a></h3>
+            <p class="card-meta">Jann-Berghaus-Str. 7</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo/Do 9–12 &amp; 14–16 Uhr, Di/Mi/Fr 9–12 Uhr</p>
+            <p class="desc">Regionale Sparkassenfiliale mit persönlicher Beratung, Ein- und Auszahlung sowie Geldautomat.</p>
+            <div class="card-foot"><a href="https://www.sparkasse-aurich-norden.de/de/home/toolbar/filialen/sparkasse-aurich-norden-filiale-sparkasse-norderney-4359.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=sparkasse-aurich-norden" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=sparkasse-aurich-norden">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=sparkasse-aurich-norden#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="raiffeisen-volksbank-fresena" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="bank">
+          <a class="card-media" href="/eintrag?id=raiffeisen-volksbank-fresena" aria-label="Details zu Raiffeisen-Volksbank Fresena"><img src="assets/images/platzhalter-karte.svg" alt="Raiffeisen-Volksbank Fresena Geschäftsstelle an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Bank &amp; Sparkasse</span></div>
+            <h3><a href="/eintrag?id=raiffeisen-volksbank-fresena">Raiffeisen-Volksbank Fresena</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 69</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–12:30 &amp; 15–17 Uhr, mittwochs nur vormittags</p>
+            <p class="desc">Genossenschaftsbank-Filiale mit persönlicher Beratung und Geldautomat mit Einzahlfunktion.</p>
+            <div class="card-foot"><a href="https://www.rvbfresena.de/meine-bank/filialen/filialen-uebersicht/raiffeisen-volksbank-fresena-eg-norderney.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=raiffeisen-volksbank-fresena" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=raiffeisen-volksbank-fresena">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=raiffeisen-volksbank-fresena#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="deutsche-post-filiale-627" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="post">
+          <a class="card-media" href="/eintrag?id=deutsche-post-filiale-627" aria-label="Details zu Deutsche Post Filiale 627"><img src="assets/images/platzhalter-karte.svg" alt="Deutsche Post Filiale in der HS2-Passage an der Bülowallee Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Post</span></div>
+            <h3><a href="/eintrag?id=deutsche-post-filiale-627">Deutsche Post Filiale 627</a></h3>
+            <p class="card-meta">Bülowallee 2 (HS2-Passage)</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo/Di/Do/Fr 8:30–13 &amp; 14–16:30 Uhr, Mi 8:30–13 Uhr, Sa 8:30–13 Uhr</p>
+            <p class="desc">Postfiliale für Brief- und Paketversand sowie Verkauf von Briefmarken und Versandmaterial. Kein Postbank-Schalter integriert. Zusätzlich gibt es rund um die Uhr eine Packstation am Busbahnhof.</p>
+            <div class="card-foot"><a href="https://www.deutschepost.de/de/s/standorte.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=deutsche-post-filiale-627" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=deutsche-post-filiale-627">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=deutsche-post-filiale-627#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="kurt-s-fahrradshop" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="fahrrad">
+          <a class="card-media" href="/eintrag?id=kurt-s-fahrradshop" aria-label="Details zu Kurt&#x27;s Fahrradshop"><img src="assets/images/platzhalter-karte.svg" alt="Kurt&#x27;s Fahrradshop, Fahrradgeschäft mit Werkstatt auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Fahrradladen · Verkauf &amp; Werkstatt</span></div>
+            <h3><a href="/eintrag?id=kurt-s-fahrradshop">Kurt&#x27;s Fahrradshop</a></h3>
+            <p class="card-meta">Nordhelmstr. 73</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–12 &amp; 15–18 Uhr, Sa/So 10–12 &amp; 17–18 Uhr</p>
+            <p class="desc">Fahrradgeschäft mit eigener Werkstatt für Reparatur und Wartung. Neben dem Verkauf bietet der Laden auch Mietfahrräder an, ist also die richtige Adresse, wenn das mitgebrachte Rad eine Panne hat.</p>
+            <div class="card-foot"><a href="https://kfs-norderney.jimdoweb.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=kurt-s-fahrradshop" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=kurt-s-fahrradshop">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=kurt-s-fahrradshop#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="rossmann" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="drogerie">
+          <a class="card-media" href="/eintrag?id=rossmann" aria-label="Details zu ROSSMANN"><img src="assets/images/platzhalter-karte.svg" alt="ROSSMANN Drogeriemarkt an der Poststraße auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Drogerie</span></div>
+            <h3><a href="/eintrag?id=rossmann">ROSSMANN</a></h3>
+            <p class="card-meta">Poststr. 1</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9–19 Uhr, Sa 9–18 Uhr, So 10–17 Uhr</p>
+            <p class="desc">Drogeriefiliale mitten im Ort mit Sortiment für Körperpflege, Kosmetik, Haushalt und Babybedarf. Als anerkannter Erholungsort hat Norderney erweiterte Sonntagsöffnungszeiten, deshalb ist auch sonntags geöffnet.</p>
+            <div class="card-foot"><a href="https://www.rossmann.de/de/filialen/niedersachsen/norderney/poststr--1.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=rossmann" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=rossmann">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=rossmann#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="thalia-buchhandlung" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="buch">
+          <a class="card-media" href="/eintrag?id=thalia-buchhandlung" aria-label="Details zu Thalia Buchhandlung"><img src="assets/images/platzhalter-karte.svg" alt="Thalia Buchhandlung in der Fußgängerzone von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Buchhandlung</span></div>
+            <h3><a href="/eintrag?id=thalia-buchhandlung">Thalia Buchhandlung</a></h3>
+            <p class="card-meta">Poststr. 12</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 10–18 Uhr (saisonal abweichend)</p>
+            <p class="desc">Buchhandlung in der Fußgängerzone, laut Unternehmen die erste Inselbuchhandlung in der Geschichte von Thalia. Neben Büchern gibt es regionale Produkte, Spiele und Geschenkartikel.</p>
+            <div class="card-foot"><a href="https://www.thalia.de/buchhandlung/5580" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=thalia-buchhandlung" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=thalia-buchhandlung">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=thalia-buchhandlung#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="inselmanufaktur-deckena" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="lebensmittel">
+          <a class="card-media" href="/eintrag?id=inselmanufaktur-deckena" aria-label="Details zu Inselmanufaktur Deckena"><img src="assets/images/platzhalter-karte.svg" alt="Inselmanufaktur Deckena, Fleischerei und Feinkost an der Strandstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Fleischerei &amp; Feinkost</span></div>
+            <h3><a href="/eintrag?id=inselmanufaktur-deckena">Inselmanufaktur Deckena</a></h3>
+            <p class="card-meta">Strandstraße 20</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–18 Uhr, Sa 8:30–13 Uhr</p>
+            <p class="desc">Inselmetzgerei und Feinkostgeschäft mit eigener Wurst- und Schinkenherstellung. Das Stammhaus in der Strandstraße ist der Hauptstandort; dazu kommen die angeschlossene Wurst- und Schinkenmanufaktur, der Feinkoststandort Meergenuss in der Friedrichstraße 16 und die Kochinsel im Gewerbegebiet mit wechselndem Mittagstisch zur Abholung.</p>
+            <div class="card-foot"><a href="https://www.inselmanufaktur.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=inselmanufaktur-deckena" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselmanufaktur-deckena">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselmanufaktur-deckena#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="meine-insel-der-laden" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="souvenirs">
+          <a class="card-media" href="/eintrag?id=meine-insel-der-laden" aria-label="Details zu meine Insel — Der Laden"><img src="assets/images/platzhalter-karte.svg" alt="Laden meine Insel im Conversationshaus am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Souvenirs &amp; Geschenke</span></div>
+            <h3><a href="/eintrag?id=meine-insel-der-laden">meine Insel — Der Laden</a></h3>
+            <p class="card-meta">Am Kurplatz 1 · im Conversationshaus</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–17 Uhr, Sa 10–13 Uhr</p>
+            <p class="desc">Ladengeschäft im Conversationshaus am Kurplatz mit Souvenirs, Geschenkartikeln und Produkten mit Insel-Bezug. Betrieben von der Staatsbad Norderney GmbH, also direkt neben der Tourist-Information gelegen.</p>
+            <div class="card-foot"><a href="https://www.norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=meine-insel-der-laden" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=meine-insel-der-laden">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=meine-insel-der-laden#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="schnieder-souvenir" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="souvenirs">
+          <a class="card-media" href="/eintrag?id=schnieder-souvenir" aria-label="Details zu Schnieder Souvenir"><img src="assets/images/platzhalter-karte.svg" alt="Spielwarengeschäft Schnieder Souvenir am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Spielwaren &amp; Souvenirs</span></div>
+            <h3><a href="/eintrag?id=schnieder-souvenir">Schnieder Souvenir</a></h3>
+            <p class="card-meta">Am Kurplatz 1</p>
+            <p class="desc">Nach eigener Beschreibung das größte Spielwarengeschäft der Insel, direkt am Kurplatz. Im Sortiment stehen Marken wie Lego, Schleich und Carrera sowie Souvenirs und Strandartikel von Eimer und Schaufel bis Drachen.</p>
+            <div class="card-foot"><a href="https://schnieder-souvenir.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=schnieder-souvenir" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=schnieder-souvenir">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=schnieder-souvenir#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="crehaartive-norderney" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="dienstleistung">
+          <a class="card-media" href="/eintrag?id=crehaartive-norderney" aria-label="Details zu Crehaartive Norderney"><img src="assets/images/platzhalter-karte.svg" alt="Friseursalon Crehaartive an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Friseur</span></div>
+            <h3><a href="/eintrag?id=crehaartive-norderney">Crehaartive Norderney</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 12</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9–18 Uhr, Sa nach Vereinbarung</p>
+            <p class="desc">Friseursalon mit weiteren Standorten auf dem Festland. Termine werden laut eigener Website ausschließlich telefonisch vergeben.</p>
+            <div class="card-foot"><a href="https://www.crehaartive.de/friseur-norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=crehaartive-norderney" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=crehaartive-norderney">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=crehaartive-norderney#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="friseursalon-ingeborg" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="dienstleistung">
+          <a class="card-media" href="/eintrag?id=friseursalon-ingeborg" aria-label="Details zu Friseursalon Ingeborg"><img src="assets/images/platzhalter-karte.svg" alt="Inhabergeführter Friseursalon in der Winterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Friseur</span></div>
+            <h3><a href="/eintrag?id=friseursalon-ingeborg">Friseursalon Ingeborg</a></h3>
+            <p class="card-meta">Winterstr. 4</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Fr 9–18 Uhr, Sa 9–13 Uhr</p>
+            <p class="desc">Inhabergeführter Salon von Torsten Dohrmann in der Winterstraße.</p>
+            <div class="card-foot"><a href="tel:+4949322488" class="btn btn-primary btn-sm">Anrufen</a><a href="/eintrag?id=friseursalon-ingeborg" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=friseursalon-ingeborg">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=friseursalon-ingeborg#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="goldschmiede-holtmann" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="schmuck">
+          <a class="card-media" href="/eintrag?id=goldschmiede-holtmann" aria-label="Details zu Goldschmiede Holtmann"><img src="assets/images/platzhalter-karte.svg" alt="Goldschmiedewerkstatt Holtmann mit handgefertigtem Schmuck auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Goldschmiede &amp; Juwelier</span></div>
+            <h3><a href="/eintrag?id=goldschmiede-holtmann">Goldschmiede Holtmann</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 10</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Fr 10–18 Uhr, Sa 10–15 Uhr, Mo nach Vereinbarung</p>
+            <p class="desc">Goldschmiedewerkstatt mit handgefertigtem Schmuck, dazu Designerschmuck und Uhren namhafter Marken. Der Betrieb fertigt eigene Stücke und Trauringe an und kauft Gold an.</p>
+            <div class="card-foot"><a href="https://www.goldschmiede-holtmann.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=goldschmiede-holtmann" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=goldschmiede-holtmann">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=goldschmiede-holtmann#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="juwelier-goetting" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="schmuck">
+          <a class="card-media" href="/eintrag?id=juwelier-goetting" aria-label="Details zu Juwelier Götting"><img src="assets/images/platzhalter-karte.svg" alt="Juwelier Götting an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Juwelier</span></div>
+            <h3><a href="/eintrag?id=juwelier-goetting">Juwelier Götting</a></h3>
+            <p class="card-meta">Friedrichstr. 15</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
+            <p class="desc">Familienbetrieb, der nach eigener Darstellung seit 1920 besteht. Heutige Inhaberin ist Melanie König.</p>
+            <div class="card-foot"><a href="https://www.facebook.com/inh.melanie.koenig.e.k/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=juwelier-goetting" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=juwelier-goetting">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=juwelier-goetting#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="rundu-schuh" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="mode">
+          <a class="card-media" href="/eintrag?id=rundu-schuh" aria-label="Details zu R&amp;U Schuh"><img src="assets/images/platzhalter-karte.svg" alt="Schuhfachgeschäft R und U Schuh in der Winterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Schuhe</span></div>
+            <h3><a href="/eintrag?id=rundu-schuh">R&amp;U Schuh</a></h3>
+            <p class="card-meta">Winterstraße 15</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>April–Nov: Mo–Sa 9:30–18:30 Uhr, So &amp; feiertags 10–18 Uhr · Jan/Feb: Mo–Sa 10–18 Uhr, So geschlossen</p>
+            <p class="desc">Schuhfachgeschäft mit stark saisonal wechselnden Öffnungszeiten. In der Hauptsaison ist auch sonntags geöffnet, im Winter gelten kürzere Zeiten.</p>
+            <div class="card-foot"><a href="https://ruuschuh.de/filialen/schuh-mann-norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=rundu-schuh" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=rundu-schuh">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=rundu-schuh#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="mein-inselmarkt-kruse" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="supermarkt">
+          <a class="card-media" href="/eintrag?id=mein-inselmarkt-kruse" aria-label="Details zu Mein Inselmarkt Kruse"><img src="assets/images/platzhalter-karte.svg" alt="Nachbarschaftsmarkt Mein Inselmarkt Kruse auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Nahversorger · zwei Standorte</span></div>
+            <h3><a href="/eintrag?id=mein-inselmarkt-kruse">Mein Inselmarkt Kruse</a></h3>
+            <p class="card-meta">Nordhelmstraße 66 · zweiter Laden: Strandstraße 6</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–13 &amp; 15–18 Uhr, Sa 8:30–13 Uhr, So 10–12 bzw. 13 Uhr</p>
+            <p class="desc">Zwei kleine Nachbarschaftsmärkte abseits der großen Supermärkte, einer davon versorgt die Nordhelmsiedlung. Täglich frische Backwaren. Die Sonntagszeiten unterscheiden sich je Standort leicht.</p>
+            <div class="card-foot"><a href="https://www.instagram.com/inselmarktkruse/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zu Instagram</a><a href="/eintrag?id=mein-inselmarkt-kruse" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=mein-inselmarkt-kruse">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=mein-inselmarkt-kruse#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="norderneyer-wochenmarkt" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="lebensmittel">
+          <a class="card-media" href="/eintrag?id=norderneyer-wochenmarkt" aria-label="Details zu Norderneyer Wochenmarkt"><img src="assets/images/platzhalter-karte.svg" alt="Wochenmarkt mit regionalen Produkten an der Adolfsreihe Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Wochenmarkt</span></div>
+            <h3><a href="/eintrag?id=norderneyer-wochenmarkt">Norderneyer Wochenmarkt</a></h3>
+            <p class="card-meta">Adolfsreihe, zwischen Kurtheater und Kurplatz</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Jeden Mittwoch ca. 9–12 Uhr, ganzjährig</p>
+            <p class="desc">Wochenmarkt mit regionalen Produkten wie Brot, Obst, Gemüse, Käse, Eiern und Fleisch. Findet das ganze Jahr über statt, im Winter mit weniger Ständen.</p>
+            <div class="card-foot"><a href="https://www.norderney.de/informationen/aktivitaeten/einkaufen" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=norderneyer-wochenmarkt" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=norderneyer-wochenmarkt">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=norderneyer-wochenmarkt#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="blumen-boekhoff" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="blumen">
+          <a class="card-media" href="/eintrag?id=blumen-boekhoff" aria-label="Details zu Blumen Boekhoff"><img src="assets/images/platzhalter-karte.svg" alt="Blumengeschäft Boekhoff an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Blumen &amp; Floristik</span></div>
+            <h3><a href="/eintrag?id=blumen-boekhoff">Blumen Boekhoff</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 27</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–12 &amp; 15–17 Uhr, Sa 8–12 Uhr, Mi &amp; So geschlossen</p>
+            <p class="desc">Floristik-Meisterbetrieb, laut Fleurop-Partnerseite mit Schwerpunkt auf Hochzeiten.</p>
+            <div class="card-foot"><a href="https://www.instagram.com/blumen_boekhoff_norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zu Instagram</a><a href="/eintrag?id=blumen-boekhoff" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=blumen-boekhoff">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=blumen-boekhoff#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="blumenhaus-namuth" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="blumen">
+          <a class="card-media" href="/eintrag?id=blumenhaus-namuth" aria-label="Details zu Blumenhaus Namuth"><img src="assets/images/platzhalter-karte.svg" alt="Blumenhaus Namuth an der Janusstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Blumen</span></div>
+            <h3><a href="/eintrag?id=blumenhaus-namuth">Blumenhaus Namuth</a></h3>
+            <p class="card-meta">Janusstr. 2</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
+            <p class="desc">Zweiter Blumenladen der Insel, geführt von Jörn Namuth.</p>
+            <div class="card-foot"><a href="https://www.openstreetmap.org/search?query=Janusstr.%202%2C%2026548%20Norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Route anzeigen</a><a href="/eintrag?id=blumenhaus-namuth" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=blumenhaus-namuth">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=blumenhaus-namuth#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="inselreinigung-sonnenschein" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="dienstleistung">
+          <a class="card-media" href="/eintrag?id=inselreinigung-sonnenschein" aria-label="Details zu Inselreinigung Sonnenschein"><img src="assets/images/platzhalter-karte.svg" alt="Wäscherei und Textilreinigung Sonnenschein auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Wäscherei &amp; Reinigung</span></div>
+            <h3><a href="/eintrag?id=inselreinigung-sonnenschein">Inselreinigung Sonnenschein</a></h3>
+            <p class="card-meta">Nordhelmstraße 77 · Annahme: Winterstraße 14</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Wäscherei Mo–Fr 6:30–15 Uhr · Annahmestelle Mo–Fr 9–12:30 Uhr</p>
+            <p class="desc">Wäscherei und Textilreinigung für Ferienwohnungen, Hotels, Gastronomie und Privathaushalte. Für Urlauber ist vor allem die Annahmestelle in der Winterstraße praktisch.</p>
+            <div class="card-foot"><a href="https://www.xn--wscherei-sonnenschein-51b.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=inselreinigung-sonnenschein" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=inselreinigung-sonnenschein">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=inselreinigung-sonnenschein#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="atelier-waterkant" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="souvenirs">
+          <a class="card-media" href="/eintrag?id=atelier-waterkant" aria-label="Details zu Atelier Waterkant"><img src="assets/images/platzhalter-karte.svg" alt="Designladen Atelier Waterkant mit maritimen Produkten auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Design &amp; Souvenirs</span></div>
+            <h3><a href="/eintrag?id=atelier-waterkant">Atelier Waterkant</a></h3>
+            <p class="card-meta">Jann-Berghaus-Straße 70 · neben der Volksbank</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
+            <p class="desc">Kleiner Laden mit überwiegend selbst entworfenen maritimen Produkten: Sauna- und Strandtücher, Meersalz, Becher, Kissen und gehäkelte Krebse, dazu Grafikdrucke und Bilder. Betrieben von Matthias und Katja Fülle, zusätzlich mit Onlineshop.</p>
+            <div class="card-foot"><a href="https://www.atelierwaterkant.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=atelier-waterkant" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=atelier-waterkant">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=atelier-waterkant#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+        <div class="card card--eintrag" id="biomaris-shop" data-betrieb-karte data-kategorie="geschaefte-mode" data-sortiment="drogerie">
+          <a class="card-media" href="/eintrag?id=biomaris-shop" aria-label="Details zu BIOMARIS Shop"><img src="assets/images/platzhalter-karte.svg" alt="BIOMARIS Werksverkauf für Meereskosmetik am Weststrand Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></a>
+          <div class="card-body">
+            <div class="card-tags-row"><span class="card-tag">Meereskosmetik</span></div>
+            <h3><a href="/eintrag?id=biomaris-shop">BIOMARIS Shop</a></h3>
+            <p class="card-meta">Am Weststrand 2</p>
+            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen (ganzjährig geöffnet, Zeiten wechseln saisonal)</p>
+            <p class="desc">Werksverkauf der Meereskosmetik-Marke BIOMARIS direkt an der Weststrandpromenade, barrierefrei zugänglich und mit persönlicher Beratung.</p>
+            <div class="card-foot"><a href="https://www.biomaris.com/shop-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Zum Shop</a><a href="/eintrag?id=biomaris-shop" class="btn btn-outline btn-sm">Details</a></div>
+            <p class="eintrag-hinweis">Zuletzt aktualisiert: 16.11.2026 · Von uns zusammengestellt, ohne Gewähr. Du bist der Betrieb? <a href="/betrieb-eintragen?eintrag=biomaris-shop">Übernimm deinen Eintrag.</a> · <a href="/kontakt?eintrag=biomaris-shop#frag-luis">Fehler melden</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="filter-leer" data-filter-leer="[data-betrieb-karte]" hidden>Zu dieser Auswahl gibt es noch keinen Eintrag. Probier einen anderen Filter.</p>
+      <!-- /@betriebe -->
+      <div class="card-grid" style="margin-top:28px">
+        <div class="card" data-category="mode-souvenir">
           <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Fußgängerzone Friedrichstraße mit Boutiquen und Modegeschäften auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
           <div class="card-body">
             <span class="card-tag">Einkaufsstraßen</span>
@@ -312,309 +548,9 @@
             </div>
           </div>
         </div>
-
-        <div class="card" data-shop-card data-category="bank">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Sparkasse Aurich-Norden Filiale an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Bank &amp; Sparkasse</span>
-            <h3>Sparkasse Aurich-Norden</h3>
-            <p class="card-meta">Jann-Berghaus-Str. 7</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo/Do 9–12 &amp; 14–16 Uhr, Di/Mi/Fr 9–12 Uhr</p>
-            <p class="desc">Regionale Sparkassenfiliale mit persönlicher Beratung, Ein- und Auszahlung sowie Geldautomat. </p>
-            <div class="card-foot">
-              <a href="https://www.sparkasse-aurich-norden.de/de/home/toolbar/filialen/sparkasse-aurich-norden-filiale-sparkasse-norderney-4359.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="bank">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Raiffeisen-Volksbank Fresena Geschäftsstelle an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Bank &amp; Sparkasse</span>
-            <h3>Raiffeisen-Volksbank Fresena</h3>
-            <p class="card-meta">Jann-Berghaus-Straße 69 · Tel. 04932 92310</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–12:30 &amp; 15–17 Uhr, mittwochs nur vormittags</p>
-            <p class="desc">Genossenschaftsbank-Filiale mit persönlicher Beratung und Geldautomat mit Einzahlfunktion. </p>
-            <div class="card-foot">
-              <a href="tel:+49493292310" class="btn btn-outline btn-sm">Anrufen</a>
-              <a href="https://www.rvbfresena.de/meine-bank/filialen/filialen-uebersicht/raiffeisen-volksbank-fresena-eg-norderney.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="post">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Deutsche Post Filiale in der HS2-Passage an der Bülowallee Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Post</span>
-            <h3>Deutsche Post Filiale 627</h3>
-            <p class="card-meta">Bülowallee 2 (HS2-Passage)</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo/Di/Do/Fr 8:30–13 &amp; 14–16:30 Uhr, Mi 8:30–13 Uhr, Sa 8:30–13 Uhr</p>
-            <p class="desc">Postfiliale für Brief- und Paketversand sowie Verkauf von Briefmarken und Versandmaterial. Kein Postbank-Schalter integriert. Zusätzlich gibt es rund um die Uhr eine Packstation am Busbahnhof.</p>
-            <div class="card-foot">
-              <a href="https://www.deutschepost.de/de/s/standorte.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Standort bei Deutsche Post</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="fahrrad">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Kurt's Fahrradshop, Fahrradgeschäft mit Werkstatt auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Fahrradladen · Verkauf &amp; Werkstatt</span>
-            <h3>Kurt's Fahrradshop</h3>
-            <!-- Mischbetrieb: primär Verkauf/Werkstatt, auf Norderney bieten praktisch alle Fahrradläden zusätzlich auch Verleih an -->
-            <p class="card-meta">Nordhelmstr. 73 · Tel. 04932 935530</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–12 &amp; 15–18 Uhr, Sa/So 10–12 &amp; 17–18 Uhr</p>
-            <p class="desc">Fahrradgeschäft mit eigener Werkstatt für Reparatur und Wartung. Neben dem Verkauf bietet der Laden auch Mietfahrräder an, ist also die richtige Adresse, wenn das mitgebrachte Rad eine Panne hat.</p>
-            <div class="card-foot">
-              <a href="https://kfs-norderney.jimdoweb.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="drogerie">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="ROSSMANN Drogeriemarkt an der Poststraße auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Drogerie</span>
-            <h3>ROSSMANN</h3>
-            <p class="card-meta">Poststr. 1</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9–19 Uhr, Sa 9–18 Uhr, So 10–17 Uhr</p>
-            <p class="desc">Drogeriefiliale mitten im Ort mit Sortiment für Körperpflege, Kosmetik, Haushalt und Babybedarf. Als anerkannter Erholungsort hat Norderney erweiterte Sonntagsöffnungszeiten, deshalb ist auch sonntags geöffnet.</p>
-            <div class="card-foot">
-              <a href="https://www.rossmann.de/de/filialen/niedersachsen/norderney/poststr--1.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="buch">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Thalia Buchhandlung in der Fußgängerzone von Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Buchhandlung</span>
-            <h3>Thalia Buchhandlung</h3>
-            <p class="card-meta">Poststr. 12 · Tel. 04932 9912069</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Sa 10–18 Uhr (saisonal abweichend)</p>
-            <p class="desc">Buchhandlung in der Fußgängerzone, laut Unternehmen die erste Inselbuchhandlung in der Geschichte von Thalia. Neben Büchern gibt es regionale Produkte, Spiele und Geschenkartikel.</p>
-            <div class="card-foot">
-              <a href="https://www.thalia.de/buchhandlung/5580" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="lebensmittel">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Inselmanufaktur Deckena, Fleischerei und Feinkost an der Strandstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Fleischerei &amp; Feinkost</span>
-            <h3>Inselmanufaktur Deckena</h3>
-            <p class="card-meta">Strandstraße 20 · Tel. 04932 869636</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–18 Uhr, Sa 8:30–13 Uhr</p>
-            <p class="desc">Inselmetzgerei und Feinkostgeschäft mit eigener Wurst- und Schinkenherstellung. Das Stammhaus in der Strandstraße ist der Hauptstandort; dazu kommen die angeschlossene Wurst- und Schinkenmanufaktur, der Feinkoststandort Meergenuss in der Friedrichstraße 16 und die Kochinsel im Gewerbegebiet mit wechselndem Mittagstisch zur Abholung.</p>
-            <div class="card-foot">
-              <a href="https://www.inselmanufaktur.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Laden meine Insel im Conversationshaus am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Souvenirs &amp; Geschenke</span>
-            <h3>meine Insel — Der Laden</h3>
-            <p class="card-meta">Am Kurplatz 1, im Conversationshaus · Tel. 04932 891-169</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–17 Uhr, Sa 10–13 Uhr</p>
-            <p class="desc">Ladengeschäft im Conversationshaus am Kurplatz mit Souvenirs, Geschenkartikeln und Produkten mit Insel-Bezug. Betrieben von der Staatsbad Norderney GmbH, also direkt neben der Tourist-Information gelegen.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney.de" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Spielwarengeschäft Schnieder Souvenir am Kurplatz Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Spielwaren &amp; Souvenirs</span>
-            <h3>Schnieder Souvenir</h3>
-            <!-- TODO: Öffnungszeiten noch prüfen. Nur über ein Bewertungsportal auffindbar (Mo–So 9–18 Uhr), nicht auf der eigenen Website bestätigt. -->
-            <p class="card-meta">Am Kurplatz 1 · Tel. 04932 927171</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>TODO: Öffnungszeiten telefonisch prüfen</p>
-            <p class="desc">Nach eigener Beschreibung das größte Spielwarengeschäft der Insel, direkt am Kurplatz. Im Sortiment stehen Marken wie Lego, Schleich und Carrera sowie Souvenirs und Strandartikel von Eimer und Schaufel bis Drachen.</p>
-            <div class="card-foot">
-              <a href="https://schnieder-souvenir.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" data-shop-card data-category="dienstleistung">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Friseursalon Crehaartive an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Friseur</span>
-            <h3>Crehaartive Norderney</h3>
-            <p class="card-meta">Jann-Berghaus-Straße 12 · Tel. 04932 6399936</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 9–18 Uhr, Sa nach Vereinbarung</p>
-            <p class="desc">Friseursalon mit weiteren Standorten auf dem Festland. Termine werden laut eigener Website ausschließlich telefonisch vergeben.</p>
-            <div class="card-foot">
-              <a href="https://www.crehaartive.de/friseur-norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="dienstleistung">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Inhabergeführter Friseursalon in der Winterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Friseur</span>
-            <h3>Friseursalon Ingeborg</h3>
-            <!-- TODO: Öffnungszeiten prüfen. Nur über ein Branchenverzeichnis belegt, keine eigene Website vorhanden. -->
-            <p class="card-meta">Winterstr. 4 · Tel. 04932 2488</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Fr 9–18 Uhr, Sa 9–13 Uhr</p>
-            <p class="desc">Inhabergeführter Salon von Torsten Dohrmann in der Winterstraße.</p>
-            <div class="card-foot">
-              <span class="card-meta">Kein eigener Internetauftritt bekannt</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Goldschmiedewerkstatt Holtmann mit handgefertigtem Schmuck auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Goldschmiede &amp; Juwelier</span>
-            <h3>Goldschmiede Holtmann</h3>
-            <p class="card-meta">Jann-Berghaus-Straße 10 · Tel. 04932 3856</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Di–Fr 10–18 Uhr, Sa 10–15 Uhr, Mo nach Vereinbarung</p>
-            <p class="desc">Goldschmiedewerkstatt mit handgefertigtem Schmuck, dazu Designerschmuck und Uhren namhafter Marken. Der Betrieb fertigt eigene Stücke und Trauringe an und kauft Gold an.</p>
-            <div class="card-foot">
-              <a href="https://www.goldschmiede-holtmann.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Juwelier Götting an der Friedrichstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Juwelier</span>
-            <h3>Juwelier Götting</h3>
-            <!-- TODO: Öffnungszeiten noch prüfen, für diesen Betrieb war keine Quelle auffindbar. -->
-            <p class="card-meta">Friedrichstr. 15</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
-            <p class="desc">Familienbetrieb, der nach eigener Darstellung seit 1920 besteht. Heutige Inhaberin ist Melanie König.</p>
-            <div class="card-foot">
-              <a href="https://www.facebook.com/inh.melanie.koenig.e.k/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Schuhfachgeschäft R und U Schuh in der Winterstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Schuhe</span>
-            <h3>R&amp;U Schuh</h3>
-            <p class="card-meta">Winterstraße 15</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>April–Nov: Mo–Sa 9:30–18:30 Uhr, So &amp; feiertags 10–18 Uhr · Jan/Feb: Mo–Sa 10–18 Uhr, So geschlossen</p>
-            <p class="desc">Schuhfachgeschäft mit stark saisonal wechselnden Öffnungszeiten. In der Hauptsaison ist auch sonntags geöffnet, im Winter gelten kürzere Zeiten.</p>
-            <div class="card-foot">
-              <a href="https://ruuschuh.de/filialen/schuh-mann-norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="supermarkt">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Nachbarschaftsmarkt Mein Inselmarkt Kruse auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Nahversorger · zwei Standorte</span>
-            <h3>Mein Inselmarkt Kruse</h3>
-            <p class="card-meta">Nordhelmstraße 66 und Strandstraße 6 · Tel. 04932 990541</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:30–13 &amp; 15–18 Uhr, Sa 8:30–13 Uhr, So 10–12 bzw. 13 Uhr</p>
-            <p class="desc">Zwei kleine Nachbarschaftsmärkte abseits der großen Supermärkte, einer davon versorgt die Nordhelmsiedlung. Täglich frische Backwaren. Die Sonntagszeiten unterscheiden sich je Standort leicht.</p>
-            <div class="card-foot">
-              <a href="https://www.instagram.com/inselmarktkruse/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Auf Instagram ansehen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="lebensmittel">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Wochenmarkt mit regionalen Produkten an der Adolfsreihe Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Wochenmarkt</span>
-            <h3>Norderneyer Wochenmarkt</h3>
-            <p class="card-meta">Adolfsreihe, zwischen Kurtheater und Kurplatz</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Jeden Mittwoch ca. 9–12 Uhr, ganzjährig</p>
-            <p class="desc">Wochenmarkt mit regionalen Produkten wie Brot, Obst, Gemüse, Käse, Eiern und Fleisch. Findet das ganze Jahr über statt, im Winter mit weniger Ständen.</p>
-            <div class="card-foot">
-              <a href="https://www.norderney.de/informationen/aktivitaeten/einkaufen" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="dienstleistung">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Blumengeschäft Boekhoff an der Jann-Berghaus-Straße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Blumen &amp; Floristik</span>
-            <h3>Blumen Boekhoff</h3>
-            <!-- TODO: Öffnungszeiten prüfen. Nur über ein Verzeichnis belegt, die Mittwochsschließung ist ungewöhnlich. -->
-            <p class="card-meta">Jann-Berghaus-Straße 27 · Tel. 04932 1477</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 10–12 &amp; 15–17 Uhr, Sa 8–12 Uhr, Mi &amp; So geschlossen</p>
-            <p class="desc">Floristik-Meisterbetrieb, laut Fleurop-Partnerseite mit Schwerpunkt auf Hochzeiten.</p>
-            <div class="card-foot">
-              <a href="https://www.instagram.com/blumen_boekhoff_norderney/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Auf Instagram ansehen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="dienstleistung">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Blumenhaus Namuth an der Janusstraße Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Blumen</span>
-            <h3>Blumenhaus Namuth</h3>
-            <!-- TODO: Öffnungszeiten und Internetauftritt noch prüfen, es war keine Quelle auffindbar. -->
-            <p class="card-meta">Janusstr. 2</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
-            <p class="desc">Zweiter Blumenladen der Insel, geführt von Jörn Namuth.</p>
-            <div class="card-foot">
-              <span class="card-meta">Kein eigener Internetauftritt bekannt</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="dienstleistung">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Wäscherei und Textilreinigung Sonnenschein auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Wäscherei &amp; Reinigung</span>
-            <h3>Inselreinigung Sonnenschein</h3>
-            <p class="card-meta">Nordhelmstraße 77 · Annahme: Winterstraße 14 · Tel. 04932 2584</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Wäscherei Mo–Fr 6:30–15 Uhr · Annahmestelle Mo–Fr 9–12:30 Uhr</p>
-            <p class="desc">Wäscherei und Textilreinigung für Ferienwohnungen, Hotels, Gastronomie und Privathaushalte. Für Urlauber ist vor allem die Annahmestelle in der Winterstraße praktisch.</p>
-            <div class="card-foot">
-              <a href="https://www.xn--wscherei-sonnenschein-51b.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="Designladen Atelier Waterkant mit maritimen Produkten auf Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Design &amp; Souvenirs</span>
-            <h3>Atelier Waterkant</h3>
-            <!-- TODO: Öffnungszeiten noch prüfen, die eigene Website nennt keine. -->
-            <p class="card-meta">Jann-Berghaus-Straße 70, neben der Volksbank</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen</p>
-            <p class="desc">Kleiner Laden mit überwiegend selbst entworfenen maritimen Produkten: Sauna- und Strandtücher, Meersalz, Becher, Kissen und gehäkelte Krebse, dazu Grafikdrucke und Bilder. Betrieben von Matthias und Katja Fülle, zusätzlich mit Onlineshop.</p>
-            <div class="card-foot">
-              <a href="https://www.atelierwaterkant.de/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" data-shop-card data-category="mode-souvenir">
-          <div class="card-media"><img src="assets/images/platzhalter-karte.svg" alt="BIOMARIS Werksverkauf für Meereskosmetik am Weststrand Norderney (Platzhalterbild)" loading="lazy" data-placeholder="true"></div>
-          <div class="card-body">
-            <span class="card-tag">Meereskosmetik</span>
-            <h3>BIOMARIS Shop</h3>
-            <!-- TODO: Öffnungszeiten wechseln saisonal, laut Anbieter telefonisch zu erfragen. -->
-            <p class="card-meta">Am Weststrand 2 · Tel. 0178 7302506</p>
-            <p class="card-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Öffnungszeiten bitte telefonisch erfragen (ganzjährig geöffnet, Zeiten wechseln saisonal)</p>
-            <p class="desc">Werksverkauf der Meereskosmetik-Marke BIOMARIS direkt an der Weststrandpromenade, barrierefrei zugänglich und mit persönlicher Beratung.</p>
-            <div class="card-foot">
-              <a href="https://www.biomaris.com/shop-norderney" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Website besuchen</a>
-            </div>
-          </div>
-        </div>
       </div>
+      <div class="karte" data-karte="geschaefte-mode" style="margin-top:28px"></div>
+      <p class="betrieb-cta">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
     </div>
   </section>
   <section class="section section--sand">
@@ -633,18 +569,6 @@
     </div>
   </section>
 
-  <!-- Einträge von Betrieben: kommen aus daten/betriebe.json, Bereich bleibt ohne Einträge unsichtbar -->
-  <section class="section section--sand" id="betriebe" data-betriebe-bereich hidden>
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Von Betrieben eingetragen</p>
-        <h2>Neu im Guide</h2>
-      </div>
-      <div class="card-grid cols-3" data-betriebe="geschaefte-mode"></div>
-      <div class="karte" data-karte="geschaefte-mode" style="margin-top:28px"></div>
-      <p style="margin-top:24px">Du hast selbst einen Betrieb auf Norderney? <a href="/betrieb-eintragen">Trag ihn kostenlos ein.</a></p>
-    </div>
-  </section>
 
 </main>
 
@@ -714,6 +638,7 @@
 </footer>
 <!-- /@footer -->
 
+<script src="js/betriebe-felder.js?v=23"></script>
 <script src="js/betriebe.js?v=23"></script>
 <script src="js/karte.js?v=23"></script>
 <script src="js/main.js?v=23"></script>

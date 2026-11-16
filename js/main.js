@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return { attr: g.attr, val: activeBtn ? activeBtn.getAttribute('data-filter') : 'alle' };
       });
 
+      var sichtbar = 0;
       cards.forEach(function (card) {
         var visible = activeFilters.every(function (f) {
           if (f.val === 'alle') return true;
@@ -139,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
           return raw.split(' ').indexOf(f.val) !== -1;
         });
         card.style.display = visible ? '' : 'none';
+        if (visible) sichtbar++;
+      });
+      // Hinweis, wenn eine Filter-Kombination keine Treffer hat
+      document.querySelectorAll('[data-filter-leer]').forEach(function (leer) {
+        if (leer.getAttribute('data-filter-leer') === selector) leer.hidden = sichtbar > 0;
       });
     }
 

@@ -23,7 +23,6 @@ def main():
     seiten={}
     for f in ROOT.glob('*.html'):
         p=P(); p.feed(f.read_text(encoding='utf-8')); seiten[f.name]=p
-    anbieter_ids=set(re.findall(r'"id":\s*"([^"]+)"', (ROOT/'assets/data.js').read_text(encoding='utf-8')))
     betriebe_ids={e['id'] for e in json.loads((ROOT/'daten/betriebe.json').read_text(encoding='utf-8'))['eintraege']}
     fehler=0
     for name,p in sorted(seiten.items()):
@@ -39,8 +38,8 @@ def main():
                 else:
                     print(f'{name}:{zeile}: Ziel fehlt: {link}'); fehler+=1; continue
             q=parse_qs(u.query)
-            if pfad and ziel=='anbieter.html' and q.get('id',[''])[0] not in anbieter_ids:
-                print(f'{name}:{zeile}: unbekannte Anbieter-ID: {link}'); fehler+=1
+            if pfad and ziel=='anbieter.html':
+                print(f'{name}:{zeile}: alte Adresse /anbieter, bitte /eintrag?id=... verwenden: {link}'); fehler+=1
             if pfad and ziel=='eintrag.html' and q.get('id',[''])[0] not in betriebe_ids:
                 print(f'{name}:{zeile}: unbekannte Eintrags-ID: {link}'); fehler+=1
             if u.fragment and ziel in seiten and u.fragment not in seiten[ziel].ids:
