@@ -9,7 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MUSTER = re.compile(r"\[([A-ZÄÖÜ][A-ZÄÖÜ0-9 \-]*[A-ZÄÖÜ0-9])(?::[^\]]*|, [A-ZÄÖÜ]+)?\]")
 DATEIEN = sorted([*ROOT.glob("*.html"), *ROOT.glob("partials/*.html"), *ROOT.glob("js/*.js"),
                   ROOT / "assets/data.js", ROOT / "daten/betriebe.json", ROOT / "sitemap.xml",
-                  ROOT / "robots.txt", ROOT / "docs/tally-formulare.md"])
+                  ROOT / "robots.txt", ROOT / "docs/tally-formulare.md", ROOT / "docs/datenschutz-generator.md"])
 PARTIAL_SEITEN = "(steht über partials/ in jeder Seite – nur in partials/ ändern, dann tools/layout.py)"
 
 

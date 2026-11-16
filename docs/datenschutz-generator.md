@@ -36,7 +36,7 @@ Keine eigenen Rechtstexte schreiben – bei Unsicherheit Generator-Hilfe oder An
 
 ## 4. Webanalyse / Reichweitenmessung
 
-- [ ] **Umami** (Umami Cloud, cloud.umami.is) – Software Inc., USA [prüfen: Anbieter und Serverstandort im Umami-Konto]
+- [ ] **Umami** (Umami Cloud, cloud.umami.is) – [UMAMI-ANBIETER: Firmenname, Sitz und Serverstandort aus dem Umami-Konto bzw. dessen Datenschutzseite]
 - [ ] **Cookiefrei**: Umami setzt keine Cookies und speichert keine IP-Adressen dauerhaft
       → im Generator „Reichweitenmessung ohne Cookies“ wählen (falls vorhanden)
 - [ ] Wofür: anonyme Besucherzahlen, z. B. welche Seiten oft aufgerufen werden

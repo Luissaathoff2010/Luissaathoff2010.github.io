@@ -2,7 +2,7 @@
 Erzeugt mit `python3 tools/platzhalter.py`. Nach dem Ersetzen erneut ausführen.
 Platzhalter aus `partials/` (Footer, Head) stehen in jeder Seite. Dort nur die Datei in `partials/` ändern und `python3 tools/layout.py` ausführen.
 
-## [DOMAIN] – 194×
+## [DOMAIN] – 280×
 
 _21 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur in partials/ ändern, dann tools/layout.py)_
 
@@ -17,10 +17,10 @@ _21 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur 
 | `aktivitaeten.html` | 15 | [DOMAIN] |
 | `aktivitaeten.html` | 21 | [DOMAIN] |
 | `aktivitaeten.html` | 27 | [DOMAIN] |
-| `anbieter.html` | 8 | [DOMAIN] |
-| `anbieter.html` | 14 | [DOMAIN] |
-| `anbieter.html` | 15 | [DOMAIN] |
-| `anbieter.html` | 21 | [DOMAIN] |
+| `anbieter.html` | 9 | [DOMAIN] |
+| `anbieter.html` | 19 | [DOMAIN] |
+| `anbieter.html` | 20 | [DOMAIN] |
+| `anbieter.html` | 26 | [DOMAIN] |
 | `betrieb-eintragen.html` | 8 | [DOMAIN] |
 | `betrieb-eintragen.html` | 14 | [DOMAIN] |
 | `betrieb-eintragen.html` | 15 | [DOMAIN] |
@@ -31,12 +31,13 @@ _21 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur 
 | `datenschutz.html` | 15 | [DOMAIN] |
 | `datenschutz.html` | 21 | [DOMAIN] |
 | `datenschutz.html` | 27 | [DOMAIN] |
-| `docs/tally-formulare.md` | 28 | [DOMAIN] |
-| `docs/tally-formulare.md` | 29 | [DOMAIN] |
-| `eintrag.html` | 13 | [DOMAIN] |
+| `docs/tally-formulare.md` | 55 | [DOMAIN] |
+| `docs/tally-formulare.md` | 56 | [DOMAIN] |
+| `eintrag.html` | 8 | [DOMAIN] |
 | `eintrag.html` | 14 | [DOMAIN] |
-| `eintrag.html` | 20 | [DOMAIN] |
-| `eintrag.html` | 26 | [DOMAIN] |
+| `eintrag.html` | 15 | [DOMAIN] |
+| `eintrag.html` | 21 | [DOMAIN] |
+| `eintrag.html` | 27 | [DOMAIN] |
 | `essen-trinken.html` | 8 | [DOMAIN] |
 | `essen-trinken.html` | 14 | [DOMAIN] |
 | `essen-trinken.html` | 15 | [DOMAIN] |
@@ -166,6 +167,91 @@ _21 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur 
 | `sitemap.xml` | 67 | [DOMAIN] |
 | `sitemap.xml` | 68 | [DOMAIN] |
 | `sitemap.xml` | 69 | [DOMAIN] |
+| `sitemap.xml` | 70 | [DOMAIN] |
+| `sitemap.xml` | 71 | [DOMAIN] |
+| `sitemap.xml` | 72 | [DOMAIN] |
+| `sitemap.xml` | 73 | [DOMAIN] |
+| `sitemap.xml` | 74 | [DOMAIN] |
+| `sitemap.xml` | 75 | [DOMAIN] |
+| `sitemap.xml` | 76 | [DOMAIN] |
+| `sitemap.xml` | 77 | [DOMAIN] |
+| `sitemap.xml` | 78 | [DOMAIN] |
+| `sitemap.xml` | 79 | [DOMAIN] |
+| `sitemap.xml` | 80 | [DOMAIN] |
+| `sitemap.xml` | 81 | [DOMAIN] |
+| `sitemap.xml` | 82 | [DOMAIN] |
+| `sitemap.xml` | 83 | [DOMAIN] |
+| `sitemap.xml` | 84 | [DOMAIN] |
+| `sitemap.xml` | 85 | [DOMAIN] |
+| `sitemap.xml` | 86 | [DOMAIN] |
+| `sitemap.xml` | 87 | [DOMAIN] |
+| `sitemap.xml` | 88 | [DOMAIN] |
+| `sitemap.xml` | 89 | [DOMAIN] |
+| `sitemap.xml` | 90 | [DOMAIN] |
+| `sitemap.xml` | 91 | [DOMAIN] |
+| `sitemap.xml` | 92 | [DOMAIN] |
+| `sitemap.xml` | 93 | [DOMAIN] |
+| `sitemap.xml` | 94 | [DOMAIN] |
+| `sitemap.xml` | 95 | [DOMAIN] |
+| `sitemap.xml` | 96 | [DOMAIN] |
+| `sitemap.xml` | 97 | [DOMAIN] |
+| `sitemap.xml` | 98 | [DOMAIN] |
+| `sitemap.xml` | 99 | [DOMAIN] |
+| `sitemap.xml` | 100 | [DOMAIN] |
+| `sitemap.xml` | 101 | [DOMAIN] |
+| `sitemap.xml` | 102 | [DOMAIN] |
+| `sitemap.xml` | 103 | [DOMAIN] |
+| `sitemap.xml` | 104 | [DOMAIN] |
+| `sitemap.xml` | 105 | [DOMAIN] |
+| `sitemap.xml` | 106 | [DOMAIN] |
+| `sitemap.xml` | 107 | [DOMAIN] |
+| `sitemap.xml` | 108 | [DOMAIN] |
+| `sitemap.xml` | 109 | [DOMAIN] |
+| `sitemap.xml` | 110 | [DOMAIN] |
+| `sitemap.xml` | 111 | [DOMAIN] |
+| `sitemap.xml` | 112 | [DOMAIN] |
+| `sitemap.xml` | 113 | [DOMAIN] |
+| `sitemap.xml` | 114 | [DOMAIN] |
+| `sitemap.xml` | 115 | [DOMAIN] |
+| `sitemap.xml` | 116 | [DOMAIN] |
+| `sitemap.xml` | 117 | [DOMAIN] |
+| `sitemap.xml` | 118 | [DOMAIN] |
+| `sitemap.xml` | 119 | [DOMAIN] |
+| `sitemap.xml` | 120 | [DOMAIN] |
+| `sitemap.xml` | 121 | [DOMAIN] |
+| `sitemap.xml` | 122 | [DOMAIN] |
+| `sitemap.xml` | 123 | [DOMAIN] |
+| `sitemap.xml` | 124 | [DOMAIN] |
+| `sitemap.xml` | 125 | [DOMAIN] |
+| `sitemap.xml` | 126 | [DOMAIN] |
+| `sitemap.xml` | 127 | [DOMAIN] |
+| `sitemap.xml` | 128 | [DOMAIN] |
+| `sitemap.xml` | 129 | [DOMAIN] |
+| `sitemap.xml` | 130 | [DOMAIN] |
+| `sitemap.xml` | 131 | [DOMAIN] |
+| `sitemap.xml` | 132 | [DOMAIN] |
+| `sitemap.xml` | 133 | [DOMAIN] |
+| `sitemap.xml` | 134 | [DOMAIN] |
+| `sitemap.xml` | 135 | [DOMAIN] |
+| `sitemap.xml` | 136 | [DOMAIN] |
+| `sitemap.xml` | 137 | [DOMAIN] |
+| `sitemap.xml` | 138 | [DOMAIN] |
+| `sitemap.xml` | 139 | [DOMAIN] |
+| `sitemap.xml` | 140 | [DOMAIN] |
+| `sitemap.xml` | 141 | [DOMAIN] |
+| `sitemap.xml` | 142 | [DOMAIN] |
+| `sitemap.xml` | 143 | [DOMAIN] |
+| `sitemap.xml` | 144 | [DOMAIN] |
+| `sitemap.xml` | 145 | [DOMAIN] |
+| `sitemap.xml` | 146 | [DOMAIN] |
+| `sitemap.xml` | 147 | [DOMAIN] |
+| `sitemap.xml` | 148 | [DOMAIN] |
+| `sitemap.xml` | 149 | [DOMAIN] |
+| `sitemap.xml` | 150 | [DOMAIN] |
+| `sitemap.xml` | 151 | [DOMAIN] |
+| `sitemap.xml` | 152 | [DOMAIN] |
+| `sitemap.xml` | 153 | [DOMAIN] |
+| `sitemap.xml` | 154 | [DOMAIN] |
 | `strand-natur.html` | 8 | [DOMAIN] |
 | `strand-natur.html` | 14 | [DOMAIN] |
 | `strand-natur.html` | 15 | [DOMAIN] |
@@ -191,156 +277,177 @@ _42 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur 
 | `partials/head.html` | 1 | [UMAMI-ID] |
 | `partials/head.html` | 3 | [UMAMI-ID] |
 
-## [PAYPAL-ME-LINK] – 22×
+## [PAYPAL-ME-LINK] – 62×
 
-_21 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur in partials/ ändern, dann tools/layout.py)_
+_58 weitere Stellen in den Seiten (steht über partials/ in jeder Seite – nur in partials/ ändern, dann tools/layout.py)_
 
 | Datei | Zeile | Text |
 |---|---|---|
+| `docs/datenschutz-generator.md` | 88 | [PAYPAL-ME-LINK] |
 | `partials/footer.html` | 55 | [PAYPAL-ME-LINK] |
+| `partials/header.html` | 62 | [PAYPAL-ME-LINK] |
+| `partials/unterstuetzen.html` | 9 | [PAYPAL-ME-LINK] |
 
 ## [TALLY-LINK-BETRIEB] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `betrieb-eintragen.html` | 149 | [TALLY-LINK-BETRIEB] |
-| `betrieb-eintragen.html` | 152 | [TALLY-LINK-BETRIEB] |
+| `betrieb-eintragen.html` | 156 | [TALLY-LINK-BETRIEB] |
+| `betrieb-eintragen.html` | 159 | [TALLY-LINK-BETRIEB] |
 | `docs/tally-formulare.md` | 9 | [TALLY-LINK-BETRIEB] |
 
-## [LUIS-TIPP] – 6×
+## [LUIS-TIPP] – 7×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `daten/betriebe.json` | 42 | [LUIS-TIPP: kurzer persönlicher Satz] |
-| `geheimtipps.html` | 134 | [LUIS-TIPP: kurzer persönlicher Satz] |
-| `geheimtipps.html` | 140 | [LUIS-TIPP: kurzer persönlicher Satz] |
-| `geheimtipps.html` | 146 | [LUIS-TIPP: kurzer persönlicher Satz] |
-| `geheimtipps.html` | 152 | [LUIS-TIPP: kurzer persönlicher Satz] |
-| `geheimtipps.html` | 158 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `daten/betriebe.json` | 6152 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `essen-trinken.html` | 612 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `geheimtipps.html` | 141 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `geheimtipps.html` | 147 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `geheimtipps.html` | 153 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `geheimtipps.html` | 159 | [LUIS-TIPP: kurzer persönlicher Satz] |
+| `geheimtipps.html` | 165 | [LUIS-TIPP: kurzer persönlicher Satz] |
 
-## [DATENSCHUTZTEXT] – 1×
+## [DATENSCHUTZTEXT] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `datenschutz.html` | 140 | [DATENSCHUTZTEXT] |
+| `datenschutz.html` | 147 | [DATENSCHUTZTEXT] |
+| `docs/datenschutz-generator.md` | 7 | [DATENSCHUTZTEXT] |
+| `docs/datenschutz-generator.md` | 130 | [DATENSCHUTZTEXT] |
+
+## [RECHTSFORM] – 2×
+
+| Datei | Zeile | Text |
+|---|---|---|
+| `docs/datenschutz-generator.md` | 12 | [RECHTSFORM] |
+| `impressum.html` | 140 | [RECHTSFORM] |
+
+## [E-MAIL] – 4×
+
+| Datei | Zeile | Text |
+|---|---|---|
+| `docs/datenschutz-generator.md` | 15 | [E-MAIL] |
+| `docs/datenschutz-generator.md` | 62 | [E-MAIL] |
+| `impressum.html` | 149 | [E-MAIL] |
+| `kontakt.html` | 148 | [E-MAIL] |
+
+## [UMAMI-ANBIETER] – 1×
+
+| Datei | Zeile | Text |
+|---|---|---|
+| `docs/datenschutz-generator.md` | 39 | [UMAMI-ANBIETER: Firmenname, Sitz und Serverstandort aus dem Umami-Konto bzw. dessen Datenschutzseite] |
+
+## [E-MAIL-ANBIETER] – 1×
+
+| Datei | Zeile | Text |
+|---|---|---|
+| `docs/datenschutz-generator.md` | 64 | [E-MAIL-ANBIETER] |
 
 ## [TALLY-LINK-KONTAKT] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `docs/tally-formulare.md` | 32 | [TALLY-LINK-KONTAKT] |
-| `kontakt.html` | 135 | [TALLY-LINK-KONTAKT] |
-| `kontakt.html` | 137 | [TALLY-LINK-KONTAKT] |
+| `docs/tally-formulare.md` | 59 | [TALLY-LINK-KONTAKT] |
+| `kontakt.html` | 142 | [TALLY-LINK-KONTAKT] |
+| `kontakt.html` | 144 | [TALLY-LINK-KONTAKT] |
 
 ## [TIPP 1] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 132 | [TIPP 1: ÜBERSCHRIFT] |
+| `geheimtipps.html` | 139 | [TIPP 1: ÜBERSCHRIFT] |
 
 ## [TEXT] – 20×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 133 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
-| `geheimtipps.html` | 139 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
-| `geheimtipps.html` | 145 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
-| `geheimtipps.html` | 151 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
-| `geheimtipps.html` | 157 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
-| `info.html` | 143 | [TEXT: Anreise mit Bahn bis Norddeich Mole, Parken in Norddeich, Gepäck] |
-| `info.html` | 152 | [TEXT: Apotheken-Notdienst, Hausärzte auf der Insel] |
-| `info.html` | 156 | [TEXT: Hundestrände, Zeiten, Hundekotbeutel-Stationen] |
-| `info.html` | 159 | [TEXT: Wo du in der Stadt fahren darfst, wo geschoben wird, Abstellen] |
-| `info.html` | 164 | [TEXT: Öffnungszeiten am Sonntag, Tipp für den Großeinkauf] |
-| `info.html` | 169 | [TEXT: Adresse und Öffnungszeiten der Tourist-Information] |
-| `info.html` | 172 | [TEXT: Freies WLAN auf der Insel] |
-| `kinder.html` | 131 | [TEXT: Familienfreundliche Strände, z.&nbsp;B. Weststrand] |
-| `kinder.html` | 135 | [TEXT: Spielplätze auf der Insel mit Lage] |
-| `kinder.html` | 138 | [TEXT: Ponyreiten, Minigolf, Kutschfahrt, Wattwanderung für Kinder] |
-| `kinder.html` | 142 | [TEXT: Familienbad im bade:haus, Watt Welten, Kino] |
-| `nutzungsbedingungen.html` | 133 | [TEXT: Der Betrieb ist für seine Angaben und Bilder selbst verantwortlich und muss die Rechte an den eingereichten Bildern haben.] |
-| `nutzungsbedingungen.html` | 136 | [TEXT: Der Norderney Guide darf Einträge prüfen, ablehnen, kürzen oder löschen.] |
-| `nutzungsbedingungen.html` | 139 | [TEXT: Der Eintrag ist aktuell kostenlos. Später kann es kostenpflichtige Angebote geben.] |
-| `nutzungsbedingungen.html` | 142 | [TEXT: Es besteht kein Anspruch darauf, dass ein Eintrag dauerhaft online bleibt.] |
+| `geheimtipps.html` | 140 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
+| `geheimtipps.html` | 146 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
+| `geheimtipps.html` | 152 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
+| `geheimtipps.html` | 158 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
+| `geheimtipps.html` | 164 | [TEXT: 2–4 Sätze. Was ist es, wo ist es, wann lohnt es sich?] |
+| `info.html` | 150 | [TEXT: Anreise mit Bahn bis Norddeich Mole, Parken in Norddeich, Gepäck] |
+| `info.html` | 159 | [TEXT: Apotheken-Notdienst, Hausärzte auf der Insel] |
+| `info.html` | 163 | [TEXT: Hundestrände, Zeiten, Hundekotbeutel-Stationen] |
+| `info.html` | 166 | [TEXT: Wo du in der Stadt fahren darfst, wo geschoben wird, Abstellen] |
+| `info.html` | 171 | [TEXT: Öffnungszeiten am Sonntag, Tipp für den Großeinkauf] |
+| `info.html` | 176 | [TEXT: Adresse und Öffnungszeiten der Tourist-Information] |
+| `info.html` | 179 | [TEXT: Freies WLAN auf der Insel] |
+| `kinder.html` | 138 | [TEXT: Familienfreundliche Strände, z.&nbsp;B. Weststrand] |
+| `kinder.html` | 142 | [TEXT: Spielplätze auf der Insel mit Lage] |
+| `kinder.html` | 145 | [TEXT: Ponyreiten, Minigolf, Kutschfahrt, Wattwanderung für Kinder] |
+| `kinder.html` | 149 | [TEXT: Familienbad im bade:haus, Watt Welten, Kino] |
+| `nutzungsbedingungen.html` | 140 | [TEXT: Der Betrieb ist für seine Angaben und Bilder selbst verantwortlich und muss die Rechte an den eingereichten Bildern haben.] |
+| `nutzungsbedingungen.html` | 143 | [TEXT: Der Norderney Guide darf Einträge prüfen, ablehnen, kürzen oder löschen.] |
+| `nutzungsbedingungen.html` | 146 | [TEXT: Der Eintrag ist aktuell kostenlos. Später kann es kostenpflichtige Angebote geben.] |
+| `nutzungsbedingungen.html` | 149 | [TEXT: Es besteht kein Anspruch darauf, dass ein Eintrag dauerhaft online bleibt.] |
 
 ## [TIPP 2] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 138 | [TIPP 2: ÜBERSCHRIFT] |
+| `geheimtipps.html` | 145 | [TIPP 2: ÜBERSCHRIFT] |
 
 ## [TIPP 3] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 144 | [TIPP 3: ÜBERSCHRIFT] |
+| `geheimtipps.html` | 151 | [TIPP 3: ÜBERSCHRIFT] |
 
 ## [TIPP 4] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 150 | [TIPP 4: ÜBERSCHRIFT] |
+| `geheimtipps.html` | 157 | [TIPP 4: ÜBERSCHRIFT] |
 
 ## [TIPP 5] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `geheimtipps.html` | 156 | [TIPP 5: ÜBERSCHRIFT] |
-
-## [RECHTSFORM] – 1×
-
-| Datei | Zeile | Text |
-|---|---|---|
-| `impressum.html` | 133 | [RECHTSFORM] |
-
-## [E-MAIL] – 2×
-
-| Datei | Zeile | Text |
-|---|---|---|
-| `impressum.html` | 142 | [E-MAIL] |
-| `kontakt.html` | 141 | [E-MAIL] |
+| `geheimtipps.html` | 163 | [TIPP 5: ÜBERSCHRIFT] |
 
 ## [DATUM] – 2×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 213 | [DATUM] |
-| `nutzungsbedingungen.html` | 144 | [DATUM] |
+| `index.html` | 220 | [DATUM] |
+| `nutzungsbedingungen.html` | 151 | [DATUM] |
 
 ## [TAG] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 219 | [TAG, DATUM] |
-| `index.html` | 228 | [TAG, DATUM] |
-| `index.html` | 236 | [TAG, DATUM] |
+| `index.html` | 226 | [TAG, DATUM] |
+| `index.html` | 235 | [TAG, DATUM] |
+| `index.html` | 243 | [TAG, DATUM] |
 
 ## [TITEL DER VERANSTALTUNG] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 221 | [TITEL DER VERANSTALTUNG] |
-| `index.html` | 230 | [TITEL DER VERANSTALTUNG] |
-| `index.html` | 238 | [TITEL DER VERANSTALTUNG] |
+| `index.html` | 228 | [TITEL DER VERANSTALTUNG] |
+| `index.html` | 237 | [TITEL DER VERANSTALTUNG] |
+| `index.html` | 245 | [TITEL DER VERANSTALTUNG] |
 
 ## [UHRZEIT] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 222 | [UHRZEIT] |
-| `index.html` | 231 | [UHRZEIT] |
-| `index.html` | 239 | [UHRZEIT] |
+| `index.html` | 229 | [UHRZEIT] |
+| `index.html` | 238 | [UHRZEIT] |
+| `index.html` | 246 | [UHRZEIT] |
 
 ## [ORT] – 3×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 222 | [ORT] |
-| `index.html` | 231 | [ORT] |
-| `index.html` | 239 | [ORT] |
+| `index.html` | 229 | [ORT] |
+| `index.html` | 238 | [ORT] |
+| `index.html` | 246 | [ORT] |
 
 ## [LINK] – 1×
 
 | Datei | Zeile | Text |
 |---|---|---|
-| `index.html` | 224 | [LINK] |
+| `index.html` | 231 | [LINK] |
